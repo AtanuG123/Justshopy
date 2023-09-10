@@ -69,7 +69,7 @@ export default function Navber() {
             <img src={require("./images/logo.png")} alt="logo"></img>
           </li>
         </ul >
-        <ul className="">
+        <ul className="nav_main">
           <li className="nav_li"><Link to={"/"}>Home</Link> </li>
           <li className="nav_li"><Link to={"/"}>Products</Link> </li>
           <li className="nav_li"><Link to={"/aboutus"}>About Us</Link> </li>

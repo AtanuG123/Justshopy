@@ -32,7 +32,7 @@ export default function Productpage() {
   useEffect(() => {
     document.getElementById("product_p").style.display = "none";
     setisLoading(true);
-    axios.post("process.env.REACT_APP_PORT/product", { Customid }).then((res) => {
+    axios.post(`${process.env.REACT_APP_PORT}/product`, { Customid }).then((res) => {
       setsingleproduct(res.data);
       console.log(res.data);
       console.log("hehe1", res.data.Img2);

@@ -18,7 +18,7 @@ export default function Productlist() {
     useEffect(() => {
         Setisloading(true);
         document.getElementById("productlist").style.display = "none";
-        axios.post('https://justshopy-backend.vercel.app/productlist', { Catagory, Flag })
+        axios.post(`${process.env.REACT_APP_PORT}/productlist`, { Catagory, Flag })
             .then(res => {
                 setlistpro(res.data);
                 console.log(res.data)

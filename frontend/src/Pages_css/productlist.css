@@ -1,0 +1,17 @@
+#productlist{
+    display:flex;
+    flex-direction: column;
+    margin:75px 30px;
+}
+#boxs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* flex-direction: inherit; */
+}
+
+@media (max-width:760px) {
+    #productlist{
+        margin: 75px 5px;
+    }
+}

@@ -1,0 +1,32 @@
+import { useDispatch } from "react-redux";
+import { profile } from "../state/userprofile";
+import { remove } from "../state/cart";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Navber from "../component/navber";
+
+export default function Userprofile() {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const logoutnotify = () => {
+        toast.success("logout succesfull", {
+            autoClose: 1500,
+        });
+    }
+    const removeuser = () => {
+        dispatch(profile("invalid"));
+        dispatch(remove());
+        navigate("/");
+        logoutnotify();
+    }
+    return (
+        <div style={{ marginTop: "100px" }}>
+            {/* <Navber/> */}
+            <h3>User Profile Page</h3>
+            <button onClick={removeuser}>
+                Logout
+            </button>
+        </div>
+    );
+}

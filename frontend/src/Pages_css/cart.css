@@ -1,0 +1,201 @@
+.cart {
+  margin-top: 70px;
+  display: flex;
+  margin-left: 20px;
+}
+.cart * {
+  font-family: "DM Sans", sans-serif;
+}
+.listitem {
+  width: 100%;
+}
+.checkout {
+  position: fixed;
+  right: 1px;
+  width: 360px;
+  margin-right: 30px;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #738aaf;
+  background-color: rgb(249, 252, 252);
+  border: 3px solid black;
+}
+.checkout > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout > div > div h4 {
+  margin-bottom: 15px;
+}
+.checkout > div > div p {
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+.checkout > div > div p + p {
+  font-weight: 560;
+}
+.chkout button {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(22, 23, 23);
+  transition: all 0.35s;
+}
+.chkout button:hover {
+  background-color: rgb(248, 18, 198);
+}
+.discount {
+  color: rgb(236, 8, 8);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.paymethod {
+  background-color: rgb(242, 244, 245);
+  margin-top: 15px;
+}
+.paymethod p {
+  padding-top: 5px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+}
+.paymethod img {
+  height: 100px;
+  width: 14rem;
+}
+
+.cartbody {
+  box-shadow: 0px 0px 8px rgb(133, 133, 133);
+  margin-top: 20px;
+  display: flex;
+  width: 650px;
+  height: 210px;
+  margin-bottom: 30px;
+}
+
+.cartimg {
+  height: 210px;
+  width: 180px;
+  cursor: pointer;
+}
+
+.details * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  font-size: 14px;
+}
+.details {
+  margin-top: 10px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 20px;
+}
+.size {
+  font-size: 16px;
+}
+
+.size span {
+  font-size: large;
+}
+
+.price_de > span {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.price_de > span + span + span {
+  color: rgb(75, 216, 75);
+}
+.price_de {
+  margin-top: 10px;
+}
+.actualprice {
+  font-size: 20px;
+
+  color: rgb(183, 2, 211);
+
+  font-weight: 600;
+}
+.quantity {
+  bottom: 5px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.quantity > button {
+  border: 1px solid grey;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0px 14px 3px 14px;
+  background-color: rgb(218, 228, 237);
+}
+.quantity p {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  background-color: aliceblue;
+  padding: 7px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+@media (max-width: 1000px) {
+  .cart {
+    margin-left: 10px;
+    flex-direction: column;
+  }
+  .checkout {
+    bottom: 1px;
+    right: 1px;
+    width: 100%;
+    margin: 0px;
+    z-index: 1;
+  }
+  .checkout > div > div h4 {
+    margin-bottom: 5px;
+  }
+  hr {
+    margin: 1px;
+  }
+  .chkout button {
+    margin-top: 5px;
+  }
+  .listitem {
+    margin-bottom: 350px;
+  }
+  .cartbody {
+    height: fit-content;
+    width: 97vw;
+  }
+}
+
+@media (max-width: 444px) {
+  .cartimg {
+    height: 160px;
+    width: 110px;
+  }
+  .listitem {
+    width: 90%;
+    margin-right: 10px;
+  }
+  .listitem * {
+    font-size: 0.7rem;
+  }
+  .quantity button {
+    padding: 0px 8px;
+  }
+  .size span {
+    font-size: 0.9rem;
+  }
+  .details {
+    margin-left: 15px;
+  }
+}

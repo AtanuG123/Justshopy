@@ -33,7 +33,7 @@ export default function Signup() {
     e.preventDefault();
     // document.getElementById("loader").style.display = "inline";
     axios
-      .post("http://127.0.0.1:3002/signup ", { Name, Email, Password })
+      .post(`${process.env.REACT_APP_PORT}/signup`, { Name, Email, Password })
       .then((result) => {
         console.log(result.data);
         if (result.data === "user_exist") {

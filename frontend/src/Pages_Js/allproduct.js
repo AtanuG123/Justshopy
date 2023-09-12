@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../component/loader";
+import Copyright from "../component/Footer";
 export default function Allproduct(){
     const { id } = useParams();
     const [listpro, setlistpro] = useState([]);
@@ -51,6 +52,7 @@ export default function Allproduct(){
                     )
                     }
                 </div>
+                    <Copyright/>
             </div>
         </>)
 }

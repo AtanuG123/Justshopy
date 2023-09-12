@@ -8,6 +8,7 @@ export default function Success(){
     const dispatch = useDispatch();
     const order = useSelector(state=>state.cart.copydata)
     const subtotal =  useSelector(state => state.cart.copyprice);
+    const user = useSelector(state=>state.profile.data)
     // console.log(Math.round(subtotal))
     useEffect(()=>{
        
@@ -41,7 +42,7 @@ export default function Success(){
                                     )
                                 })
                             }</td>
-                            <td>ATANU GHOSH </td>
+                            <td>{user.Name} </td>
                             <td>SDFSDFSDFSD</td>
                             <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>
                         </tr>

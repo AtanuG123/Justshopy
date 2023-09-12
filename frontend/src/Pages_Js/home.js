@@ -65,7 +65,7 @@ export default function Home() {
                     <div>
 
                         <div>
-                            <img className="featuredmain11" src={require("../component/images/hoodie.jpeg")}></img>
+                            <img onClick={() => switchonclick("Hoodie", false)} className="featuredmain11" src={require("../component/images/hoodie.jpeg")}></img>
                             <div>
                                 <h4>Hoodies</h4>
                                 <p>Starting at <span>399</span></p>

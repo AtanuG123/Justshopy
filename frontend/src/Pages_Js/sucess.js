@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
-import { ordercreate, remove } from "../state/cart";
+import { remove } from "../state/cart";
 import { useEffect } from "react";
 import "../Pages_css/userprofile.css"
 
@@ -13,7 +13,7 @@ export default function Success(){
     useEffect(()=>{
        
         dispatch(remove());
-        dispatch(ordercreate(order))
+        // dispatch(ordercreate(order))
     })
     return(
         <div  style={{marginTop:"80px"}}>
@@ -42,7 +42,11 @@ export default function Success(){
                                     )
                                 })
                             }</td>
+<<<<<<< HEAD
                             <td>{user.Name} </td>
+=======
+                            <td>{user.Name}</td>
+>>>>>>> 8c282c1f14c1bc947d5b074753bf0cc24416149a
                             <td>SDFSDFSDFSD</td>
                             <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>
                         </tr>

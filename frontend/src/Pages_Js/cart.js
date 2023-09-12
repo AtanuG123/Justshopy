@@ -20,7 +20,7 @@ const dispatch = useDispatch();
         const headers = {
             "Content-Type": "application/json"
         }
-        const response = await fetch("http://localhost:3002/api/create-checkout-session", {
+        const response = await fetch(`${process.env.REACT_APP_PORT}/api/create-checkout-session`, {
             method: "POST",
             headers: headers,
             body: JSON.stringify(body)

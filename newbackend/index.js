@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bcryptjs = require("bcryptjs");
-const stripe = require("stripe")("sk_test_51NopitSJ60SygxplXTGHnfiLVANYiPF07I3hfqEjZtYnqVLKIys161qlgqCUGHgTCdIxxuTWflT18L4DWyclZuSZ00EhBZmkg8");
+const stripe = require("stripe")(process.env.REACT_APP_STRIPE_PRIVATE);
 
 const UserModel = require("./models/Userdetails.js");
 const ProductModel = require("./models/productupload.js");
@@ -14,7 +14,7 @@ app.use(cors());
 
 
 
-mongoose.connect(`mongodb+srv://atanu2004ghosh:vG9k5kkqhgYbDBFi@cluster0.r37vth3.mongodb.net/?retryWrites=true&w=majority`);
+mongoose.connect(process.env.REACT_APP_KEY);
 
 app.post('/login',(req,res)=>{
     const {Email,Password}= req.body;
@@ -159,8 +159,8 @@ app.post("/api/create-checkout-session",async(req,res)=>{
             }, 
           ], 
         mode:"payment",
-        success_url:`http://localhost:3000/paymentsuccess`,
-        cancel_url:"http://localhost:3000/paymentcancel",
+        success_url:"https://justshopy.vercel.app/paymentsuccess",
+        cancel_url:"https://justshopy.vercel.app/paymentcancel",
     })
 
     res.json({id:session.id})

@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../component/loader";
+import Copyright from "../component/Footer";
 export default function Allproduct(){
     const { id } = useParams();
     const [listpro, setlistpro] = useState([]);
@@ -16,7 +17,7 @@ export default function Allproduct(){
     useEffect(() => {
         Setisloading(true);
         document.getElementById("productlist").style.display = "none";
-        axios.post('http://127.0.0.1:3002/allproduct', {})
+        axios.post(`${process.env.REACT_APP_PORT}/allproduct`, {})
             .then(res => {
                 setlistpro(res.data);
                 // console.log(res.data)
@@ -51,6 +52,7 @@ export default function Allproduct(){
                     )
                     }
                 </div>
+                    <Copyright/>
             </div>
         </>)
 }

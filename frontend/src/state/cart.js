@@ -69,13 +69,13 @@ const cartSlice = createSlice({
             state.data =[];
             state.subprice=0;
         },
-        ordercreate(state,action){
-            state.order.push(action.payload)
-            // console.log(state.order)
-        }
+        // ordercreate(state,action){
+        //     state.order.push(action.payload)
+        //     // console.log(state.order)
+        // }
     
         
     }
 });
-export const {addtocart,reduceCart,remove,ordercreate} = cartSlice.actions;
+export const {addtocart,reduceCart,remove} = cartSlice.actions;
 export default cartSlice.reducer;

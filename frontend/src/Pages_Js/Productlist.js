@@ -57,8 +57,8 @@ export default function Productlist() {
                     )
                     }
                 </div>
+                <Copyright/>
             </div>
-                    <Copyright/>
         </>
     )
 }

@@ -21,16 +21,16 @@ export default function Copyright() {
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
                 <p>
-                  <a className="text-white">Hoodies</a>
+                  <a href ="/productlist/Man" className="text-white">Man</a>
                 </p>
                 <p>
-                  <a className="text-white">T-shirt</a>
+                  <a href ="/productlist/Woman" className="text-white">Woman</a>
                 </p>
                 <p>
-                  <a className="text-white">Jeans</a>
+                  <a href ="/productlist/Tshirt" className="text-white">Tshirt</a>
                 </p>
                 <p>
-                  <a className="text-white">Kurta</a>
+                  <a href ="/productlist/kurta" className="text-white">Kurta</a>
                 </p>
               </div>
               <hr className="w-100 clearfix d-md-none" />
@@ -52,8 +52,8 @@ export default function Copyright() {
             <div className="row d-flex align-items-center">
               <div className="col-md-7 col-lg-8 text-center text-md-start">
                 <div className="p-3">
-                  © 2020 Copyright:
-                  <a herf="https://atanupersonal.netlify.app/" className="text-white" >Atanupersonal.com </a>
+                  © 2023 Copyright:
+                  <a href="https://atanupersonal.netlify.app/" className="text-white" >atanupersonal.netlify.app </a>
                 </div>
               </div>
               <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">

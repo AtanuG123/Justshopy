@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bcryptjs = require("bcryptjs");
-const stripe = require("stripe")("sk_test_51NopitSJ60SygxplXTGHnfiLVANYiPF07I3hfqEjZtYnqVLKIys161qlgqCUGHgTCdIxxuTWflT18L4DWyclZuSZ00EhBZmkg8");
+const stripe = require("stripe")(process.env.REACT_APP_STRIPE_PRIVATE);
 
 const UserModel = require("./models/Userdetails.js");
 const ProductModel = require("./models/productupload.js");

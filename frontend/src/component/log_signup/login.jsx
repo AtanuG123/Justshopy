@@ -31,7 +31,7 @@ export default function Login() {
     document.getElementById("loader").style.display = "inline";
     
     axios
-      .post("http://127.0.0.1:3002/login", { Email, Password })
+      .post(`${process.env.REACT_APP_PORT}/login`, { Email, Password })
       .then((result) => {
         if (result.data !== "invalid") {
           dispatch(profile(result.data));

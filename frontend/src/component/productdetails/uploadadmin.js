@@ -23,7 +23,7 @@ export default function Product() {
     
     const handleonclick3 = (e) => {
         e.preventDefault();
-        axios.post("http://127.0.0.1:3002/admin ", { Name, Descrip, Catagory, Subcatagory,Brand, Img1, Img2, Img3, Img4, Img5, Price, Discount,Customid })
+        axios.post(`${process.env.REACT_APP_PORT}/admin`, { Name, Descrip, Catagory, Subcatagory,Brand, Img1, Img2, Img3, Img4, Img5, Price, Discount,Customid })
             .then(result => {
                 console.log(result)
                 navigate("/")

@@ -42,11 +42,11 @@ export default function Success(){
                                     )
                                 })
                             }</td>
-<<<<<<< HEAD
+
                             <td>{user.Name} </td>
-=======
+
                             <td>{user.Name}</td>
->>>>>>> 8c282c1f14c1bc947d5b074753bf0cc24416149a
+
                             <td>SDFSDFSDFSD</td>
                             <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>
                         </tr>

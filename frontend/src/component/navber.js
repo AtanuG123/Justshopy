@@ -121,9 +121,9 @@ export default function Navber() {
 
         <ul className="navsmall" id="smallwrap">
           <li className="nav_small"><Link to={"/"}>Home</Link> </li>
-          <li className="nav_small"><Link to={"/"}>Products</Link> </li>
+          <li className="nav_small"><Link to={"/allproduct"}>Products</Link> </li>
           <li className="nav_small"><Link to={"/aboutus"}>About Us</Link> </li>
-          <li className="nav_small"><Link to={"/"}>Contact us</Link> </li>
+          <li className="nav_small"><Link to={"/aboutus"}>Contact us</Link> </li>
           {/* <li className="nav_li"><Link to={"/"}>Home</Link> </li> */}
           {/* <li className="nav_li"><Link to={"/"}>Home</Link> </li> */}
 

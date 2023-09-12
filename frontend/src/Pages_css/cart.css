@@ -121,7 +121,11 @@
     flex-direction: column;
   }
   #cartheading td{
-    padding: auto 10px;
+    padding: 0px 7px;
+  }
+  .imgonly{
+    width: 65px;
+  height: 80px;
   }
 }
 

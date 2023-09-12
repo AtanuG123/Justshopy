@@ -104,7 +104,7 @@ export default function Productpage() {
     } else if (flag === 1) {
       addednotify("already added");
     } else {
-      addednotify("Signup before Proced");
+      addednotify("Signup before Proceed");
       // navigate("/signup");
     }
   };

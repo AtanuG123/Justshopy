@@ -7,6 +7,7 @@ import axios from 'axios';
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../component/loader";
 import Navber from "../component/navber";
+import Copyright from "../component/Footer";
 export default function Productlist() {
     const { id } = useParams();
     const [listpro, setlistpro] = useState([]);
@@ -57,6 +58,7 @@ export default function Productlist() {
                     }
                 </div>
             </div>
+                    <Copyright/>
         </>
     )
 }

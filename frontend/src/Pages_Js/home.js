@@ -12,7 +12,7 @@ export default function Home() {
     const dispatch = useDispatch();
 
     function switchonclick(Catagory, flag1) {
-        console.log(typeof (Catagory));
+        // console.log(typeof (Catagory));
         dispatch(flag(flag1));
         navigate("/productlist/" + Catagory);
     };

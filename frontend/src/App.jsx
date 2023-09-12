@@ -15,9 +15,12 @@ import Product from "./component/productdetails/uploadadmin";
 
 
 
-import LoadingSpinner from "./component/loader";
+
 import AboutContact from "./Pages_Js/aboutus";
-import Checkout from "./Pages_Js/checkoutpage";
+import Allproduct from "./Pages_Js/allproduct";
+import Success from "./Pages_Js/sucess";
+import Cancel from "./Pages_Js/cancel";
+
 
 function App() {
   return (
@@ -35,10 +38,13 @@ function App() {
         <Route path="/productlist/:id" element={<Productlist/>}></Route>
         <Route path="/user/:id" element={<Userprofile/>}></Route>
         <Route path="/aboutus" element={<AboutContact/>}></Route>
-        <Route path="/checkout" element={<Checkout/>}></Route>
+        <Route path="/allproduct" element={<Allproduct/>}></Route>
+        <Route path="/paymentsuccess" element={<Success/>}></Route>
+        <Route path="/paymentcancel" element={<Cancel/>}></Route>
+      
 
       </Routes>
-      {/* <LoadingSpinner/> */}
+     
     </BrowserRouter>      
   </div>
       

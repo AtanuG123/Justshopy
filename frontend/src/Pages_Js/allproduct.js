@@ -6,19 +6,17 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../component/loader";
-import Navber from "../component/navber";
-export default function Productlist() {
+export default function Allproduct(){
     const { id } = useParams();
     const [listpro, setlistpro] = useState([]);
     const [isLoading, Setisloading] = useState(false);
     const Catagory = id;
-    const Flag = useSelector(state => state.productlist.flag);
-    // console.log("this is from productlist", id);
-
+    
+    console.log("this is from productlist", id);
     useEffect(() => {
         Setisloading(true);
         document.getElementById("productlist").style.display = "none";
-        axios.post('http://127.0.0.1:3002/productlist', { Catagory, Flag })
+        axios.post('http://127.0.0.1:3002/allproduct', {})
             .then(res => {
                 setlistpro(res.data);
                 // console.log(res.data)
@@ -26,14 +24,11 @@ export default function Productlist() {
                 document.getElementById("productlist").style.display = "flex";
             })
     }, [])
-
-
-    return (
-        <> 
+    return(<> 
         {/* <Navber/> */}
             {isLoading ? <LoadingSpinner /> : null}
             <div id='productlist'>
-                <div><h2> {Catagory}</h2></div>
+                <div><h2> All product</h2></div>
                 <div id="boxs">
 
                     {listpro.map(items => {
@@ -57,6 +52,5 @@ export default function Productlist() {
                     }
                 </div>
             </div>
-        </>
-    )
+        </>)
 }

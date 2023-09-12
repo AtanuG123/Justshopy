@@ -8,9 +8,7 @@ const productlistSlice = createSlice({
     name:"productlist",
     initialState,
     reducers:{
-        // productlist(state,action){
-        //     state.data1=action.payload;
-        // },
+        
         flag(state,action){
             state.flag = action.payload
         }

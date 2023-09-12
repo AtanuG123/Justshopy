@@ -146,6 +146,10 @@ li {
     #featuredmain> div{  
     margin-top: 20px;
     }   
+    #featuredmain > div >div{
+      margin: 0px 0px;
+      width: 150px;
+    }
   }
 
   @media (max-width:385px) {

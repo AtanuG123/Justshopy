@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { subtotal } from "../state/cart";
+import { subtotal,productremove, removeFromCart, reduceCart } from "../state/cart";
 import { useParams } from "react-router-dom";
 import "../Pages_css/cart.css";
 export default function Cartitem(props) {
@@ -9,11 +9,8 @@ export default function Cartitem(props) {
     const navigate  = useNavigate();
     const dispatch = useDispatch();
     const [qty, setqty] = useState(1);
-    const reduceitem=()=>{
-        if(qty>1){
-            setqty(qty-1);
-            dispatch(subtotal(-props.price));
-        }
+    const reduceitem=(id)=>{
+        dispatch(reduceCart(id));
     }
     const increseitem=()=>{
         if(qty<5){
@@ -34,6 +31,7 @@ export default function Cartitem(props) {
                 </p>
                 <p>
                     {props.description}
+                    
                 </p>
                 <p className="size">
                 size :<span>{props.size}</span> 
@@ -43,9 +41,10 @@ export default function Cartitem(props) {
                 </p>
                 
                 <div className="quantity">
-                    <button onClick={reduceitem}>-</button>
-                    <p id="itemquan">{qty}</p>
+                    <button onClick={()=>reduceitem(props.id)}>-</button>
+                    <p id="itemquan">{props.qty}</p>
                     <button onClick={increseitem}>+</button>
+                   
                 </div>
                   
                 </div>

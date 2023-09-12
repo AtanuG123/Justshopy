@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navber from "../component/navber";
-
-export default function Userprofile() {
+import { useSelector } from 'react-redux';
+import "../Pages_css/userprofile.css"
+export default  function Userprofile() {
+    
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const logoutnotify = () => {
@@ -22,9 +24,7 @@ export default function Userprofile() {
     }
     return (
         <div style={{ marginTop: "100px" }}>
-            {/* <Navber/> */}
-            <h3>User Profile Page</h3>
-            <button onClick={removeuser}>
+            <button className="btn btn-primary" onClick={removeuser}>
                 Logout
             </button>
         </div>

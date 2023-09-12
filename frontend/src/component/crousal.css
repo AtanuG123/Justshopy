@@ -7,7 +7,7 @@
 }
 @media (max-width:950px) {
   .slider-wrapper{
-    width: 90%;
+    width: 88%;
     height: 70%;
   }
 }
@@ -33,8 +33,8 @@
 }
 @media (max-width:450px) {
   
-  .slider-wrapper{
-    width: 95%;
+  .slick-slide img{
+    height: 200px;
    
   }
 }

@@ -1,29 +1,15 @@
 import "./box.css";
 
-import { useDispatch } from "react-redux";
 
-import { useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
-import { product } from "../state/product";
+
 
 export default function Itembox(props) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+ 
   const switchonclick = (e) => {
-    // dispatch(product({
-    //   id: props.id,
-    //   img1: props.img1,
-    //   img2: props.img2,
-    //   img3: props.img3,
-    //   img4: props.img4,
-    //   img5: props.img5,
-    //   description:props.description,
-    //   discount:props.discount,
-    //   price: props.price,
-    //   name: props.name,
-    //   brand :props.brand
-    // }));
+ 
     navigate("/product/" + props.customid);
   };
 

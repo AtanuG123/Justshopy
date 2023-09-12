@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bcryptjs = require("bcryptjs");
+const stripe = require("stripe")("sk_test_51NopitSJ60SygxplXTGHnfiLVANYiPF07I3hfqEjZtYnqVLKIys161qlgqCUGHgTCdIxxuTWflT18L4DWyclZuSZ00EhBZmkg8");
 
 const UserModel = require("./models/Userdetails.js");
 const ProductModel = require("./models/productupload.js");
@@ -10,7 +11,6 @@ const ProductModel = require("./models/productupload.js");
 const app = express();
 app.use(express.json());
 app.use(cors());
-
 
 
 
@@ -70,7 +70,12 @@ app.post('/product/',(req,res)=>{
     .then(product=>res.json(product))
     .catch(err=>res.json(err))
 })
-
+app.post('/allproduct',(req,res)=>{
+    
+    ProductModel.find()
+    .then(product=>res.json(product))
+    .catch(err=>res.json(err))
+})
  app.post('/productlist/',(req,res)=>{
     const {Catagory,Flag} = req.body;
     
@@ -87,6 +92,82 @@ app.post('/product/',(req,res)=>{
         } 
      }
 )
+
+app.post("/api/create-checkout-session",async(req,res)=>{
+    const {products}=req.body;
+
+    const session = await stripe.checkout.sessions.create({
+        payment_method_types:["card"],
+        shipping_address_collection: {
+            allowed_countries: ["IN"],
+          },
+        shipping_options: [
+            {
+              shipping_rate_data: {
+                type: "fixed_amount",
+                fixed_amount: {
+                  amount: 0,
+                  currency: "inr",
+                },
+                display_name: "Free shipping",
+                // Delivers between 5-7 business days
+                delivery_estimate: {
+                  minimum: {
+                    unit: "business_day",
+                    value: 5,
+                  },
+                  maximum: {
+                    unit: "business_day",
+                    value: 7,
+                  },
+                },
+              },
+            },
+            {
+              shipping_rate_data: {
+                type: "fixed_amount",
+                fixed_amount: {
+                  amount: 1500,
+                  currency: "inr",
+                },
+                display_name: "Next day air",
+                // Delivers in exactly 1 business day
+                delivery_estimate: {
+                  minimum: {
+                    unit: "business_day",
+                    value: 1,
+                  },
+                  maximum: {
+                    unit: "business_day",
+                    value: 1,
+                  },
+                },
+              },
+            },
+          ],
+        line_items: [ 
+            { 
+              price_data: { 
+                currency: "inr", 
+                product_data: { 
+                  name: "Payble Amount", 
+                }, 
+                unit_amount: products * 100, 
+              }, 
+              
+              quantity:1 
+            }, 
+          ], 
+        mode:"payment",
+        success_url:`http://localhost:3000/paymentsuccess`,
+        cancel_url:"http://localhost:3000/paymentcancel",
+    })
+
+    res.json({id:session.id})
+})
+
+
+
 
 
  app.listen(3002,()=>{

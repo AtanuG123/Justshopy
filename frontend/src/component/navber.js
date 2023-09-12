@@ -9,12 +9,15 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { profile } from "../state/userprofile";
 import { remove } from "../state/cart";
+import { useParams } from "react-router-dom";
 export default function Navber() {
   const dispatch = useDispatch();
-  
+  const {id} = useParams();
   const [logpos, setlogpos] = useState("login");
   const navigate = useNavigate();
   const user = useSelector(state => state.profile.data);
+  const cartitem1 = useSelector(state => state.cart.data);
+  // console.log(" length of cart", cartitem1)
 
   useEffect(() => {
     if (user !== "invalid") {
@@ -32,8 +35,7 @@ export default function Navber() {
       navigate("/user/"+user.Name);
     }
   }
-  const cartitem1 = useSelector(state => state.cart.data);
-  console.log(" length of cart", cartitem1)
+
 
   const shownav=()=>{
      const k =document.getElementById("smallwrap");
@@ -69,9 +71,9 @@ export default function Navber() {
             <img src={require("./images/logo.png")} alt="logo"></img>
           </li>
         </ul >
-        <ul className="">
+        <ul className="nav_main">
           <li className="nav_li"><Link to={"/"}>Home</Link> </li>
-          <li className="nav_li"><Link to={"/"}>Products</Link> </li>
+          <li className="nav_li"><Link to={"/allproduct"}>Products</Link> </li>
           <li className="nav_li"><Link to={"/aboutus"}>About Us</Link> </li>
           <li className="nav_li"><Link to={"/aboutus"}>Contact us</Link> </li>
           {/* <li className="nav_li"><Link to={"/"}>Home</Link> </li> */}

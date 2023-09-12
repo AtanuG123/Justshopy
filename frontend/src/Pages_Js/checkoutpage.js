@@ -1,156 +1,93 @@
-// import "../Pages_css/checkout.css";
-export default function Checkout(){
-    return(
-        <>
-        <div class="white-space">
-		<div class="wrapper">
-			<div class="row">
-				<div class="col-12 col">
-					<div class="info-bar">
-						<p>
-							<i class="fa fa-info"></i> 
-							Returning customer? <a href="#">Click here to login</a>
-						</p>
-					</div>
-					<p>
-						If you have shopped with us before, please enter your details in the boxes below. If you are a new customer please proceed to the Billing &amp; Shipping section.
-					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col">
-					<form method="get" class="user-pswd">
-						<div class="width50 padright">
-							<label for="username">Username or email</label>
-							<input type="text" name="username" id="username" required/>
-						</div>
-						<div class="width50">
-							<label for="password">Password</label>
-							<input type="password" name="password" id="password" required/>
-						</div>
-							<input type="submit" name="submit" value="Login"/><input type="checkbox" value="1" name="checkbox"/><p>Remember me</p>
-					</form>
-					<p><a href="#">Lost your password?</a></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col">
-					<div class="info-bar">
-						<p>
-							<i class="fa fa-info"></i> 
-							Have a coupon? <a href="#">Click here to enter your code</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-6 col coupon">
-					<form method="get">
-						<input type="text" name="coupon" id="coupon" placeholder="Coupon code"/>
-						<input type="submit" name="submit" value="Apply Coupon"/>
+import "../Pages_css/checkout.css";
+export default function Checkout() {
+	// console.log(document.getElementById("selecttag").innerText)
+	const changepayment=(e)=>{
+		console.log(e.target.value)
+		if (e.target.value ==="CARD"){
+			document.getElementById("upi").style.display="none"
+			document.getElementById("card").style.display="block"
+		}
+		 else{
+			document.getElementById("upi").style.display="block"
+			document.getElementById("card").style.display="none"
+
+		 }
+	}
+	return (
+		<div id="checkouthead">
+			<div id="address">
+
+
+				<div>
+					<div><h4>Shipping Details</h4></div>
+					<hr></hr>
+					<form>
+						<p style={{fontWeight:"600"}}>CONTACT DETAILS</p>
+						<input placeholder="Name"></input>
+						<input placeholder="Email"></input>
+						<input placeholder="Mobile no"></input>
+						<p style={{fontWeight:"600"}}>ADDRESS</p>
+						<input placeholder="Address"></input>
+
+						<input placeholder="Pincode"></input>
+						<input placeholder="Locality"></input>
+
 					</form>
 				</div>
 			</div>
-			<div class="row">
-				<form method="get">
-					<div class="col-7 col">
-						<h3 class="topborder"><span>Billing Details</span></h3>
-						<label for="country">Country</label>
-						<select name="country" id="country" required>
-							<option value="">Please select a country</option>
-							<option value="Canada">Canada</option>
-							<option value="Not Canada">Not Canada</option>
+
+
+
+
+
+			<div className="right">
+
+				<h4>PAYMENT</h4>
+				<div class="form-container">
+					<form action="#" onsubmit="return false">
+						<select title="paymode" id="selecttag" onChange={changepayment}>
+							<option selected >CARD</option>
+							<option >UPI</option>
 						</select>
-						<div class="width50 padright">
-							<label for="fname">First Name</label>
-							<input type="text" name="fname" id="fname" required/>
-						</div>
-						<div class="width50">
-							<label for="lname">Last Name</label>
-							<input type="text" name="lname" id="lname" required/>
-						</div>
-						<label for="company">Company Name</label>
-						<input type="text" name="company" id="company" required/>
-						<label for="address">Address</label>
-						<input type="text" name="address" id="address" required/>
-						<input type="text" name="address" id="address2" placeholder="Optional"/>
-						<label for="city">Town / City</label>
-						<input type="text" name="city" id="city" required/>
-						<div class="width50 padright">
-							<label for="province">Province</label>
-							<select name="province" id="province" required>
-								<option value="">Please select a province</option>
-								<option value="ab">Alberta</option>
-								<option value="bc">British Columbia</option>
-								<option value="mb">Manitoba</option>
-								<option value="nb">New Brunswick</option>
-								<option value="nl">Newfoundland and Labrador</option>
-								<option value="ns">Nova Socia</option>
-								<option value="on">Ontario</option>
-								<option value="pe">Prince Edward Island</option>
-								<option value="qc">Quebec</option>
-								<option value="sk">Saskatchewan</option>
-								<option value="not-canada">Not Canada</option>
-							</select>
-						</div>
-						<div class="width50">
-							<label for="postcode">Postcode</label>
-							<input type="text" name="postcode" id="postcode" placeholder="Postcode / Zip" required/>
-						</div>
-						<div class="width50 padright">
-							<label for="email">Email Address</label>
-							<input type="text" name="email" id="email" required/>
-						</div>
-						<div class="width50">
-							<label for="tel">Phone</label>
-							<input type="text" name="tel" id="tel" required/>
-						</div>
-						<input type="checkbox" value="2" name="checkbox"/><p>Create an account?</p>
-						<h3 class="topborder"><span>Shipping Address</span></h3>
-						<input type="checkbox" value="3" name="checkbox"/><p>Ship to a different address?</p>
-						<label for="notes" class="notes">Order Notes</label>
-						<textarea name="notes" id="notes" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-					</div>
-					<div class="col-5 col order">
-						<h3 class="topborder"><span>Your Order</span></h3>
-						<div class="row">
-							<h4 class="inline">Product</h4>
-							<h4 class="inline alignright">Total</h4>
-						</div>
-						<div>
-							<p class="prod-description inline">Nice Dress<div class="qty inline"><span class="smalltxt">x</span> 1</div>
-							</p>
-						</div>
-						<div><h5>Cart Subtotal</h5></div>
-						<div>
-							<h5 class="inline difwidth">Shipping and Handling</h5>
-							<p class="inline alignright center">Free Shipping</p>
-						</div>
-						<div><h5>Order Total</h5></div>
+						<div id="card">
 
-						<div>
-							<h3 class="topborder"><span>Payment Method</span></h3>
-							<input type="radio" value="banktransfer" name="payment" checked/><p>Direct Bank Transfer</p>
-							<p class="padleft">
-								Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
-							</p>
+						<div class="input-items flex">
+							<div class="marginright">
+								<input type="text" placeholder="Card Holder Name" name="Name" id="firstName" />
+							</div>
+						</div>
+						<div class="input-items">
+							<input type="number" size={16} placeholder="Card Number" name="cardNumber" id="cardNumber" />
+						</div>
+						<div class="input-items flex">
+							<div>
+								<input type="" placeholder="Expiration Date" name="cardNumber" id="cardNumber" />
+							</div>
+							<div>
+								<input type="text" placeholder="CVV" name="cardNumber" id="cardNumber" />
+							</div>
+						</div>
+						</div>
+						<div id="upi">
+							<img id="qrcode"src={"https://media.istockphoto.com/id/1095468748/vector/qr-code-abstract-vector-modern-bar-code-sample-for-smartphone-scanning-isolated-on-white.jpg?s=612x612&w=0&k=20&c=Jnh2TAkAFm7QpaBgCyCuGbCA6nomDfk4-XiTsBhbHFk="}></img>
+							<p>Scan & pay</p>
 						</div>
 
-						<div><input type="radio" value="cheque" name="payment"/><p>Cheque Payment</p></div>
-						<div>
-							<input type="radio" value="paypal" name="payment"/><p>Paypal</p>
-							<fieldset class="paymenttypes">
-								<legend><img src="images/pay-pal.jpg" alt="PayPal Logo" class="paypal"/></legend>
-								<img src="images/cards.jpg" alt="Visa, Mastercard, Maestro and Amex Credit Cards" class="cards"/>
-							</fieldset>
-							<a href="#" class="padleft">What is Paypal?</a>
+
+
+
+						<div className="payamount">
+							<p>Payable Amount:</p>
+							<p>10000</p>
 						</div>
-						<input type="submit" name="submit" value="Place Order" class="redbutton"/>
-					</div>
-				</form>
+						<div className="orderplace">
+							<button>PROCESED</button>
+						</div>
+
+					</form>
+				</div>
 			</div>
 		</div>
-        </div>
-        </>
-    )
+
+	);
 }

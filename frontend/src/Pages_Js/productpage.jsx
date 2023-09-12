@@ -12,7 +12,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import LoadingSpinner from "../component/loader";
 import Copyright from "../component/Footer";
-import { addtocart, subtotal } from "../state/cart";
+import { addtocart } from "../state/cart";
 import "../Pages_css/productpage.css";
 import Navber from "../component/navber";
 
@@ -34,8 +34,8 @@ export default function Productpage() {
     setisLoading(true);
     axios.post("http://127.0.0.1:3002/product", { Customid }).then((res) => {
       setsingleproduct(res.data);
-      console.log(res.data);
-      console.log("hehe1", res.data.Img2);
+      // console.log(res.data);
+      // console.log("hehe1", res.data.Img2);
       setphoto(res.data.Img1);
       setisLoading(false);
       document.getElementById("product_p").style.display = "flex";
@@ -85,10 +85,7 @@ export default function Productpage() {
   const fordispatch = (e) => {
     if (user !== "invalid" && size != null && flag === 0) {
       setflag(1);
-      if (singleproduct.Customid in cart){
-        console.log(cart);
-      }
-      addcartnotify();
+     
       dispatch(
         addtocart({
           id: singleproduct.Customid,
@@ -98,9 +95,10 @@ export default function Productpage() {
           name: singleproduct.Name,
           discount: singleproduct.Discount,
           size: size,
+          qty:1
         })
       );
-      dispatch(subtotal(singleproduct.Price));
+      // dispatch(subtotal(singleproduct.Price));
     } else if (user !== "invalid" && size === null) {
       addednotify("select size");
     } else if (flag === 1) {

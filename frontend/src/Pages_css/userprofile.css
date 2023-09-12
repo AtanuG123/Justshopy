@@ -40,3 +40,8 @@
     margin: 5px 10px;
 }
 
+@media (max-width:500px) {
+    #tablebox{
+        margin-left: 10px;
+    }
+}

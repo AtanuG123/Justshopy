@@ -159,7 +159,7 @@ app.post("/api/create-checkout-session",async(req,res)=>{
             }, 
           ], 
         mode:"payment",
-        success_url:`https://justshopy.vercel.app/paymentsuccess`,
+        success_url:"https://justshopy.vercel.app/paymentsuccess",
         cancel_url:"https://justshopy.vercel.app/paymentcancel",
     })
 

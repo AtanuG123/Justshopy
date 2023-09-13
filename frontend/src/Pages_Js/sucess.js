@@ -45,7 +45,7 @@ export default function Success(){
 
                             <td>{user.Name} </td>
 
-                            <td>{user.Name}</td>
+                            
 
                             <td>SDFSDFSDFSD</td>
                             <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import axios from "axios"
 import "../component/productdetails/uploadadmin.css";
+import { toast } from 'react-toastify';
 const Productupdate = () => {
     const navigate = useNavigate();
 
@@ -32,7 +33,10 @@ const Productupdate = () => {
         axios.post(`${process.env.REACT_APP_PORT}/productupdate`, { Customid, Sizelist })
             .then(result => {
                 console.log(result)
-                navigate("/")
+                toast.info("updated",{
+                    autoClose:2000,
+                    position:"top-right"
+                })
             })
             .catch(err => console.log(err));
     }

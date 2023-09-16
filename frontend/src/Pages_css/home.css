@@ -95,6 +95,7 @@ li {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: rgb(244, 250, 255);
+    margin:0px 20px;
 }
 #featureheading{
 
@@ -106,6 +107,7 @@ li {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
+  /* max-width: 1200px; */
 }
 #featuredmain > div{
   display: flex;
@@ -210,4 +212,12 @@ li {
   width: 97.5%;
   height: 260px;
   cursor: pointer;
+}
+@media (min-width:1200px) {
+  #ad img, #featuredpro,#catagory{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1080px;
+  }
+  
 }

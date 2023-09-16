@@ -101,7 +101,7 @@ export default function Home() {
                     <div>
 
                         <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("Kurta", false)} src="https://rukminim2.flixcart.com/image/1100/1300/l3t2fm80/kurta/w/c/k/l-psk303-glorious-original-imageujuk2zmfpkh.jpeg?q=20"></img>
+                            <img className="featuredmain22" onClick={() => switchonclick("Kurta", false)} src={require("../component/images/kurta.jpeg")}></img>
                             <div>
                                 <h4>Kurta</h4>
                                 <p>Starting at <span>249</span></p>

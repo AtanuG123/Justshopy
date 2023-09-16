@@ -26,52 +26,47 @@ export default function Productpage() {
   const [photo, setphoto] = useState(null);
   const [isLoading, setisLoading] = useState(false);
   const user = useSelector((state) => state.profile.data);
-  const cart = useSelector(state=>state.cart.data);
+  const cart = useSelector((state) => state.cart.data);
   const Customid = id;
+  const [sizelist, setsizelist] = useState(["nu"]);
 
   useEffect(() => {
     document.getElementById("product_p").style.display = "none";
     setisLoading(true);
-    axios.post(`${process.env.REACT_APP_PORT}/product`, { Customid }).then((res) => {
-      setsingleproduct(res.data);
-      // console.log(res.data);
-      // console.log("hehe1", res.data.Img2);
-      setphoto(res.data.Img1);
-      setisLoading(false);
-      document.getElementById("product_p").style.display = "flex";
-    });
+    axios
+      .post(`${process.env.REACT_APP_PORT}/product`, { Customid })
+      .then((res) => {
+        setsingleproduct(res.data);
+        setsizelist(res.data.Sizelist);
+        console.log("sizzelist", res.data.Sizelist);
+        setphoto(res.data.Img1);
+        setisLoading(false);
+        document.getElementById("product_p").style.display = "flex";
+      });
   }, []);
   if (singleproduct.Img2 !== null) {
-    console.log("not null");
+    // console.log("not null");
   } else {
     document.getElementById("small_img2").style.display = "none";
   }
 
   if (singleproduct.Img3 !== null) {
-    console.log("not null");
+    // console.log("not null");
   } else {
     document.getElementById("small_img3").style.display = "none";
   }
 
   if (singleproduct.Img4 !== null) {
-    console.log("not null");
+    // console.log("not null");
   } else {
     document.getElementById("small_img4").style.display = "none";
   }
 
   if (singleproduct.Img5 !== null) {
-    console.log("not null");
+    // console.log("not null");
   } else {
     document.getElementById("small_img5").style.display = "none";
   }
-  const addcartnotify = () => {
-    toast.success("succesfully added to cart", {
-      autoClose: 2000,
-      position: "top-right",
-      theme: "colored",
-      className: "toast-message",
-    });
-  };
 
   const addednotify = (massage) => {
     toast.info(massage, {
@@ -85,7 +80,7 @@ export default function Productpage() {
   const fordispatch = (e) => {
     if (user !== "invalid" && size != null && flag === 0) {
       setflag(1);
-     
+
       dispatch(
         addtocart({
           id: singleproduct.Customid,
@@ -95,17 +90,15 @@ export default function Productpage() {
           name: singleproduct.Name,
           discount: singleproduct.Discount,
           size: size,
-          qty:1
+          qty: 1,
         })
       );
-      // dispatch(subtotal(singleproduct.Price));
     } else if (user !== "invalid" && size === null) {
       addednotify("select size");
     } else if (flag === 1) {
       addednotify("already added");
     } else {
       addednotify("Signup before Proceed");
-      // navigate("/signup");
     }
   };
 
@@ -114,10 +107,10 @@ export default function Productpage() {
   };
 
   return (
-    <> 
-    {/* <Navber/> */}
+    <>
+      {/* <Navber/> */}
       {isLoading ? <LoadingSpinner /> : null}
-      <ToastContainer/>
+      <ToastContainer />
       <div id="product_p" style={{ flexDirection: "column" }}>
         <div className="product_part">
           <div className="img_part">
@@ -191,27 +184,21 @@ export default function Productpage() {
             <div className="product_size">
               <p> SELECT SIZE</p>
               <div>
-                <button onClick={() => setsize("S")} className="size">
-                  S
-                </button>
-                <button onClick={() => setsize("M")} className="size">
-                  M
-                </button>
-                <button onClick={() => setsize("L")} className="size">
-                  L
-                </button>
-                <button onClick={() => setsize("XL")} className="size">
-                  XL
-                </button>
-                <button onClick={() => setsize("XXL")} className="size">
-                  XXL
-                </button>
+                {sizelist.map((siz) => {
+                  return (
+                    <button
+                      onClick={() => setsize(siz.toUpperCase())}
+                      className="size"
+                    >
+                      {siz ? siz.toUpperCase() : siz}
+                    </button>
+                  );
+                })}
               </div>
             </div>
             <div className="product_cart">
-              <div className="product_cart1" >
+              <div className="product_cart1">
                 <button onClick={fordispatch}>Add to cart</button>
-               
               </div>
             </div>
 

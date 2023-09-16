@@ -20,6 +20,7 @@ import AboutContact from "./Pages_Js/aboutus";
 import Allproduct from "./Pages_Js/allproduct";
 import Success from "./Pages_Js/sucess";
 import Cancel from "./Pages_Js/cancel";
+import Productupdate from "./Pages_Js/productupdate";
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
         <Route path="/product/:id" element={<Productpage/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
-        <Route  path="/admin" element={<Product/>}></Route>
+        <Route  path="/productupload" element={<Product/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/productlist/:id" element={<Productlist/>}></Route>
         <Route path="/user/:id" element={<Userprofile/>}></Route>
@@ -41,6 +42,7 @@ function App() {
         <Route path="/allproduct" element={<Allproduct/>}></Route>
         <Route path="/paymentsuccess" element={<Success/>}></Route>
         <Route path="/paymentcancel" element={<Cancel/>}></Route>
+        <Route path="/productupdate" element={<Productupdate/>}></Route>
       
 
       </Routes>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./box.css";
 
 
@@ -6,30 +7,37 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Itembox(props) {
+  const [photo,setphoto] = useState(props.img1)
   const navigate = useNavigate();
- 
   const switchonclick = (e) => {
- 
     navigate("/product/" + props.customid);
   };
+
+
+  const changeimg=()=>{
+    setphoto(props.img2)
+  }
+  const changeprev=()=>{
+    setphoto(props.img1)
+  }
 
   return (
     <div className="box">
       <div>
-        <img src={props.img1} alt="fgh" onClick={switchonclick}></img>
+        <img id="img"src={photo} alt="productimg" onMouseLeave ={changeprev} onMouseEnter={changeimg} onClick={switchonclick}></img>
         <p>{props.brand}</p>
       </div>
       <div className="box2">
         <h5 className="productname" id="proname">
           {props.name}
         </h5>
-        <p className="rating">{props.description ?props.description.slice(0,25):" "}...</p>
+        <p className="descrip">{props.description ?props.description.slice(0,25):" "}...</p>
         <div className="box2_1">
-          <h6 className="price">₹{props.price}</h6>
-          <h6>
+          <p className="price">₹{props.price}</p>
+          <p className="mrp1">
             {Math.round((100 * props.price) / (100 - props.discount)) + props.price}
-          </h6>
-          <p className="p">{props.discount}% Off</p>
+          </p>
+          <p className="discount1">{props.discount}% Off</p>
         </div>
         <div>Free Delivery</div>
       </div>

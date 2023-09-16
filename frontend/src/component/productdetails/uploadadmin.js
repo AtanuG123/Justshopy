@@ -20,10 +20,16 @@ export default function Product() {
     const [Price, SetPrice] = useState(0);
     const [Discount, Setdiscount] = useState(0);
     const [Customid,Setcustomid] = useState(null);
+    const [size,setsize] = useState("null");
+    const [Sizelist,setsizelist] = useState([]);
+    // let sizelist =[];
     
+
+
+
     const handleonclick3 = (e) => {
         e.preventDefault();
-        axios.post(`${process.env.REACT_APP_PORT}/admin`, { Name, Descrip, Catagory, Subcatagory,Brand, Img1, Img2, Img3, Img4, Img5, Price, Discount,Customid })
+        axios.post(`${process.env.REACT_APP_PORT}/productupload`,{ Name, Descrip, Catagory, Subcatagory,Brand, Img1, Img2, Img3, Img4, Img5, Price, Discount,Customid,Sizelist })
             .then(result => {
                 console.log(result)
                 navigate("/")
@@ -31,8 +37,13 @@ export default function Product() {
             .catch(err => console.log(err));
     }
 
-
-
+    const addsize=()=>{
+        console.log(1)
+        console.log("before", Sizelist)
+        let a = Sizelist.concat(size);
+        setsizelist (a)
+        console.log(Sizelist)
+    }
     
 
 
@@ -53,6 +64,10 @@ export default function Product() {
                                 <input type="text" placeholder="SubCatagory" onChange={(e) => { Setsubcatagory(e.target.value) }} />
                                 <input type="number" name="Mrp" placeholder="MRP" onChange={(e) => { SetPrice(e.target.value) }} />
                                 <input type="number" placeholder="Discount in %" onChange={(e) => { Setdiscount(e.target.value) }} />
+                                <input type="text" style={{width:"390px"}} placeholder="size" onChange={(e) => { setsize(e.target.value) }} />
+                                <p style={{cursor:"pointer",backgroundColor:"red",width:"fit-content"}} onClick={addsize}>+</p>
+
+                                
                             </div>
                             <div>
                                 <input type="text" placeholder="Brand" onChange={(e) => { Setbrand(e.target.value) }} />
@@ -61,10 +76,10 @@ export default function Product() {
                                 <input type="text" placeholder="img link 3" onChange={(e) => { Setimg3(e.target.value) }} />
                                 <input type="text" placeholder="img link 4" onChange={(e) => { Setimg4(e.target.value) }} />
                                 <input type="text" placeholder="img link 5" onChange={(e) => { Setimg5(e.target.value) }} />
+                                <input type="text" placeholder="Custom id" onChange={(e) => { Setcustomid(e.target.value) }} />
                             </div>
                         </div>
                         <div>
-                            <input type="text" placeholder="Custom id" onChange={(e) => { Setcustomid(e.target.value) }} />
                             <button type="submit" className="formsubmit">ADD</button>
                         </div>
                     </form>

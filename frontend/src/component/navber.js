@@ -90,7 +90,7 @@ export default function Navber() {
             <form className="" >
               <div className="search">
                 <input type="search" id="searchin" placeholder="Search" onChange={(e)=>{setsearchinput(e.target.value)}}/>
-                <button onClick={()=>navigate("/productlist/"+searchinput)} ><i onPointerEnter={showinput} className="fa-solid fa-magnifying-glass"></i></button>
+                <button onClick={()=>navigate("/productlist/"+searchinput.toLowerCase())} ><i onPointerEnter={showinput} className="fa-solid fa-magnifying-glass"></i></button>
               </div>
 
             </form>

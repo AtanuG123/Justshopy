@@ -56,13 +56,16 @@ app.post('/signup', async (req, res) => {
 
 
 
-app.post('/admin', (req, res) => {
+app.post('/productupload', (req, res) => {
   ProductModel.create(req.body)
     .then(result => res.json(result))
     .catch(err => res.json(err))
 })
+
+
+
 app.post('/productupdate', (req, res) => {
-  ProductModel.findOneAndUpdate({ Customid: req.body.Customid }, { $set: { Sizelist: req.body.Sizelist } })
+  ProductModel.findOneAndUpdate({ Customid: req.body.Customid }, { $set: { Catagory: req.body.Catagory } })
     .then(result => res.json(result))
     .catch(err => res.json(err))
 })
@@ -75,26 +78,19 @@ app.post('/product/', (req, res) => {
     .then(product => res.json(product))
     .catch(err => res.json(err))
 })
-app.post('/allproduct', (req, res) => {
 
+
+app.post('/allproduct', (req, res) => {
   ProductModel.find()
     .then(product => res.json(product))
     .catch(err => res.json(err))
 })
-app.post('/productlist/', (req, res) => {
-  const { Catagory, Flag } = req.body;
 
-  if (Flag === true) {
 
-    ProductModel.find({ Catagory: Catagory })
+app.post('/productlist/', async (req, res) => {
+    ProductModel.find()
       .then(product => res.json(product))
       .catch(err => res.json(err))
-  }
-  else {
-    ProductModel.find({ Subcatagory: Catagory })
-      .then(product => res.json(product))
-      .catch(err => res.json(err))
-  }
 }
 )
 
@@ -175,6 +171,6 @@ app.post("/api/create-checkout-session", async (req, res) => {
 
 
 
-app.listen(3002, () => {
+app.listen(process.env.REACT_APP_PORT || 3002, () => {
   console.log("success");
 })

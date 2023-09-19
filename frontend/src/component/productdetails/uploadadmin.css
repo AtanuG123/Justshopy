@@ -29,18 +29,25 @@ font-size: 18px;
     outline: none;
     color: rgb(4, 6, 6);
     border: none;
-    border-radius: 12px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    
     background: none;
     width: 450px;
     height: 40px;
-    /* font-weight: 700; */
+    
     margin:10px 5px;
-    box-shadow: 0px 0px 3px rgb(115, 115, 120);
+  
     transition: .35s;
     padding-left: 10px;
+    transition: all .35s;
 }
 .productform input:hover{
+    /* width: 440px; */
+    /* height: 39px; */
+
     background-color: rgb(201, 221, 239);
+    /* border-bottom: 2px solid black; */
 }
 .productform input:visited {
     color: aquamarine;
@@ -62,4 +69,33 @@ font-size: 18px;
 }
 .formsubmit:hover{
     background-color: aquamarine;
+}
+
+.arrinput{
+    display: flex;
+    justify-content: center;
+}
+.arrinput >input{
+    width: 420px;
+}
+.arrinput >p{
+    margin-top: 10px;
+    width: 30px;
+    padding: 5px 25px 5px 10px;
+    background-color: aqua;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.arrinput >p:hover{
+    background-color: rgb(190, 193, 195);
+}
+.showsizelist{
+    display: flex;
+    justify-content: center;
+}
+.showsizelist > p{
+    background-color: rgb(211, 222, 231);
+    border-radius: 5px;
+    padding: 4px;
+    margin: 5px;
 }

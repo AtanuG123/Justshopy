@@ -17,7 +17,7 @@ export default function Navber() {
   const navigate = useNavigate();
   const user = useSelector(state => state.profile.data);
   const cartitem1 = useSelector(state => state.cart.data);
-  // console.log(" length of cart", cartitem1)
+  const[searchinput,setsearchinput] = useState();
 
   useEffect(() => {
     if (user !== "invalid") {
@@ -38,6 +38,8 @@ export default function Navber() {
 
 
   const shownav=()=>{
+
+
      const k =document.getElementById("smallwrap");
      const k1 =document.getElementById("bars");
      const k2 =document.getElementById("cross");
@@ -87,8 +89,8 @@ export default function Navber() {
           <li >
             <form className="" >
               <div className="search">
-                <input type="search" id="searchin" placeholder="Search" />
-                <button><i onPointerEnter={showinput} className="fa-solid fa-magnifying-glass"></i></button>
+                <input type="search" id="searchin" placeholder="Search" onChange={(e)=>{setsearchinput(e.target.value)}}/>
+                <button onClick={()=>navigate("/productlist/"+searchinput)} ><i onPointerEnter={showinput} className="fa-solid fa-magnifying-glass"></i></button>
               </div>
 
             </form>

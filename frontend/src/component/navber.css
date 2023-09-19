@@ -73,12 +73,11 @@
   width: fit-content;
   margin: 10px 0px;
   border-radius: 5px;
-  /* border: 2px solid black; */
 }
 .search >input {
   height: 30px;
   border: none;
-  width: 65px;
+  width: 70px;
   outline: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;

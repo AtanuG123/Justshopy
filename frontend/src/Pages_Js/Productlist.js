@@ -1,5 +1,5 @@
 import "../Pages_css/productlist.css";
-import { useSelector } from 'react-redux';
+
 import Itembox from '../component/box';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -13,16 +13,23 @@ export default function Productlist() {
     const [listpro, setlistpro] = useState([]);
     const [isLoading, Setisloading] = useState(false);
     const Catagory = id;
-    const Flag = useSelector(state => state.productlist.flag);
-    // console.log("this is from productlist", id);
+    
 
-    useEffect(() => {
+    useEffect(()=> {
         Setisloading(true);
         document.getElementById("productlist").style.display = "none";
-        axios.post(`${process.env.REACT_APP_PORT}/productlist`, { Catagory, Flag })
+       
+        axios.post(`${process.env.REACT_APP_PORT}/productlist`, {})
             .then(res => {
-                setlistpro(res.data);
-                // console.log(res.data)
+                console.log(res.data)
+                let a =[];
+                res.data.map(items=>{
+                    if(items.Catagory.includes(Catagory)){
+                       a.push(items)
+                }
+            })
+            
+                setlistpro(a);
                 Setisloading(false);
                 document.getElementById("productlist").style.display = "flex";
             })
@@ -34,7 +41,7 @@ export default function Productlist() {
         {/* <Navber/> */}
             {isLoading ? <LoadingSpinner /> : null}
             <div id='productlist'>
-                <div><h2> {Catagory}</h2></div>
+                <div><h2> {Catagory.toUpperCase()}</h2></div>
                 <div id="boxs">
 
                     {listpro.map(items => {

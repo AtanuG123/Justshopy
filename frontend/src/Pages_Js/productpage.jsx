@@ -38,7 +38,7 @@ export default function Productpage() {
       .then((res) => {
         setsingleproduct(res.data);
         setsizelist(res.data.Sizelist);
-        console.log("sizzelist", res.data.Sizelist);
+        // console.log("sizzelist", res.data.Sizelist);
         setphoto(res.data.Img1);
         setisLoading(false);
         document.getElementById("product_p").style.display = "flex";

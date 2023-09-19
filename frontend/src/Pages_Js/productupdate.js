@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"
 import "../component/productdetails/uploadadmin.css";
 import { toast } from 'react-toastify';
+import { useRef } from 'react';
 const Productupdate = () => {
     const navigate = useNavigate();
-
+    const ref = useRef(null);
     const [Name, SetName] = useState("null");
     const [Descrip, SetDescrip] = useState("null");
     const [Catagory, Setcatagory] = useState("null");
@@ -22,15 +23,18 @@ const Productupdate = () => {
     const [Discount, Setdiscount] = useState(0);
     const [Customid, Setcustomid] = useState(null);
     const [size, setsize] = useState("null");
-    const [Sizelist, setsizelist] = useState([]);
+    const [Newlist, setNewlist] = useState([]);
     // let sizelist =[];
+    const [Property,setproperty] = useState(null);
 
 
 
 
     const handleonclick3 = (e) => {
         e.preventDefault();
-        axios.post(`${process.env.REACT_APP_PORT}/productupdate`, { Customid, Sizelist })
+        const Catagory = Newlist;
+        console.log(Catagory);
+        axios.post(`${process.env.REACT_APP_PORT}/productupdate`, { Customid, Catagory })
             .then(result => {
                 console.log(result)
                 toast.info("updated",{
@@ -43,11 +47,12 @@ const Productupdate = () => {
 
     const addsize = () => {
         console.log(1)
-        console.log("before", Sizelist)
-        let a = Sizelist.concat(size);
-        setsizelist(a)
+        console.log("before", Newlist)
+        let a = Newlist.concat(size.toLowerCase());
+        setNewlist(a)
         // document.getElementById("updatedetails").innerText="",
-        console.log(Sizelist)
+        console.log(Newlist)
+        ref.current.value = "";
     }
 
     return (
@@ -61,9 +66,19 @@ const Productupdate = () => {
                         onSubmit={handleonclick3}>
                         <div style={{ display: "flex" }}>
                             <div>
+                                    <input type="text" style={{ width: "390px" }} placeholder="property" onChange={(e) => { setproperty(e.target.value) }} />
                                 <div style={{ display: "flex", marginLeft: "30px" }}>
-                                    <input id="updatedetails" type="text" style={{ width: "390px" }} placeholder="size" onChange={(e) => { setsize(e.target.value) }} />
+                                    <input id="updatedetails" type="text" style={{ width: "390px" }} ref ={ref} placeholder="input" onChange={(e) => { setsize(e.target.value) }} />
                                     <p style={{ cursor: "pointer", padding: "10px 17px", backgroundColor: "red", width: "fit-content" }} onClick={addsize}>+</p>
+                                </div>
+                                <div className="showsizelist">
+                                    {
+                                        Newlist.map(item => {
+                                            return (
+                                                <p>{item}</p>
+                                            )
+                                        })
+                                    }
                                 </div>
 
 

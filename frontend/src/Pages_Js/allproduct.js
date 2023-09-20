@@ -19,7 +19,7 @@ export default function Allproduct(){
         document.getElementById("productlist").style.display = "none";
         axios.post(`${process.env.REACT_APP_PORT}/allproduct`, {})
             .then(res => {
-                setlistpro(res.data.reverse();
+                setlistpro(res.data.reverse());
                 // console.log(res.data)
                 Setisloading(false);
                 document.getElementById("productlist").style.display = "flex";

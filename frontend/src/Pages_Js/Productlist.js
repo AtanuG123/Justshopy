@@ -29,7 +29,7 @@ export default function Productlist() {
                 }
             })
             
-                setlistpro(a);
+                setlistpro(a.reverse());
                 Setisloading(false);
                 document.getElementById("productlist").style.display = "flex";
             })

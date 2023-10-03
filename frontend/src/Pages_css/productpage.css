@@ -168,13 +168,14 @@ font-weight: 600;
 }
 .relateditem{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    
+    overflow: scroll;
+    justify-content: center;
 }
 @media (max-width:700px) {
     .product_part{
         flex-direction: column;
-    }
+    }cd
     .descrip_part{
         margin-left:1rem;
         margin-right: auto;
@@ -186,5 +187,8 @@ font-weight: 600;
     .related{
         margin: 30px 0px;
         
+        }
+        .relateditem{
+            justify-content: left;
         }
 }

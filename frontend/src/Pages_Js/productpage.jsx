@@ -34,10 +34,12 @@ export default function Productpage() {
 
   useEffect(() => {
     document.getElementById("product_p").style.display = "none";
+    document.getElementById("product_r").style.display = "none";
     setisLoading(true);
+   
     axios
       .post(
-        `${process.env.REACT_APP_PORT}/product`,
+        `${process.env.REACT_APP_PORT}/productlist`,
 
         {}
       )
@@ -47,7 +49,7 @@ export default function Productpage() {
         res.data.map((item) => {
           if (item.Customid === Customid) {
             setsingleproduct(item);
-            console.log(item.Catagory);
+            // console.log(item.Catagory);
             Cat = item.Catagory[item.Catagory.length - 1];
             // Cat = item.Catagory[item.Catagory[0]];
             setsizelist(item.Sizelist);
@@ -64,6 +66,7 @@ export default function Productpage() {
         setrelateditem(a);
 
         document.getElementById("product_p").style.display = "flex";
+        document.getElementById("product_r").style.display = "block";
         setisLoading(false);
       });
   }, []);
@@ -234,7 +237,7 @@ export default function Productpage() {
           </div>
         </div>
       </div>
-      <div className="related">
+      <div className="related" id="product_r">
         <p>You may also like</p>
         <div className="relateditem">
           {relateditem.map((items) => {

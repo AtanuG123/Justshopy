@@ -20,8 +20,8 @@ export default function Productlist() {
         Setisloading(true);
         document.getElementById("productlist").style.display = "none";
 
-        // axios.post(`${process.env.REACT_APP_PORT}/productlist`
-        axios.post("http://localhost:3002/productlist"
+        axios.post(`${process.env.REACT_APP_PORT}/productlist`
+        
 
             , {})
             .then(res => {

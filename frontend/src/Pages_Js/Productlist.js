@@ -24,20 +24,14 @@ export default function Productlist() {
             , {})
             .then(res => {
                 console.log(res.data)
-                let a = [];
-                res.data.map(items => {
-                    if (items.Catagory.includes(Catagory)||items.Sizelist.includes(Catagory)||items.Brand===Catagory||(items.Price<=Catagory && Catagory>=100)) {
-                        // console.log("1s/t")
-                        a.push(items)
-                    }
-                    if(Catagory>=50 && Catagory<=100 && items.Discount>=Catagory){
-                        // console.log(items.Discount)
-                        a.push(items);
-                    }
-                    
-                })
-                a.sort((a,b)=>a.Price-b.Price);
-                setlistpro(a.reverse());
+                let a =[];
+                res.data.map(items=>{
+                    if(items.Catagory.includes(Catagory)){
+                       a.push(items)
+                }
+            })
+            
+                setlistpro(a);
                 Setisloading(false);
                 if (a.length==0){
                     navigate("/notfound");

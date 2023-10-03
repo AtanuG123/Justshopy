@@ -22,22 +22,22 @@ export default function Home() {
                     <h2>SHOP BY CATAGORY</h2>
                 </div>
                 <ul>
-                    <li onClick={() => switchonclick("man")} >
-                        <img src={require("../component/images/mencloth.jpg")} alt="loading"></img>
-                        <div className="seedetails" >
+                    <li  >
+                        <img onClick={() => switchonclick("man")} src={require("../component/images/mencloth.jpg")} alt="loading"></img>
+                        <div onClick={() => switchonclick("man")} className="seedetails" >
                             <h3>Men's Collection</h3>
                         </div>
                     </li>
-                    <li onClick={() => switchonclick("woman")}>
-                        <img src={require("../component/images/collrectionwoman.jpg")} alt="loading" ></img>
-                        <div className="seedetails">
+                    <li >
+                        <img onClick={() => switchonclick("woman")} src={require("../component/images/collrectionwoman.jpg")} alt="loading" ></img>
+                        <div onClick={() => switchonclick("woman")} className="seedetails">
                             <h3>Woman's Collection</h3>
                            
                         </div>
                     </li>
-                    <li onClick={() => switchonclick("style")}>
-                        <img src={require("../component/images/watchglass.jpeg")} alt="loading"></img>
-                        <div className="seedetails">
+                    <li >
+                        <img onClick={() => switchonclick("style")} src={require("../component/images/watchglass.jpeg")} alt="loading"></img>
+                        <div onClick={() => switchonclick("style")} className="seedetails">
                             <h3>Style's Collection</h3>
                         </div>
                     </li>

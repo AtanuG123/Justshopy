@@ -175,7 +175,7 @@ font-weight: 600;
 @media (max-width:700px) {
     .product_part{
         flex-direction: column;
-    }cd
+    }
     .descrip_part{
         margin-left:1rem;
         margin-right: auto;

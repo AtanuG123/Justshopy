@@ -19,28 +19,26 @@ export default function Home() {
             <Crousal />
             <div id="catagory">
                 <div id="catagoryheading">
-                    <h2>Shop by Catagory</h2>
+                    <h2>SHOP BY CATAGORY</h2>
                 </div>
                 <ul>
-                    <li >
+                    <li onClick={() => switchonclick("man")} >
                         <img src={require("../component/images/mencloth.jpg")} alt="loading"></img>
-                        <div className="seedetails">
-                            <h3>Men`s Collection</h3>
-                            <a onClick={() => switchonclick("man")}>view products </a>
+                        <div className="seedetails" >
+                            <h3>Men's Collection</h3>
                         </div>
                     </li>
-                    <li>
+                    <li onClick={() => switchonclick("woman")}>
                         <img src={require("../component/images/collrectionwoman.jpg")} alt="loading" ></img>
                         <div className="seedetails">
-                            <h3>Woman`s Collection</h3>
-                            <a onClick={() => switchonclick("woman")}> view products </a>
+                            <h3>Woman's Collection</h3>
+                           
                         </div>
                     </li>
-                    <li >
+                    <li onClick={() => switchonclick("style")}>
                         <img src={require("../component/images/watchglass.jpeg")} alt="loading"></img>
                         <div className="seedetails">
-                            <h3>style's Collection</h3>
-                            <a onClick={() => switchonclick("style")} >view products </a>
+                            <h3>Style's Collection</h3>
                         </div>
                     </li>
 
@@ -49,7 +47,7 @@ export default function Home() {
 
             <div id="featuredpro">
                 <div id="featureheading">
-                    <h2>FEATURED PRODUCTS</h2>
+                    <h3>FEATURED PRODUCTS</h3>
                 </div>
                 <div id="featuredmain">
                     <div>
@@ -75,7 +73,7 @@ export default function Home() {
                         <div>
                             <img onClick={() => switchonclick("jeans")} className="featuredmain21" src={require("../component/images/jeans.jpeg")}></img>
                             <div>
-                                <h4>Jeanspant</h4>
+                                <h4>Jeans</h4>
                                 <p>Starting at <span>699</span></p>
                             </div>
                         </div>

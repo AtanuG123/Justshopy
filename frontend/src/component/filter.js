@@ -38,7 +38,7 @@ const Filter = () => {
                             <a href='/productlist/style'>Style</a>
                             <a href='/productlist/watch'>Watch</a>
                             <a href='/productlist/sunglass'>Sunglass</a>
-                            <a href='/productlist/helmet'>helmet</a>
+                            {/* <a href='/productlist/helmet'>helmet</a> */}
                             <a href='/productlist/branded'>Premium</a>
                             
                         </div>

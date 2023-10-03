@@ -8,6 +8,7 @@ export default function Itembox(props) {
   const navigate = useNavigate();
   const switchonclick = (e) => {
     navigate("/product/" + props.customid);
+    window.location.reload(true);
   };
 
   // const changeimg=()=>{

@@ -63,14 +63,21 @@ export default function Navber() {
     k.style.display="block";
   }
 
-
+const gotocart=()=>{
+  if(cartitem1.length==0){
+    navigate('/notfound');
+  }
+  else{
+    navigate('/cart');
+  }
+}
   return (
     <div className="navber" id="nav">
       <div className="leftnav" >
         <ul className="logo ">
           <li>
 
-            <img src={require("./images/logo.png")} alt="logo"></img>
+            <img onClick={()=>navigate("/")} src={require("./images/logo.png")} alt="logo"></img>
           </li>
         </ul >
         <ul className="nav_main">
@@ -90,7 +97,7 @@ export default function Navber() {
             <form className="" >
               <div className="search">
                 <input type="search" id="searchin" placeholder="Search" onChange={(e)=>{setsearchinput(e.target.value)}}/>
-                <button onClick={()=>navigate("/productlist/"+searchinput)} ><i onPointerEnter={showinput} className="fa-solid fa-magnifying-glass"></i></button>
+                <button onClick={()=>navigate("/productlist/"+searchinput.toLowerCase())} ><i onPointerEnter={showinput} className="fa-solid fa-magnifying-glass"></i></button>
               </div>
 
             </form>
@@ -98,7 +105,7 @@ export default function Navber() {
           <li className="nav_li">
 
             <div className="profile-dropdown">
-              <i className="fa-solid fa-user" onClick={showlogpage}></i>
+              <i  className="fa-solid fa-user" onClick={showlogpage}></i>
               <ToastContainer/>
               <div className="prodrop" >
                 {/* <li><button className="" onClick={() => navigate("/signup")} >signup</button></li> */}
@@ -107,13 +114,13 @@ export default function Navber() {
             </div>
           </li>
           {/* <li className="nav_li"><a href="https://www.google.co.in/"><i className="fa-regular fa-heart"></i></a></li> */}
-          <li className="nav_li"><a onClick={() => navigate("/cart")}>
-          <i class="fa-solid fa-cart-shopping"></i><span className="position-absolute  translate-middle badge rounded-pill  " style={{ color: "black" }}>{cartitem1.length}</span>
+          <li className="nav_li"><a onClick={gotocart}>
+          <i className="fa-solid fa-cart-shopping"></i><span className="position-absolute  translate-middle badge rounded-pill  " style={{ color: "black" }}>{cartitem1.length}</span>
           </a></li>
           <li className="navwrap">
             <div onClick={shownav}>
-            <i id="bars" class="fa-solid fa-bars"></i>
-            <i id="cross"class="fa-solid fa-xmark"></i>
+            <i id="bars" className="fa-solid fa-bars"></i>
+            <i id="cross"className="fa-solid fa-xmark"></i>
             </div>
           </li>
 

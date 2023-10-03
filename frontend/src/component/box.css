@@ -1,20 +1,23 @@
 *{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 
-  font-size: 16px;
+  font-size: 14px;
 }
 p{
   margin-bottom: 10px;
 }
 .box {
   margin: 15px 10px;
-  /* border-radius: 10px; */
-  box-shadow: 0px 0px 3px rgb(207, 207, 213);
   display: flex;
- border-radius: 5px;
-  /* height: fit-content; */
+  border-radius: 5px;
   flex-direction: column;
   width: 211px;
+  transition: all .25s;
+}
+.box:hover{
+  box-shadow: 0px 0px 8px rgb(152, 152, 155);
+  transform: scale(1.03);
+
 }
 .box >div > img {
   margin-top: 1px;
@@ -30,6 +33,7 @@ p{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   margin: 5px  5px;
   text-align: left;
+  
 }
 .box2 > h5 {
   margin-bottom: 4px;
@@ -59,6 +63,12 @@ p{
 .price {
 color: rgb(217, 0, 255);
   font-weight: 700;
+}
+#size{
+  background-color: rgb(236, 252, 252);
+  /* border: .5px solid black; */
+  padding: 2px;
+  margin: 2px;
 }
 @media (max-width:740px) {
   .box{

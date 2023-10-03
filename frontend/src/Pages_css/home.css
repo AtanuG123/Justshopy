@@ -9,7 +9,9 @@ ul {
 li {
   text-decoration: none;
 }
-
+/* i{
+  color: aqua;
+} */
 /* shop by catagory */
 
 #catagory {
@@ -32,7 +34,7 @@ li {
 }
 #catagory ul li img {
   /* cursor: pointer; */
-  width: 21.25em;
+  width: 24.3em;
   height: 300px;
 }
 .seedetails {
@@ -94,8 +96,8 @@ li {
     padding-bottom: 20px;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgb(244, 250, 255);
-    margin:0px 20px;
+    background-color: rgb(228, 228, 228);
+    margin:20px 20px;
 }
 #featureheading{
 
@@ -107,17 +109,19 @@ li {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
+  flex-wrap: wrap;
   /* max-width: 1200px; */
 }
 #featuredmain > div{
+  flex-wrap: wrap;
   display: flex;
   cursor: pointer;
   justify-content: space-evenly;
 }
 #featuredmain > div >div{
-  margin: 0px 20px;
+  margin: 10px 10px;
   flex-direction: column;
-  width: 180px;
+  width: 220px;
   display: flex;
   justify-content: space-evenly;
 
@@ -125,7 +129,8 @@ li {
 
 #featuredmain >div> div>div{
   background-color: rgb(159, 210, 255);
-  translate: 0px -10px;
+  /* translate: 0px -10px; */
+  margin-top: 0px;
 }
 
 #featuredmain >div >div> div *{
@@ -142,14 +147,17 @@ li {
 
 @media (max-width:865px) 
   {
+    #featuredpro{
+      margin: 10px 0px;
+    }
     #featuredmain {
      flex-direction: column;
     }
     #featuredmain> div{  
-    margin-top: 20px;
+    /* margin-top: 20px; */
     }   
     #featuredmain > div >div{
-      margin: 0px 0px;
+      margin: 10px 0px;
       width: 150px;
     }
   }
@@ -158,9 +166,8 @@ li {
     #featuredmain >div {
     justify-content: space-around;
     }
-    #featuredmain >div >div  {
-    margin: 0px;
-    }
+   
+   
   }
 
 /* Benifits */

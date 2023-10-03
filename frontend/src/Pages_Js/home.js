@@ -6,7 +6,7 @@ import Copyright from "../component/Footer";
 import Navber from "../component/navber";
 export default function Home() {
     const navigate = useNavigate();
-   
+
 
     function switchonclick(Catagory) {
         navigate("/productlist/" + Catagory);
@@ -15,7 +15,7 @@ export default function Home() {
 
     return (
         <div id="mainhome">
-            
+
             <Crousal />
             <div id="catagory">
                 <div id="catagoryheading">
@@ -70,8 +70,7 @@ export default function Home() {
                                 <p>Starting at <span>199</span></p>
                             </div>
                         </div>
-                    </div>
-                    <div>
+
 
                         <div>
                             <img onClick={() => switchonclick("jeans")} className="featuredmain21" src={require("../component/images/jeans.jpeg")}></img>
@@ -87,8 +86,8 @@ export default function Home() {
                                 <p>Starting at <span>999</span></p>
                             </div>
                         </div>
-                    </div>
-                    <div>
+                </div>
+                <div>
 
                         <div>
                             <img className="featuredmain22" onClick={() => switchonclick("kurta")} src={require("../component/images/kurta.jpeg")}></img>
@@ -98,21 +97,39 @@ export default function Home() {
                             </div>
 
                         </div>
-                        {/* <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("Kurta", false)} src={require("../component/images/playsuit.jpeg")}></img>
+                        <div>
+                            <img className="featuredmain22" onClick={() => switchonclick("sunglass", false)} src={require("../component/images/sunglass.jpeg")}></img>
                             <div>
-                                <h4>Kurta</h4>
-                                <p>Starting at <span>249</span></p>
+                                <h4>Sunglass</h4>
+                                <p>Starting at <span>199</span></p>
                             </div>
 
-                        </div> */}
-                    </div>
-                  
+                        </div>
+
+
+                        <div>
+                            <img className="featuredmain22" onClick={() => switchonclick("shoes")} src={require("../component/images/shoes.jpeg")}></img>
+                            <div>
+                                <h4>Shoes</h4>
+                                <p>Starting at <span>349</span></p>
+                            </div>
+
+                        </div>
+                        <div>
+                            <img className="featuredmain22" onClick={() => switchonclick("helmet", false)} src={require("../component/images/helmet.jpg")}></img>
+                            <div>
+                                <h4>Helmet</h4>
+                                <p>Starting at <span>749</span></p>
+                            </div>
+
+                        </div>
+                </div>
+
                 </div>
             </div>
-            <div id="ad">
+            {/* <div id="ad">
                 <img src={require("../component/images/ad.jpg")} alt="ad"></img>
-            </div>
+            </div> */}
             <div id="benifits">
                 <div>
                     <i className="fa-solid fa-truck"></i>

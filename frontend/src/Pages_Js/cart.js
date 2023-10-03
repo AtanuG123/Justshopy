@@ -12,7 +12,7 @@ export default function Cart() {
     const dispatch = useDispatch();
     const cartproduct = useSelector(state => state.cart.data);
     const subtotal = useSelector(state => state.cart.subprice);
-    // console.log("he he", cartproduct)
+  
     const makepayment = async () => {
         if (Math.round(subtotal) !== 0) {
             const stripe = await loadStripe("pk_test_51NopitSJ60SygxplnqXdvdBzZ88SA9g1eLhATSLGgZrPNHNYWebcb4FStx1aqEoDWlSz7GGIKkhmDEh4FBNLm1BZ00c35qlSzc");
@@ -37,9 +37,6 @@ export default function Cart() {
             if (result.error) {
                 console.log(result.error);
             }
-
-
-
         }
         else {
             toast.info("your cart is empty", {

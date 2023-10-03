@@ -2,10 +2,10 @@
 import "./copyright.css";
 export default function Copyright() {
   return (
-    <div className="container" style={{ maxWidth: "1100px" }}>
+    <div className="container" style={{ maxWidth: "1100px",padding:"0px" }}>
       <footer
         className="text-center text-lg-start text-white"
-        style={{ backgroundColor: "#738aaf", margin: "10px 0px" }}>
+        style={{ backgroundColor: "#738aaf", margin: "10px 0px 0px 0px" }}>
         <div className="container p-4 pb-0">
           <section className="">
             <div className="row">

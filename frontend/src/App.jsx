@@ -21,6 +21,7 @@ import Allproduct from "./Pages_Js/allproduct";
 import Success from "./Pages_Js/sucess";
 import Cancel from "./Pages_Js/cancel";
 import Productupdate from "./Pages_Js/productupdate";
+import Notfound from "./component/notfound";
 
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
         <Route path="/paymentsuccess" element={<Success/>}></Route>
         <Route path="/paymentcancel" element={<Cancel/>}></Route>
         <Route path="/productupdate" element={<Productupdate/>}></Route>
-      
+      <Route path="/notfound" element={<Notfound/>}></Route>
 
       </Routes>
      

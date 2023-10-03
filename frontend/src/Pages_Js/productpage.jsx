@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-import { useNavigate } from "react-router-dom";
+import { useAsyncError, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import axios from "axios";
@@ -15,6 +15,7 @@ import Copyright from "../component/Footer";
 import { addtocart } from "../state/cart";
 import "../Pages_css/productpage.css";
 import Navber from "../component/navber";
+import Itembox from "../component/box";
 
 export default function Productpage() {
   const dispatch = useDispatch();
@@ -29,19 +30,41 @@ export default function Productpage() {
   const cart = useSelector((state) => state.cart.data);
   const Customid = id;
   const [sizelist, setsizelist] = useState(["nu"]);
+  const [relateditem, setrelateditem] = useState([]);
 
   useEffect(() => {
     document.getElementById("product_p").style.display = "none";
     setisLoading(true);
     axios
-      .post(`${process.env.REACT_APP_PORT}/product`, { Customid })
+      .post(
+        `${process.env.REACT_APP_PORT}/product`,
+
+        {}
+      )
       .then((res) => {
-        setsingleproduct(res.data);
-        setsizelist(res.data.Sizelist);
-        // console.log("sizzelist", res.data.Sizelist);
-        setphoto(res.data.Img1);
-        setisLoading(false);
+        let a = [];
+        let Cat = "";
+        res.data.map((item) => {
+          if (item.Customid === Customid) {
+            setsingleproduct(item);
+            console.log(item.Catagory);
+            Cat = item.Catagory[item.Catagory.length - 1];
+            // Cat = item.Catagory[item.Catagory[0]];
+            setsizelist(item.Sizelist);
+            setphoto(item.Img1);
+            // console.log(item);
+          }
+        });
+        res.data.map((items) => {
+          if (items.Catagory.includes(Cat) && items.Customid !== Customid) {
+            a.push(items);
+          }
+        });
+        // console.log(a);
+        setrelateditem(a);
+
         document.getElementById("product_p").style.display = "flex";
+        setisLoading(false);
       });
   }, []);
   if (singleproduct.Img2 !== null) {
@@ -107,7 +130,9 @@ export default function Productpage() {
   };
 
   return (
-    <>
+    <div className="productpage">
+
+    
       {/* <Navber/> */}
       {isLoading ? <LoadingSpinner /> : null}
       <ToastContainer />
@@ -208,8 +233,32 @@ export default function Productpage() {
             </div>
           </div>
         </div>
-        <Copyright />
       </div>
-    </>
+      <div className="related">
+        <p>You may also like</p>
+        <div className="relateditem">
+          {relateditem.map((items) => {
+            return (
+              <Itembox
+                key={items._id}
+                customid={items.Customid}
+                name={items.Name}
+                img1={items.Img1}
+                img2={items.Img2}
+                img3={items.Img3}
+                img4={items.Img4}
+                img5={items.Img5}
+                discount={items.Discount}
+                description={items.Descrip}
+                price={items.Price}
+                brand={items.Brand}
+                size={items.Sizelist}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <Copyright />
+      </div>
   );
 }

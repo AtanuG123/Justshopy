@@ -14,12 +14,22 @@ const Filter = () => {
 
         }
     }
-    const filternow=(e)=>{
-        navigate('/productlist/'+e);
-    }
+    
     return (
         <>
-            <button className='filterbtn' id='filterbtn' onClick={showfilter}>Apply Filter</button>
+            {/* <div className='sorting'>
+                <button className='filterbtn' id='filterbtn' onClick={showfilter}>Apply Filter</button>
+                <div>
+
+                <p>SORT BY</p>
+                <select >
+                    <option value="New" selected>Newest First</option>
+                    <option value="priceHigh" >Price:low to high</option>
+                    <option value="priceLow">Price:high to low</option>
+                    <option value="DiscountHigh">Discount:High to low</option>
+                </select>
+                </div>
+            </div> */}
             <div className="filter" id='filter'>
                 <h3>Filter</h3>
 
@@ -38,9 +48,7 @@ const Filter = () => {
                             <a href='/productlist/style'>Style</a>
                             <a href='/productlist/watch'>Watch</a>
                             <a href='/productlist/sunglass'>Sunglass</a>
-                            {/* <a href='/productlist/helmet'>helmet</a> */}
                             <a href='/productlist/branded'>Premium</a>
-                            
                         </div>
                         <div>
                             <a href='/productlist/woman'>Woman</a>

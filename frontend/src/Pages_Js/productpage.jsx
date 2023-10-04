@@ -49,12 +49,9 @@ export default function Productpage() {
         res.data.map((item) => {
           if (item.Customid === Customid) {
             setsingleproduct(item);
-            // console.log(item.Catagory);
             Cat = item.Catagory[item.Catagory.length - 1];
-            // Cat = item.Catagory[item.Catagory[0]];
             setsizelist(item.Sizelist);
             setphoto(item.Img1);
-            // console.log(item);
           }
         });
         res.data.map((items) => {
@@ -62,7 +59,7 @@ export default function Productpage() {
             a.push(items);
           }
         });
-        // console.log(a);
+       
         setrelateditem(a);
 
         document.getElementById("product_p").style.display = "flex";
@@ -131,7 +128,9 @@ export default function Productpage() {
   const mainphotochange = (img) => {
     setphoto(img);
   };
-
+if(relateditem.length===0){
+  document.getElementById("product_r").style.display = "none";
+}
   return (
     <div className="productpage">
 

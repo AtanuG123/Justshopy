@@ -14,5 +14,6 @@ const Productschema = new mongoose.Schema({
     Discount : Number,
     Sizelist:Array
 })
+
 const ProductModel = mongoose.model("productdetails",Productschema);
 module.exports = ProductModel

@@ -11,6 +11,8 @@ export default  function Userprofile() {
     
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const order_id = useSelector(state=>state.order.data);
+
     const logoutnotify = () => {
         toast.success("logout succesfull", {
             autoClose: 1500,
@@ -26,6 +28,7 @@ export default  function Userprofile() {
         <div style={{ marginTop: "100px" }}>
             <button className="btn btn-primary" onClick={removeuser}>
                 Logout
+               
             </button>
         </div>
     );

@@ -128,9 +128,7 @@ export default function Productpage() {
   const mainphotochange = (img) => {
     setphoto(img);
   };
-if(relateditem.length===0){
-  document.getElementById("product_r").style.display = "none";
-}
+
   return (
     <div className="productpage">
 

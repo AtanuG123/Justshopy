@@ -7,11 +7,13 @@ import { loadStripe } from '@stripe/stripe-js';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addtocart, reduceCart } from '../state/cart';
+import { order } from '../state/order';
 export default function Cart() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const cartproduct = useSelector(state => state.cart.data);
     const subtotal = useSelector(state => state.cart.subprice);
+    const order_id = useSelector(state=>state.order.data);
   
     const makepayment = async () => {
         if (Math.round(subtotal) !== 0) {
@@ -30,6 +32,8 @@ export default function Cart() {
 
             const session = await response.json();
             console.log(session)
+            dispatch(order({orderid:session.id}));
+            
             const result = stripe.redirectToCheckout({
                 sessionId: session.id,
             });
@@ -93,21 +97,21 @@ export default function Cart() {
                             <p>{subtotal}</p>
                         </div>
                         <div>
-                            <p>Est. Tax(10%):</p>
-                            <p>{((subtotal * 10) / 100)}</p>
+                            <p>Est. Tax(5%):</p>
+                            <p>{((subtotal * 5) / 100)}</p>
                         </div>
                         <div>
                             <p>Est. Shipping & Handling:</p>
-                            <p>00.00</p>
+                            <p>20.00</p>
                         </div>
-                        <div className="discount">
+                        {/* <div className="discount">
                             <p >Special Discount(5%):</p>
                             <p>-{((subtotal * 5) / 100)}</p>
-                        </div>
+                        </div> */}
                         <hr></hr>
                         <div>
                             <p>Total:</p>
-                            <p>{subtotal + ((subtotal * 5) / 100)}</p>
+                            <p>{subtotal + ((subtotal * 5) / 100)+20}</p>
                         </div>
                     </div>
                     <div className="chkout">

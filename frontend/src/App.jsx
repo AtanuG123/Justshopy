@@ -44,10 +44,8 @@ function App() {
         <Route path="/paymentsuccess" element={<Success/>}></Route>
         <Route path="/paymentcancel" element={<Cancel/>}></Route>
         <Route path="/productupdate" element={<Productupdate/>}></Route>
-      <Route path="/notfound" element={<Notfound/>}></Route>
-
+        <Route path="/notfound" element={<Notfound/>}></Route>
       </Routes>
-     
     </BrowserRouter>      
   </div>
       

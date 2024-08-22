@@ -6,13 +6,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../Pages_css/userprofile.css"
 
-export default function Success(){
+export default function Success() {
     const dispatch = useDispatch();
-    const navigate =useNavigate();
-    const order = useSelector(state=>state.cart.copydata)
-    const subtotal =  useSelector(state => state.cart.copyprice);
-    const user = useSelector(state=>state.profile.data);
-    const order_id = useSelector(state=>state.order.data);
+    const navigate = useNavigate();
+    const order = useSelector(state => state.cart.copydata)
+    const subtotal = useSelector(state => state.cart.copyprice);
+    const user = useSelector(state => state.profile.data);
+    const order_id = useSelector(state => state.order.data);
     // const[Name,setName] = useState("");
     // const[Email,setEmail] = useState("");
     // const[Amount,setAmount] = useState(0);
@@ -22,27 +22,33 @@ export default function Success(){
     // setOrderid1(order_id.orderid.slice(9,20));
     // setAmount(Math.round(subtotal + ((subtotal * 5) / 100)))
     const Name = user.Name;
-    const Emailid =user.Email;
+    const Emailid = user.Email;
     const Amount = Math.round(subtotal + ((subtotal * 5) / 100));
-    const Orderid = order_id.orderid.slice(9,20);
-    useEffect(()=>{
-        
+    const Orderid = order_id.orderid.slice(9, 20);
+    const Datetime=new Date().toLocaleDateString()+ " "+new Date().toLocaleTimeString();
+
+    const [timeleft,settimeleft]=useState(5);
+
+    useEffect(() => {
+        axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name, Orderid, Amount ,Datetime})
         dispatch(remove());
-        // dispatch(ordercreate(order))
-    })
-    const gotoprofile=(e)=>{
-        e.preventDefault();
-        axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid,Name,Orderid,Amount})
-        .then(result => {
-            // console.log(result)
-            navigate("/user/"+user.Name);
-        })
-        .catch(err => console.log(err));
-    }
-    return(
-        <div  style={{marginTop:"80px"}}>
-           <h4 style={{color:"green",fontWeight:"600"}}>YOUR ORDER PLACED</h4>
-           <div  id="orderhead">
+        if(timeleft===0){
+            navigate("/user/" + user.Name); 
+            return;
+        }
+        const timer = setTimeout(() => {
+            settimeleft(timeleft-1);
+        }, 1000); 
+
+        return () => clearTimeout(timer); 
+
+    }, [timeleft,navigate]);
+
+   
+    return (
+        <div style={{ marginTop: "80px" }}>
+            <h4 style={{ color: "green", fontWeight: "600" }}>YOUR ORDER PLACED</h4>
+            <div id="orderhead">
                 <div>
                     <h4>ORDER DETAILS</h4>
                     <br></br>
@@ -58,7 +64,7 @@ export default function Success(){
                         <tr id='orderitems'>
 
                             <td>{
-                               order.map(item => {
+                                order.map(item => {
                                     return (
                                         <span>
                                             <img src={item.img}></img>
@@ -69,15 +75,15 @@ export default function Success(){
 
                             <td>{user.Name} </td>
 
-                            
 
-                            <td >{order_id.orderid.slice(9,20)}</td>
+
+                            <td >{order_id.orderid.slice(9, 20)}</td>
                             <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>
                         </tr>
                     </table>
-                    <button onClick={gotoprofile}>Profile</button>
+                    <p style={{ textAlign:"right"}}> *Redirecting to your profile in {timeleft}s</p>
                 </div>
-            </div> 
+            </div>
         </div>
     )
 }

@@ -19,6 +19,7 @@ export default  function Userprofile() {
         axios.post(`${process.env.REACT_APP_PORT}/user/`, { Emailid})
         .then(result => {
             setallorder(result.data)
+            setallorder(allorder.reverse())
             // console.log(allorder)
             
         })
@@ -52,6 +53,7 @@ export default  function Userprofile() {
                             <td>SHIP TO </td>
                             <td >ORDER ID</td>
                             <td>TOTAL AMOUNT</td>
+                            <td>DATE & TIME</td>
                         </tr>
                         
 
@@ -65,6 +67,7 @@ export default  function Userprofile() {
                                         <td>{items.Name}</td>
                                         <td>{items.Orderid}</td>
                                         <td>{items.Amount}</td>
+                                        <td>{items.Datetime}</td>
                                         </tr>
                                     )
                                 })

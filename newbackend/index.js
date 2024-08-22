@@ -6,6 +6,7 @@ const stripe = require("stripe")(process.env.REACT_APP_STRIPE_PRIVATE);
 
 const UserModel = require("./models/Userdetails.js");
 const ProductModel = require("./models/productupload.js");
+const OrderModel = require("./models/orderupload.js");
 
 
 const app = express();
@@ -168,6 +169,11 @@ app.post("/api/create-checkout-session", async (req, res) => {
   res.json({ id: session.id })
 })
 
+app.post('/paymentsuccess', (req, res) => {
+  OrderModel.create(req.body)
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
 
 
 

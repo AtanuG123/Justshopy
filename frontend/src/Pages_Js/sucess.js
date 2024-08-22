@@ -13,14 +13,7 @@ export default function Success() {
     const subtotal = useSelector(state => state.cart.copyprice);
     const user = useSelector(state => state.profile.data);
     const order_id = useSelector(state => state.order.data);
-    // const[Name,setName] = useState("");
-    // const[Email,setEmail] = useState("");
-    // const[Amount,setAmount] = useState(0);
-    // const[Orderid1,setOrderid1] = useState("");
-    // setName(user.name)
-    // setEmail(user.Email)
-    // setOrderid1(order_id.orderid.slice(9,20));
-    // setAmount(Math.round(subtotal + ((subtotal * 5) / 100)))
+    
     const Name = user.Name;
     const Emailid = user.Email;
     const Amount = Math.round(subtotal + ((subtotal * 5) / 100));
@@ -30,9 +23,9 @@ export default function Success() {
     const [timeleft,settimeleft]=useState(5);
 
     useEffect(() => {
-        axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name, Orderid, Amount ,Datetime})
-        dispatch(remove());
         if(timeleft===0){
+            axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name, Orderid, Amount ,Datetime})
+            dispatch(remove());
             navigate("/user/" + user.Name); 
             return;
         }

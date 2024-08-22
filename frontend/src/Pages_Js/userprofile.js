@@ -18,15 +18,13 @@ export default  function Userprofile() {
     useEffect(()=>{
         axios.post(`${process.env.REACT_APP_PORT}/user/`, { Emailid})
         .then(result => {
-            setallorder(result.data)
-            setallorder(allorder.reverse())
-            // console.log(allorder)
-            
+            const reversedData = [...result.data].reverse();
+            setallorder(reversedData)            
         })
         .catch(err => console.log(err));
         
-        
-    })
+    },[Emailid])
+
     const logoutnotify = () => {
         toast.success("logout succesfull", {
             autoClose: 1500,
@@ -38,6 +36,7 @@ export default  function Userprofile() {
         navigate("/");
         logoutnotify();
     }
+    
     return (
         <div  style={{marginTop:"80px"}}>
            

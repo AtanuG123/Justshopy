@@ -22,9 +22,9 @@ export default function Success(){
     // setOrderid1(order_id.orderid.slice(9,20));
     // setAmount(Math.round(subtotal + ((subtotal * 5) / 100)))
     const Name = user.Name;
-    const Email =user.Email;
+    const Emailid =user.Email;
     const Amount = Math.round(subtotal + ((subtotal * 5) / 100));
-    const Orderid1 = order_id.orderid.slice(9,20);
+    const Orderid = order_id.orderid.slice(9,20);
     useEffect(()=>{
         
         dispatch(remove());
@@ -32,7 +32,7 @@ export default function Success(){
     })
     const gotoprofile=(e)=>{
         e.preventDefault();
-        axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Email,Name,Orderid1,Amount})
+        axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid,Name,Orderid,Amount})
         .then(result => {
             // console.log(result)
             navigate("/user/"+user.Name);

@@ -175,6 +175,12 @@ app.post('/paymentsuccess', (req, res) => {
     .catch(err => res.json(err))
 })
 
+app.post('/user/', (req, res) => {
+  const { Emailid } = req.body;
+  OrderModel.find({ Emailid:Emailid })
+    .then(Orders => res.json(Orders))
+    .catch(err => res.json(err))
+})
 
 
 

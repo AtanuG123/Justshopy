@@ -77,9 +77,9 @@ export default function Success() {
                             <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>
                         </tr>
                     </table>
-                    <p style={{ textAlign:"right"}}> *Redirecting to your profile in {timeleft}s</p>
                 </div>
             </div>
+            <p style={{ textAlign:"right"}}> *Redirecting to your profile in {timeleft}s</p>
         </div>
     )
 }

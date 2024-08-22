@@ -20,6 +20,9 @@ export default function Userprofile() {
             .then(result => {
                 const reversedData = [...result.data].reverse();
                 setallorder(reversedData)
+                if (allorder.length===0) {
+                    document.getElementById("tablebox").style.display="none";
+                }
             })
             .catch(err => console.log(err));
 

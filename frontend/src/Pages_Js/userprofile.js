@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import  axios  from "axios";
 import { useSelector } from 'react-redux';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../Pages_css/userprofile.css"
 export default  function Userprofile() {
     
@@ -14,10 +14,12 @@ export default  function Userprofile() {
     const dispatch = useDispatch();
     const user = useSelector(state => state.profile.data);
     const Emailid =user.Email
+    const [allorder,setallorder]=useState([]);
     useEffect(()=>{
         axios.post(`${process.env.REACT_APP_PORT}/user/`, { Emailid})
         .then(result => {
-            console.log(result)
+            setallorder(result.data)
+            // console.log(allorder)
             
         })
         .catch(err => console.log(err));
@@ -46,13 +48,27 @@ export default  function Userprofile() {
                 <div id='tablebox'>
                     <table >
                         <tr id='detailhead'>
-                            <td>ORDER PLACED</td>
+                            <td>ORDER</td>
                             <td>SHIP TO </td>
                             <td >ORDER ID</td>
                             <td>TOTAL AMOUNT</td>
                         </tr>
-                        {/* <tr id='orderitems'> */}
+                        
 
+                        
+                         {/* <tr id='orderitems'> */}
+                            {
+                                allorder.map((items)=>{
+                                    return(
+                                        <tr id='orderitems'>
+                                            <td></td>
+                                        <td>{items.Name}</td>
+                                        <td>{items.Orderid}</td>
+                                        <td>{items.Amount}</td>
+                                        </tr>
+                                    )
+                                })
+                            } 
                             {/* <td>{
                                order.map(item => {
                                     return (
@@ -68,8 +84,8 @@ export default  function Userprofile() {
                             
 
                             <td >{order_id.orderid.slice(9,20)}</td>
-                            <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>
-                        </tr> */}
+                            <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td> */}
+                        {/* </tr> */}
                     </table>
                     {/* <button onClick={gotoprofile}>Profile</button> */}
                 </div>

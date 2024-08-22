@@ -53,7 +53,7 @@ export default function Copyright() {
               <div className="col-md-7 col-lg-8 text-center text-md-start">
                 <div className="p-3">
                   © 2023 Copyright:
-                  <a href="https://atanupersonal.netlify.app/" className="text-white" >atanupersonal.netlify.app </a>
+                  <a href="https://atanuportfolio.vercel.app/" className="text-white" >https://atanuportfolio.vercel.app/ </a>
                 </div>
               </div>
               <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">

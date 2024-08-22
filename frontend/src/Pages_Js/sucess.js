@@ -19,14 +19,17 @@ export default function Success() {
     const Amount = Math.round(subtotal + ((subtotal * 5) / 100));
     const Orderid = order_id.orderid.slice(9, 20);
     const Datetime=new Date().toLocaleDateString()+ " "+new Date().toLocaleTimeString();
+    const Orderimg = order[0].img;
+    const Orderlen = order.length;
+   
 
-    const [timeleft,settimeleft]=useState(5);
+    const [timeleft,settimeleft]=useState(10);
 
     useEffect(() => {
         if(timeleft===0){
-            axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name, Orderid, Amount ,Datetime})
+            // axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name,Orderimg,Orderlen, Orderid, Amount ,Datetime})
             dispatch(remove());
-            navigate("/user/" + user.Name); 
+            // navigate("/user/" + user.Name); 
             return;
         }
         const timer = setTimeout(() => {

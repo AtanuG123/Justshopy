@@ -40,8 +40,17 @@
     margin: 5px 10px;
 }
 
-@media (max-width:500px) {
+@media (max-width:750px) {
     #tablebox{
-        margin-left: 10px;
+        margin:auto;
+        overflow: scroll;
+    }
+    #orderhead table{
+        width: 720px;
+        overflow: scroll;
+    }
+    tr *{
+        /* overflow: scroll; */
+        font-size: 14px;
     }
 }

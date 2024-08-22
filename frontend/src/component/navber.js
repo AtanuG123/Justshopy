@@ -77,7 +77,7 @@ const gotocart=()=>{
         <ul className="logo ">
           <li>
 
-            <img onClick={()=>navigate("/")} src={require("./images/logo.png")} alt="logo"></img>
+            <img style={{cursor:"pointer"}} onClick={()=>navigate("/")} src={require("./images/logo.png")} alt="logo"></img>
           </li>
         </ul >
         <ul className="nav_main">

@@ -27,9 +27,9 @@ export default function Success() {
 
     useEffect(() => {
         if(timeleft===0){
-            // axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name,Orderimg,Orderlen, Orderid, Amount ,Datetime})
+            axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name,Orderimg,Orderlen, Orderid, Amount ,Datetime})
             dispatch(remove());
-            // navigate("/user/" + user.Name); 
+            navigate("/user/" + user.Name); 
             return;
         }
         const timer = setTimeout(() => {

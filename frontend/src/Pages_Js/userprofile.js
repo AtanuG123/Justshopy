@@ -86,6 +86,7 @@ export default function Userprofile() {
                    
                 </div>
             </div>
+            <br></br>
             <button className="btn btn-primary" onClick={removeuser}>
                 Logout
 

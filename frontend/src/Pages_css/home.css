@@ -68,10 +68,7 @@ li {
     flex-direction: column;
     
   }
-  #catagory ul li img {
-    /* margin-left: 5px; */
-    /* margin-bottom: 10px; */
-  }
+  
 }
 @media (max-width:350px) {
   #catagory ul li img,.seedetails {
@@ -147,9 +144,7 @@ li {
     #featuredmain {
      flex-direction: column;
     }
-    #featuredmain> div{  
-    /* margin-top: 20px; */
-    }   
+     
     #featuredmain > div >div{
       margin: 10px 0px;
       width: 150px;

@@ -34,7 +34,7 @@ export default function Productpage() {
 
   useEffect(() => {
     document.getElementById("product_p").style.display = "none";
-    document.getElementById("product_r").style.display = "none";
+    // document.getElementById("product_r").style.display = "none";
     setisLoading(true);
    
     axios
@@ -63,7 +63,7 @@ export default function Productpage() {
         setrelateditem(a);
 
         document.getElementById("product_p").style.display = "flex";
-        document.getElementById("product_r").style.display = "block";
+        // document.getElementById("product_r").style.display = "block";
         setisLoading(false);
       });
   }, []);

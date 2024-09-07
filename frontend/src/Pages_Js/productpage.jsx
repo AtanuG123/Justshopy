@@ -195,9 +195,7 @@ export default function Productpage() {
               </div>
               <div className="mrp">
                 <p className="mrp1">
-                  {Math.round(
-                    (100 * singleproduct.Price) / (100 - singleproduct.Discount)
-                  ) + singleproduct.Price}
+                {Math.round((singleproduct.Discount*singleproduct.Price)/100) +singleproduct.Price}
                 </p>
                 <p>({singleproduct.Discount} % Off)</p>
               </div>

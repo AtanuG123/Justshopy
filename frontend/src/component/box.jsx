@@ -40,8 +40,7 @@ export default function Itembox(props) {
         <div className="box2_1">
           <p className="price">₹{props.price}</p>
           <p className="mrp1">
-            {Math.round((100 * props.price) / (100 - props.discount)) +
-              props.price}
+            {Math.round((props.discount*props.price)/100) +props.price}
           </p>
           <p className="discount1">{props.discount}% Off</p>
         </div>

@@ -58,7 +58,7 @@ const Filter = () => {
                         </div>
                     </div>
                 </div>
-                <div className='filter_size'>
+                {/* <div className='filter_size'>
                     <hr></hr>
                     <h5>size</h5>
                     <div>
@@ -88,7 +88,7 @@ const Filter = () => {
                             <a href='/productlist/free size'>Free</a>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div>
                     <hr></hr>
                     <h5>Price</h5>

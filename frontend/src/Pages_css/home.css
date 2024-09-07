@@ -134,7 +134,10 @@ li {
   font-family: 'Josefin Sans', sans-serif;
   color: rgb(218, 20, 20);
 }
-
+#featuredmain img{
+  height: 250px;
+  width: 220px;
+}
 
 @media (max-width:865px) 
   {

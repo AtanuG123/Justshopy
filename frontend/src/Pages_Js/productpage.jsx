@@ -141,12 +141,12 @@ export default function Productpage() {
           <div className="img_part">
             <div className="main_img">
               <img src={photo} alt="error"></img>
-              <span
+              {/* <span
                 style={{ translate: "-140% 70%", backgroundColor: "blue" }}
                 class="position-absolute  badge rounded-pill"
               >
                 <i className="fa-regular fa-heart whishlist"></i>
-              </span>
+              </span> */}
             </div>
             <div className="all_img">
               <img
@@ -195,7 +195,7 @@ export default function Productpage() {
               </div>
               <div className="mrp">
                 <p className="mrp1">
-                {Math.round((singleproduct.Discount*singleproduct.Price)/100) +singleproduct.Price}
+                {Math.round((100*singleproduct.Price)/(100-singleproduct.Discount)) +singleproduct.Price}
                 </p>
                 <p>({singleproduct.Discount} % Off)</p>
               </div>
@@ -232,7 +232,7 @@ export default function Productpage() {
           </div>
         </div>
       </div>
-      <div className="related" id="product_r">
+      {/* <div className="related" id="product_r">
         <p>You may also like</p>
         <div className="relateditem">
           {relateditem.map((items) => {
@@ -255,7 +255,7 @@ export default function Productpage() {
             );
           })}
         </div>
-      </div>
+      </div> */}
       <Copyright />
       </div>
   );

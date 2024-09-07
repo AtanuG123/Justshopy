@@ -38,24 +38,26 @@ const Filter = () => {
                     <hr></hr>
                     <div>
                         <div>
-                            <a href='/productlist/man'>Man</a>
-                            <a href='/productlist/hoodie'>Hoodie</a>
-                            <a href='/productlist/blazer'>Blazer</a>
-                            <a href='/productlist/tshirt'>Tshirt</a>
-                            <a href='/productlist/jeans'>Jeans</a>
+                            <a href='/productlist/pipe'>Hose pipe</a>
+                            <a href='/productlist/footvalve'>Footvalve</a>
+                            <a href='/productlist/busket'>Basket</a>
+                            <a href='/productlist/salt'>Salt</a>
+                            <a href='/productlist/net'>Net</a>
                         </div>
                         <div>
-                            <a href='/productlist/style'>Style</a>
-                            <a href='/productlist/watch'>Watch</a>
-                            <a href='/productlist/sunglass'>Sunglass</a>
-                            <a href='/productlist/branded'>Premium</a>
+                            <a href='/productlist/bin'>Plastic Bin</a>
+                            <a href='/productlist/fishfeed'>Fish Feed</a>
+                            <a href='/productlist/basin'>Plastic Basin</a>
+                            <a href='/productlist/fish medicine'>Fish medicine</a>
+                            {/* <a href='/productlist/sunglass'>Sunglass</a>
+                            <a href='/productlist/branded'>Premium</a> */}
                         </div>
-                        <div>
+                        {/* <div>
                             <a href='/productlist/woman'>Woman</a>
                             <a href='/productlist/kurta'>Kurta</a>
                             <a href='/productlist/shoes'>Shoes</a>
                             <a href='/productlist/helmet'>Helmet</a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 {/* <div className='filter_size'>
@@ -92,17 +94,17 @@ const Filter = () => {
                 <div>
                     <hr></hr>
                     <h5>Price</h5>
+                    <a href='/productlist/100'>upto 100</a>
+                    <a href='/productlist/200'>upto 200</a>
                     <a href='/productlist/500'>upto 500</a>
-                    <a href='/productlist/1000'>upto 1000</a>
-                    <a href='/productlist/1500'>upto 1500</a>
                     <a href='/allproduct'>All price</a>
                 </div>
                 <div>
                     <hr></hr>
                     <h5>Discount</h5>
-                    <a href='/productlist/50'>upto 50%</a>
-                    <a href='/productlist/60'>50%-60%</a>
-                    <a href='/productlist/70'>60%-70%</a>
+                    <a href='/productlist/20'>upto 20%</a>
+                    <a href='/productlist/40'>30%-40%</a>
+                    <a href='/productlist/40'>50%-70%</a>
                     <a href='/productlist/80'>70%-80%</a>
                     <a href='/productlist/81' >More than 80%</a>
                 </div>

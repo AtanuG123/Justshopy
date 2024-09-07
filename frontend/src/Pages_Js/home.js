@@ -19,26 +19,26 @@ export default function Home() {
             <Crousal />
             <div id="catagory">
                 <div id="catagoryheading">
-                    <h2>SHOP BY CATAGORY</h2>
+                    <h2>TOP SELLING</h2>
                 </div>
                 <ul>
                     <li  >
-                        <img onClick={() => switchonclick("man")} src={require("../component/images/mencloth.jpg")} alt="loading"></img>
-                        <div onClick={() => switchonclick("man")} className="seedetails" >
-                            <h3>Men's Collection</h3>
+                        <img onClick={() => switchonclick("pipe")} src={"https://i.postimg.cc/GmWV7kc4/eco-flex.jpg"} alt="loading"></img>
+                        <div onClick={() => switchonclick("pipe")} className="seedetails" >
+                            <h3>Suction Hose</h3>
                         </div>
                     </li>
                     <li >
-                        <img onClick={() => switchonclick("woman")} src={require("../component/images/collrectionwoman.jpg")} alt="loading" ></img>
-                        <div onClick={() => switchonclick("woman")} className="seedetails">
-                            <h3>Woman's Collection</h3>
+                        <img onClick={() => switchonclick("salt")} src={"https://i.postimg.cc/vHM35td3/Screenshot-2024-09-07-105255.png"} alt="loading" ></img>
+                        <div onClick={() => switchonclick("salt")} className="seedetails">
+                            <h3>Salt</h3>
                            
                         </div>
                     </li>
                     <li >
-                        <img onClick={() => switchonclick("style")} src={require("../component/images/watchglass.jpeg")} alt="loading"></img>
-                        <div onClick={() => switchonclick("style")} className="seedetails">
-                            <h3>Style's Collection</h3>
+                        <img onClick={() => switchonclick("basin")} src={"https://i.postimg.cc/FzpbT0VS/tajbucket.jpg"} alt="loading"></img>
+                        <div onClick={() => switchonclick("basin")} className="seedetails">
+                            <h3>Plastic Basin</h3>
                         </div>
                     </li>
 
@@ -53,71 +53,71 @@ export default function Home() {
                     <div>
 
                         <div>
-                            <img onClick={() => switchonclick("hoodie")} className="featuredmain11" src={require("../component/images/hoodie.jpeg")}></img>
+                            <img onClick={() => switchonclick("bin")} className="featuredmain11" src={"https://i.postimg.cc/DySGRWF1/Screenshot-2024-09-07-110114.png"}></img>
                             <div>
-                                <h4>Hoodies</h4>
-                                <p>Starting at <span>399</span></p>
+                                <h4>Plastic Bin</h4>
+                                <p>Starting at <span>100</span></p>
                             </div>
 
                         </div>
                         <div>
 
-                            <img onClick={() => switchonclick("tshirt")} className="featuredmain12" src={require("../component/images/tshirt.jpeg")}></img>
+                            <img onClick={() => switchonclick("busket")} className="featuredmain12" src={"https://i.postimg.cc/Hn36Nq9B/chupri.jpg"}></img>
                             <div>
-                                <h4>T-shirt</h4>
-                                <p>Starting at <span>199</span></p>
+                                <h4>Basket</h4>
+                                <p>Starting at <span>80</span></p>
                             </div>
                         </div>
 
 
                         <div>
-                            <img onClick={() => switchonclick("jeans")} className="featuredmain21" src={require("../component/images/jeans.jpeg")}></img>
+                            <img onClick={() => switchonclick("footvalve")} className="featuredmain21" src={"https://i.postimg.cc/vH8M3jRK/telfish.jpg"}></img>
                             <div>
-                                <h4>Jeans</h4>
-                                <p>Starting at <span>699</span></p>
+                                <h4>Footvalve</h4>
+                                <p>Starting at <span>150</span></p>
                             </div>
                         </div>
                         <div>
-                            <img onClick={() => switchonclick("blazer")} className="featuredmain32" src={require("../component/images/blazer.jpeg")}></img>
+                            <img onClick={() => switchonclick("net")} className="featuredmain32" src={"https://i.postimg.cc/Y2hVD34R/chapa.jpg"}></img>
                             <div>
-                                <h4>Blazer</h4>
-                                <p>Starting at <span>999</span></p>
+                                <h4>Net</h4>
+                                <p>Starting at <span>70</span></p>
                             </div>
                         </div>
                 </div>
                 <div>
 
                         <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("kurta")} src={require("../component/images/kurta.jpeg")}></img>
+                            <img className="featuredmain22" onClick={() => switchonclick("salt")} src={"https://i.postimg.cc/tRWjvQ4q/think-pure-premium-black-salt-powder-1-kg-packaging-type-stand-up-pouch-1000x1000.jpg"}></img>
                             <div>
-                                <h4>Kurta</h4>
-                                <p>Starting at <span>249</span></p>
+                                <h4>Salt</h4>
+                                <p>Starting at <span>30/kg</span></p>
                             </div>
 
                         </div>
                         <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("sunglass", false)} src={require("../component/images/sunglass.jpeg")}></img>
+                            <img className="featuredmain22" onClick={() => switchonclick("pipe")} src={"https://i.postimg.cc/7ZTk6t5t/supersakti.jpg"}></img>
                             <div>
-                                <h4>Sunglass</h4>
-                                <p>Starting at <span>199</span></p>
+                                <h4>Suction Hose</h4>
+                                <p>Starting at <span>4500</span></p>
                             </div>
 
                         </div>
 
 
                         <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("shoes")} src={require("../component/images/shoes.jpeg")}></img>
+                            <img className="featuredmain22" onClick={() => switchonclick("fishfeed")} src={"https://i5.walmartimages.com/asr/b705ae8f-2149-4e06-8685-81d1ef2a4737_1.933f9f3eaf9b9743afba01a12b9050d6.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"}></img>
                             <div>
-                                <h4>Shoes</h4>
-                                <p>Starting at <span>349</span></p>
+                                <h4>Fish feed</h4>
+                                <p>Starting at <span>500</span></p>
                             </div>
 
                         </div>
                         <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("helmet", false)} src={require("../component/images/helmet.jpg")}></img>
+                            <img className="featuredmain22" onClick={() => switchonclick("fishmedicine", false)} src={"https://www.loyalpetzone.com/wp-content/uploads/2024/07/merquin-syrup-dogs-birds-800x800.jpg"}></img>
                             <div>
-                                <h4>Helmet</h4>
-                                <p>Starting at <span>749</span></p>
+                                <h4>Meriquin</h4>
+                                <p>Starting at <span>500</span></p>
                             </div>
 
                         </div>

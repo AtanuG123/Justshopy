@@ -21,16 +21,19 @@ export default function Copyright() {
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
                 <p>
-                  <a href ="/productlist/Man" className="text-white">Man</a>
+                  <a href ="/productlist/pipe" className="text-white">Hose Pipe</a>
                 </p>
                 <p>
-                  <a href ="/productlist/Woman" className="text-white">Woman</a>
+                  <a href ="/productlist/salt" className="text-white">Salt</a>
                 </p>
                 <p>
-                  <a href ="/productlist/Tshirt" className="text-white">Tshirt</a>
+                  <a href ="/productlist/basin" className="text-white">Basin</a>
                 </p>
                 <p>
-                  <a href ="/productlist/kurta" className="text-white">Kurta</a>
+                  <a href ="/productlist/busket" className="text-white">Basket</a>
+                </p>
+                <p>
+                  <a href ="/productlist/fishmedicine" className="text-white">Fish Medicine</a>
                 </p>
               </div>
               <hr className="w-100 clearfix d-md-none" />
@@ -53,7 +56,7 @@ export default function Copyright() {
               <div className="col-md-7 col-lg-8 text-center text-md-start">
                 <div className="p-3">
                   © 2023 Copyright:
-                  <a href="https://atanuportfolio.vercel.app/" className="text-white" >https://atanuportfolio.vercel.app/ </a>
+                  <a href="https://atanuportfolio.vercel.app/" className="text-white" >@atanuportfolio</a>
                 </div>
               </div>
               <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">

@@ -154,6 +154,10 @@ li {
       margin: 10px 0px;
       width: 150px;
     }
+    #featuredmain img{
+      height: 170px;
+      width: 150px;
+    }
   }
 
   @media (max-width:385px) {

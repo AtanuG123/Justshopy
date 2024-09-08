@@ -34,6 +34,7 @@ export default function Login() {
       .post(`${process.env.REACT_APP_PORT}/login`, { Email, Password })
       .then((result) => {
         if (result.data !== "invalid") {
+          console.log(result.data);
           dispatch(profile(result.data));
           loginnotify();
           document.getElementById("loader").style.display = "none";

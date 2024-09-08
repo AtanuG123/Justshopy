@@ -2,6 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bcryptjs = require("bcryptjs");
+
+//update here
+const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
+dotenv.config();
+
 const stripe = require("stripe")(process.env.REACT_APP_STRIPE_PRIVATE);
 
 const UserModel = require("./models/Userdetails.js");
@@ -24,7 +30,16 @@ app.post('/login', (req, res) => {
     .then(async user => {
       if (user) {
         if (await bcryptjs.compare(Password, user.Password)) {
-          res.json(user);
+
+          //update start
+          const token = jwt.sign({ userId: user._id }, "atanunewtoken", {
+            expiresIn: '1h',
+          });
+      
+          res.json({ token });
+          //update close
+
+          // res.json(user);
         }
         else {
           res.json("invalid");

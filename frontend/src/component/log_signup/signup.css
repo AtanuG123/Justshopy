@@ -28,6 +28,10 @@
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 0px 5px #000;
 }
+#sign1{
+	height: 550px;
+	margin-top: 20px;
+}
 .logo_auth{
 	margin-top: 20px;
 	width: 100px;

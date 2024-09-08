@@ -10,6 +10,8 @@ export default function Signup() {
   const [Name, SetName] = useState(null);
   const [Email, SetEmail] = useState(null);
   const [Password, SetPassword] = useState(null);
+  const [Address, SetAddress] = useState(null);
+  const [Pin, SetPin] = useState(null);
   const navigate = useNavigate();
   const from1 = useRef();
   const user_exist = (data) => {
@@ -33,7 +35,7 @@ export default function Signup() {
     e.preventDefault();
     // document.getElementById("loader").style.display = "inline";
     axios
-      .post(`${process.env.REACT_APP_PORT}/signup`, { Name, Email, Password })
+      .post(`${process.env.REACT_APP_PORT}/signup`, { Name, Email, Password,Address,Pin })
       .then((result) => {
         console.log(result.data);
         if (result.data === "user_exist") {
@@ -59,7 +61,7 @@ export default function Signup() {
 
   return (
     <div className="body">
-      <div className="main">
+      <div className="main" id="sign1">
       <img className="logo_auth" src={require("../images/logo.png")}></img>
 
         <div className="signup">
@@ -93,6 +95,26 @@ export default function Signup() {
               onChange={(e) => {
                 SetPassword(e.target.value);
               }}
+            />
+             <input
+              type="text"
+              name="user_address"
+              placeholder="Address"
+              onChange={(e) => {
+                SetAddress(e.target.value);
+              }}
+              required=""
+            />
+            <input
+              type="number"
+              name="user_pin"
+              maxLength={6}
+              minLength={6}
+              placeholder="Pincode"
+              onChange={(e) => {
+                SetPin(e.target.value);
+              }}
+              required=""
             />
             <button type="submit" className="signbtn">
               Sign up

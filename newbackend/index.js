@@ -32,11 +32,11 @@ app.post('/login', (req, res) => {
         if (await bcryptjs.compare(Password, user.Password)) {
 
           //update start
-          const token = jwt.sign({ userId: user._id }, "atanunewtoken", {
-            expiresIn: '1h',
+          const token = jwt.sign({ userId: user._id,username:user.Name,userEmail:user.Email }, "atanunewtoken", {
+            expiresIn: '5min',
           });
       
-          res.json({ token });
+          res.json({ user,token });
           //update close
 
           // res.json(user);

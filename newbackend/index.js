@@ -32,14 +32,16 @@ app.post('/login', (req, res) => {
         if (await bcryptjs.compare(Password, user.Password)) {
 
           //update start
-          const token = jwt.sign({ userId: user._id,username:user.Name,userEmail:user.Email }, "atanunewtoken", {
-            expiresIn: '2min',
-          });
+          // const token = jwt.sign({ user }, "atanunewtoken", {expiresIn: '2min'},(err,token)=>{
+          //     if(err){
+          //       res.json("invalid");
+          //     }
+          //   res.json({user,auth:token });
+          // });
       
-          res.json({token });
           //update close
 
-          // res.json(user);
+          res.json(user);
         }
         else {
           res.json("invalid");

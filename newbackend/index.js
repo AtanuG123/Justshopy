@@ -57,7 +57,7 @@ app.post('/login', (req, res) => {
 
 app.post('/signup', async (req, res) => {
 
-  let { Name, Email, Password } = req.body;
+  let { Name, Email, Password ,Address ,Pin} = req.body;
   let isregister = "";
   isregister = await UserModel.findOne({ Email: Email })
   if (isregister !== null) {
@@ -67,7 +67,7 @@ app.post('/signup', async (req, res) => {
     const salt = await bcryptjs.genSalt();
     let Passwordhashed = await bcryptjs.hash(Password, salt);
     Password = Passwordhashed.toString();
-    UserModel.create({ Name, Email, Password })
+    UserModel.create({ Name, Email, Password,Address,Pin})
       .then(result => res.json(result));
   }
 })

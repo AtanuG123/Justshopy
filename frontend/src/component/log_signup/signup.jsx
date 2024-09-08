@@ -108,8 +108,8 @@ export default function Signup() {
             <input
               type="number"
               name="user_pin"
-              maxLength={6}
-              minLength={6}
+              maxLength={"100000"}
+              minLength={"999999"}
               placeholder="Pincode"
               onChange={(e) => {
                 SetPin(e.target.value);

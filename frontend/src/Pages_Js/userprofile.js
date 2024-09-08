@@ -44,10 +44,10 @@ export default function Userprofile() {
         <div style={{ marginTop: "80px"}}>
 
             <div id="orderhead">
-                <div style={{textAlign:"left",padding:"30px"}}>
+                <div className="userdetail"style={{textAlign:"left",padding:"30px"}}>
                     <h4>User Name : {user.Name}</h4>
                     <h4>User Email : {user.Email}</h4>
-                    <h4>User Address : {user.Address}{user.Pin}</h4>
+                    <h4>User Address : {user.Address}</h4>
                     <h4>User Pincode : {user.Pin}</h4>
 
                 </div>

@@ -53,4 +53,7 @@
         /* overflow: scroll; */
         font-size: 14px;
     }
+    .userdetail *{
+        font-size: 13px;
+    }
 }

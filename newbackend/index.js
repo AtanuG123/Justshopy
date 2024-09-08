@@ -118,9 +118,9 @@ app.post("/api/create-checkout-session", async (req, res) => {
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
-    // shipping_address_collection: {
-    //   allowed_countries: ["IN"],
-    // },
+    shipping_address_collection: {
+      allowed_countries: ["IN"],
+    },
     shipping_options: [
       {
         shipping_rate_data: {

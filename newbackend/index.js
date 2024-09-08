@@ -33,10 +33,10 @@ app.post('/login', (req, res) => {
 
           //update start
           const token = jwt.sign({ userId: user._id,username:user.Name,userEmail:user.Email }, "atanunewtoken", {
-            expiresIn: '5min',
+            expiresIn: '2min',
           });
       
-          res.json({ user,token });
+          res.json({token });
           //update close
 
           // res.json(user);

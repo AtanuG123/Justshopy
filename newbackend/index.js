@@ -21,8 +21,8 @@ app.use(cors());
 
 
 
-// mongoose.connect(process.env.REACT_APP_KEY);
-mongoose.connect(`mongodb+srv://atanu2004ghosh:vG9k5kkqhgYbDBFi@cluster0.r37vth3.mongodb.net/?retryWrites=true&w=majority`);
+mongoose.connect(process.env.REACT_APP_KEY);
+// mongoose.connect(``);
 
 app.post('/login', (req, res) => {
   const { Email, Password } = req.body;

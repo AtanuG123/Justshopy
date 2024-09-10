@@ -14,14 +14,15 @@
 	align-items: center;
 	background-image: url("../images/background1.jpg");
 	background-size: cover;
-	height: 88vh;
+	height: 100%;
+	padding-bottom: 100px;
 	font-family: 'Jost', sans-serif;
 	
 }
 .main{
 	width: 350px;
 	height: 450px;
-    /* margin-top: 35px; */
+    margin-top: 35px;
 	margin-left:-400px;
 	/* translate: -40px -20px; */
 	border-radius: 10px;

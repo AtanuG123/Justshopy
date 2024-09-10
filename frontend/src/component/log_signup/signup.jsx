@@ -46,7 +46,7 @@ export default function Signup() {
           document.getElementById("loader").style.display = "none";
           navigate("/login");
           user_success("signup succesfull");
-          emailjs.sendForm('service_jhi0ce9', 'template_2kwnnnb', from1.current, 'qfQvmS9EbFjUvemNh')
+          emailjs.sendForm('service_f0lo43n', 'template_2kwnnnb', from1.current, '58oZ9ibqxclPO-LFI')
             .then((result) => {
               console.log(result.text);
             }

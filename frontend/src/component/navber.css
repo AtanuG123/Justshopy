@@ -1,15 +1,17 @@
 .navber * {
   margin: 0px;
   padding: 0px;
-  /* font-size: 18px; */
-  /* overflow: scroll; */
+  /* font-family: "Rubik", sans-serif; */
+  /* font-optical-sizing: auto; */
+  /* font-weight: 500; */
+  /* font-style: normal; */
 }
 .navber {
   top: 0px;
-  height: 60px;
+  height: 110px;
   position: fixed;
   z-index: 1;
-  box-shadow: 0px 1px 5px rgb(49, 50, 49);
+  box-shadow: 0px 0px 10px rgb(123, 123, 123);
   background-color: rgb(239, 237, 237);
   display: flex;
   width: 100%;
@@ -26,11 +28,11 @@
   flex-direction: row;
 }
 .leftnav ul li a{
-
-  font-size: 16px;
+color: #000;
+  font-size: 20px;
 }
 .leftnav ul li {
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   margin-left: 40px;
   align-items: center;

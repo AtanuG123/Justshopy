@@ -19,62 +19,45 @@ li {
 }
 #catagoryheading {
   margin-bottom: 20px;
-  /* font-weight: 600; */
   text-shadow: .2px .1px ;
-}
 
-#catagory ul {
+}
+.cata_product{
+  margin: auto;
   display: flex;
-  justify-content: space-evenly;
-
-  overflow: hidden;
-  padding: 0px;
+  justify-content: center;
+  align-items: center;
 }
-#catagory ul li {
-  cursor: pointer;
-  /* position: relative; */
-  margin-bottom: 20px;
-}
-#catagory ul li img {
-  /* cursor: pointer; */
-  width: 24.3em;
-  height: 300px;
-}
-.seedetails {
+.cata_product1 {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
-  /* top: 77%; */
- margin-left: auto;
- margin-right: auto;
-  bottom: 0%;
-
-  width: 24.3em;
-  background-color: rgb(231, 237, 243);
-  /* display: flex; */
-  opacity: 1;
-  transition: ease-in 0.8s;
 }
-.seedetails h3 {
-  margin-top: 10px;
-  height: 40px;
-  text-shadow: .2px .1px ;
+.cata_product1 img{
+  padding: 20px 40px;
+  height: 40vw;
+  width: 38vw;
+  
 }
-
-
-
+.cata_product2 img{
+  padding: 20px 40px;
+  height: 80vw;
+  width: 40vw;
+}
 @media (max-width:865px) {
-  #catagory ul {
-    flex-direction: column;
+  .cata_product1 img{
+    padding: 5px 10px;
+    height: 55vw;
+    width: 43vw;
     
+  }
+  .cata_product2 img{
+    padding: 5px 10px;
+    height: 110vw;
+    width: 43vw;
   }
   
 }
-@media (max-width:350px) {
-  #catagory ul li img,.seedetails {
-    width: 90%;
-  }
-}
+
 /* Featured product */
 
 
@@ -84,14 +67,13 @@ li {
     padding-bottom: 20px;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgb(236, 241, 243);
+    /* background-color: rgb(236, 241, 243); */
     margin:20px 20px;
 }
-#featureheading h3{
-  text-shadow: .2px .1px ;
+#featureheading p{
+
     margin-bottom: 20px;
-    /* font-weight: 600; */
-    /* font-family: 'Josefin Sans', sans-serif; */
+    font-size: xxx-large;
 }
 #featuredmain{
   display: flex;
@@ -107,33 +89,41 @@ li {
   justify-content: space-evenly;
 }
 #featuredmain > div >div{
-  margin: 10px 10px;
+  margin: 30px 30px;
   flex-direction: column;
-  width: 220px;
+  width: 380px;
   display: flex;
   justify-content: space-evenly;
-
+  box-shadow: 0px 15px 13px rgb(207, 206, 206);
+  
+  padding: 30px;
+  border-radius: 6px;
+  transition: all .2s;
 }
-
+#featuredmain > div>div:hover{
+  transform: scale(1.05);
+}
 #featuredmain >div> div>div{
-  background-color: rgb(159, 210, 255);
-  /* translate: 0px -10px; */
-  margin-top: 0px;
+  padding: 15px;
+  /* margin-top: 0px; */
 }
 
 #featuredmain >div >div> div *{
   margin-top: 0px;
   margin-bottom: 0px;
+  font-weight: 500;
 }
 
 #featuredmain div div h4,#featuredmain div div span{
-  font-weight: 600;
-  font-family: 'Josefin Sans', sans-serif;
-  color: rgb(218, 20, 20);
+  font-weight: 500;
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgb(0, 0, 0);
 }
 #featuredmain img{
-  height: 250px;
-  width: 220px;
+  width: 320px;
+  height: 382px;
+  border-radius: 6px;
+
 }
 
 @media (max-width:865px) 
@@ -144,30 +134,53 @@ li {
     #featuredmain {
      flex-direction: column;
     }
-     
+    #featureheading p{
+
+      margin-bottom: 20px;
+      font-size: xx-large;
+  }
     #featuredmain > div >div{
-      margin: 10px 0px;
-      width: 150px;
+      
+      width: 260px;
     }
     #featuredmain img{
-      height: 170px;
-      width: 150px;
+      height: 250px;
+      width: 200px;
     }
   }
-
+  @media (max-width:640px) {
+    /* #featuredmain img{
+      height: 40vw;
+      width: 37vw;
+    } */
+    #featuredmain > div >div{
+      margin: 15px 10px;
+    }
+  }
   @media (max-width:385px) {
     #featuredmain >div {
     justify-content: space-around;
     }
    
-   
+    #featuredmain >div >div{
+      width: 260px;
+    }
+    
+    /* #featuredmain >div >div>div{
+      padding: 15px;
+      
+    } */
+    #featuredmain img{
+      width: 200px;
+      height: 250px;
+    }
   }
 
 /* Benifits */
 
 #benifits{
     display: flex;
-    width: fit-content;
+    width: 90vw;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -213,11 +226,11 @@ li {
   height: 260px;
   cursor: pointer;
 }
-@media (min-width:1200px) {
-  #ad img, #featuredpro,#catagory{
+/* @media (min-width:1200px) {
+  #ad img, #catagory{
     margin-left: auto;
     margin-right: auto;
     width: 1080px;
   }
   
-}
+} */

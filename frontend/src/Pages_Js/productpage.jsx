@@ -101,7 +101,7 @@ export default function Productpage() {
   };
 
   const fordispatch = (e) => {
-    if (user !== "invalid" && size != null && flag === 0) {
+    if (user !== "invalid"  && flag === 0) {
       setflag(1);
 
       dispatch(
@@ -112,13 +112,12 @@ export default function Productpage() {
           price: singleproduct.Price,
           name: singleproduct.Name,
           discount: singleproduct.Discount,
-          size: size,
+          size: "free",
           qty: 1,
         })
       );
-    } else if (user !== "invalid" && size === null) {
-      addednotify("select size");
-    } else if (flag === 1) {
+    } 
+    else if (flag === 1) {
       addednotify("already added");
     } else {
       addednotify("Signup before Proceed");
@@ -189,22 +188,26 @@ export default function Productpage() {
           <div className="descrip_part">
             <h3 className="product_name">{singleproduct.Name}</h3>
             <p className="product_brand">Brand : {singleproduct.Brand}</p>
+            <div className="product_des">
+              <p>{singleproduct.Descrip}</p>
+              <h6></h6>
+            </div>
             <div className="product_price">
               <div className="actual_mrp">
                 <h4> ₹{singleproduct.Price}</h4>
+                <p>{singleproduct.Discount} % Off</p>
               </div>
               <div className="mrp">
                 <p className="mrp1">
-                {Math.round((100*singleproduct.Price)/(100-singleproduct.Discount))}
+                ₹{Math.round((100*singleproduct.Price)/(100-singleproduct.Discount))}
                 </p>
-                <p>({singleproduct.Discount} % Off)</p>
               </div>
             </div>
-            <div className="instock">
+            {/* <div className="instock">
               <p>In Stock</p>
-            </div>
+            </div> */}
 
-            <div className="product_size">
+            {/* <div className="product_size">
               <p> SELECT SIZE</p>
               <div>
                 {sizelist.map((siz) => {
@@ -218,17 +221,13 @@ export default function Productpage() {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
             <div className="product_cart">
               <div className="product_cart1">
                 <button onClick={fordispatch}>Add to cart</button>
               </div>
             </div>
 
-            <div className="product_des">
-              <p>PRODUCT DETAILS</p>
-              <h6>{singleproduct.Descrip}</h6>
-            </div>
           </div>
         </div>
       </div>

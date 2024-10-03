@@ -81,10 +81,10 @@ const gotocart=()=>{
           </li>
         </ul >
         <ul className="nav_main">
-          <li className="nav_li"><Link to={"/"}>Home</Link> </li>
-          <li className="nav_li"><Link to={"/allproduct"}>Products</Link> </li>
-          <li className="nav_li"><Link to={"/aboutus"}>About Us</Link> </li>
-          <li className="nav_li"><Link to={"/aboutus"}>Contact us</Link> </li>
+          <li className="nav_li"><Link to={"/"}>HOME</Link> </li>
+          <li className="nav_li"><Link to={"/allproduct"}>BEST SELLERS</Link> </li>
+          <li className="nav_li"><Link to={"/aboutus"}>ABOUT US</Link> </li>
+          <li className="nav_li"><Link to={"/aboutus"}>CONTACT</Link> </li>
           {/* <li className="nav_li"><Link to={"/"}>Home</Link> </li> */}
           {/* <li className="nav_li"><Link to={"/"}>Home</Link> </li> */}
 

@@ -1,10 +1,10 @@
 .productpage{
 
-    background-color: #f8f7f7;
+    background-color: #ffffff;
 }
 .product_part{
     display: flex;
-    padding-top: 65px;
+    margin-top: 135px;
     margin-bottom: 20px;
     justify-content: center;
 }
@@ -14,14 +14,15 @@
 /* img part  */
 
 .img_part{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     display: flex;
     flex-direction: column;
 }
 .main_img img{
-   height:340px ;
-    width: 270px;
+   height:430px ;
+    width: 370px;
     transition: all .25s;
+    border-radius: 6px;
     box-shadow: 0px 0px 5px  gray;
 }
 
@@ -51,41 +52,49 @@
 .descrip_part {
     display: flex;
     text-align: left;
-    margin-left: 50px ;
-    margin-top: 25px;
+    margin-left: 75px ;
+    /* margin-top: 25px; */
     flex-direction: column;
 }
-
+.descrip_part h3{
+    /* font-family:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    font-weight: 700;
+    font-size: 40px;
+    max-width: 36vw;
+}
 .product_price{
 
 margin: 10px 0px 0px 0px;
 }
 .actual_mrp h4{
-    font-weight: 600;
+    font-weight: 700;
+    font-size: xx-large;
 }
-.mrp{
+.actual_mrp{
     display: flex;
 }
-.mrp p {
+.actual_mrp p {
     margin: 0px 5px 2px 0px ;
 }
 .mrp1{
-    text-decoration: line-through;
+    font-size: x-large;
+    font-weight: 600;
+    color: rgb(152, 152, 152);
+    text-decoration: line-through rgb(88, 88, 88);
 }
-.mrp p + p {
-    font-weight: 500;
-    /* color: #fff67a; */
-    color: rgb(4, 168, 4);
+.actual_mrp h4 + p {
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: rgb(218, 221, 221);
+    padding: 5px;
+    margin: 5px 0px 10px 10px;
+    color: rgb(215, 70, 25);
 }
 
 
 /* product size */
 
-.instock{
-    color: rgb(59, 152, 9);
-    font-weight: 600;
-    margin: 0px;
-}
+
 .product_size p,.product_sold p{
     font-weight: 500;
     margin: 3px 0px; 
@@ -120,9 +129,9 @@ margin: 10px 0px 0px 0px;
 
 .product_cart1 button{
     border: none;
-    font-weight: 500;
+    font-weight: 600;
     background:none;
-    background-color: rgba(87, 255, 224, 0.837);
+    background-color: rgb(55, 255, 188);
     border-radius: 5px;
     /* color: white; */
     font-size: 18px;
@@ -145,16 +154,14 @@ margin: 10px 0px 0px 0px;
 
 
 .product_des p{
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 17px;
     
     color: rgb(99, 99, 99);
     margin: 10px 0px 0px 0px;
-}
-.product_des h6{
     max-width: 36vw;
-    /* font-size: small; */
 }
+
 .related{
 margin: 30px 12px;
 background-color: white;
@@ -176,13 +183,23 @@ font-weight: 600;
     .product_part{
         flex-direction: column;
     }
+    .main_img img{
+        
+         width: 80vw;
+         
+     }
+     .product_des p{
+        max-width: 85vw;
+     }
     .descrip_part{
         margin-left:1rem;
         margin-right: auto;
         text-align: left;
     }
-    .product_des h6{
-        max-width: 90vw;
+    .descrip_part h3{
+        padding-top: 10px;
+        max-width: 85vw;
+        font-size: 30px;
     }
     .related{
         margin: 30px 0px;

@@ -73,7 +73,7 @@ export default function Allproduct() {
             <div id='productlist1'>
                 <div>   
                 <div className='sorting'>
-                            <button className='filterbtn' id='filterbtn' onClick={showfilter}>Apply Filter</button>
+                            {/* <button className='filterbtn' id='filterbtn' onClick={showfilter}>Apply Filter</button> */}
                             <div>
                                 <p>SORT BY</p>
                                 <select id="sort" onChange={(e) => sorting(e.target.value)}>
@@ -84,7 +84,7 @@ export default function Allproduct() {
                                 </select>
                             </div>
                         </div>
-                    <Filter/>
+                    {/* <Filter/> */}
                 </div>
                 <div style={{ display: "flex", flexDirection: "column" }}>
                     <div id="boxs">

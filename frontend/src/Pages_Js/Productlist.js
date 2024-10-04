@@ -83,17 +83,30 @@ export default function Productlist() {
             a.sort((a, b) => a.Discount - b.Discount);
             setlistpro(a.reverse());
         }
-       
-    }
 
+    }
+    const homenavi = () => {
+        navigate("/");
+    }
     return (
         <>
             {isLoading ? <LoadingSpinner /> : null}
             <div id='productlist'>
                 <div id='productlist1'>
+                    <div className="navigation">
+                        <h5>
+
+                        <span onClick={homenavi}>Home  </span> {'>'}
+                        <span >{Catagory.toUpperCase()}  </span>
+                        </h5>
+                        {/* <span>{Customid}</span> */}
+                    </div>
+                    {/* <h2>
+                        {Catagory.toUpperCase()}
+                    </h2> */}
                     <div className="filter1">
                         <div className='sorting'>
-                            <button className='filterbtn' id='filterbtn' onClick={showfilter}>Apply Filter</button>
+
                             <div>
                                 <p>SORT BY</p>
                                 <select id="sort" onChange={(e) => sorting(e.target.value)}>
@@ -104,7 +117,7 @@ export default function Productlist() {
                                 </select>
                             </div>
                         </div>
-                        <Filter />
+                        {/* <Filter /> */}
                     </div>
                     <div>
                         <div id="boxs">

@@ -16,7 +16,7 @@ import { addtocart } from "../state/cart";
 import "../Pages_css/productpage.css";
 import Navber from "../component/navber";
 import Itembox from "../component/box";
-
+// import { useNavigate } from "react-router-dom";
 export default function Productpage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -127,7 +127,9 @@ export default function Productpage() {
   const mainphotochange = (img) => {
     setphoto(img);
   };
-
+  const homenavi =()=>{
+    navigate("/");
+  }
   return (
     <div className="productpage">
 
@@ -136,6 +138,11 @@ export default function Productpage() {
       {isLoading ? <LoadingSpinner /> : null}
       <ToastContainer />
       <div id="product_p" style={{ flexDirection: "column" }}>
+        <div className="navigation">
+          <span onClick={homenavi}>Home</span> {">"}
+          <span >{singleproduct.Catagory}  </span>{">"}
+          <span>{singleproduct.Name}</span>
+        </div>
         <div className="product_part">
           <div className="img_part">
             <div className="main_img">

@@ -32,7 +32,7 @@ export default function Home() {
                         </div> */}
                     </div>
                     <div >
-                        <img onClick={() => switchonclick("salt")} src={"https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/meriquin_0.jpg?itok=edMkr4Wg"} alt="loading" ></img>
+                        <img onClick={() => switchonclick("fishmedicine")} src={"https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/meriquin_0.jpg?itok=edMkr4Wg"} alt="loading" ></img>
                         {/* <div onClick={() => switchonclick("salt")} className="seedetails">
                             <h3>Salt</h3>
                            
@@ -43,7 +43,7 @@ export default function Home() {
                 
 
                     <div className="cata_product2" >
-                        <img onClick={() => switchonclick("basin")} src={"https://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"} alt="loading"></img>
+                        <img onClick={() => switchonclick("fishfeed")} src={"https://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"} alt="loading"></img>
                         {/* <div onClick={() => switchonclick("basin")} className="seedetails">
                             <h3>Plastic Basin</h3>
                         </div> */}

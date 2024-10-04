@@ -1,7 +1,7 @@
 *{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 
-  font-size: 14px;
+  /* font-size: 16px; */
 }
 p{
   margin-bottom: 10px;
@@ -9,31 +9,34 @@ p{
 .box {
   margin: 15px 10px;
   display: flex;
+  /* flex-wrap: wrap; */
+  cursor: pointer;
   border-radius: 5px;
-  flex-direction: column;
-  width: 211px;
+ width:40vw;
   transition: all .25s;
+  box-shadow: 0px 0px 4px rgb(152, 152, 155);
 }
 .box:hover{
   box-shadow: 0px 0px 8px rgb(152, 152, 155);
-  transform: scale(1.03);
+  transform: scale(1.05);
 
 }
 .box >div > img {
-  margin-top: 1px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+border-radius: 10px;
   cursor: pointer;
   width: 210px;
   height: 245px;
-  /* transition: all .35s; */
+  padding: 10px;
 }
 
 .box2 {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  margin: 5px  5px;
+  margin: 15px  5px;
   text-align: left;
   
+}
+.box2 *{
+  font-size: large;
 }
 .box2 > h5 {
   margin-bottom: 4px;
@@ -45,17 +48,24 @@ p{
 }
 .box2_1 {
   display: flex;
-  flex-direction: row;
+
+  flex-direction: column;
 
 }
-.mrp1 {
-  padding-left: 5px;
-  padding-right: 5px;
-   text-decoration: line-through;
+.box2_1 div{
+  display: flex;
 }
-.discount1{
+.mrp2 {
+ /* font-size: 18px; */
+ font-weight: 600;
+ color: rgb(140, 141, 141);
+  text-decoration: line-through;
+}
+.discount2{
   padding: 0px 3px;
+  margin-left: 10px;
   border-radius: 3px;
+  width: fit-content;
   color: rgb(34, 55, 84);
   background-color: rgb(123, 230, 150);
 
@@ -72,27 +82,38 @@ color: rgb(217, 0, 255);
 }
 @media (max-width:740px) {
   .box{
-    width: 160px;
-  margin:10px 10px;
+    /* width: 160px; */
+  /* margin:10px 10px; */
   }
   .box2{
     margin: 5px ;
   }
   .box *{
-    font-size: small
+    font-size:medium;
   }
   .box >div > img {
     margin-top: 1px;
     width: 159px;
     height: 170px;
+    padding: 5px 5px;
   }
 }
-@media (max-width:490px) {
+@media (max-width:1150px) {
   .box{
-    margin: 10px 5px;
-    /* height: 300px; */
-  }
-  .box2_1 *{
-    margin: 0px;
+   width: 70vw;
   }
 }
+@media (max-width:650px) {
+  .box{
+   width: 90vw;
+  }
+  .box *{
+    font-size:14px;
+  }
+}
+/* @media (max-width:470px) {
+  .box >div > img {
+    width: 120px ;
+    height: 140px;
+  }
+} */

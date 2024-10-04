@@ -1,10 +1,10 @@
 .productpage{
 
+    margin-top: 135px;
     background-color: #ffffff;
 }
 .product_part{
     display: flex;
-    margin-top: 135px;
     margin-bottom: 20px;
     justify-content: center;
 }

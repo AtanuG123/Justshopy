@@ -111,6 +111,9 @@ color: #000;
   
 }
 @media (max-width:870px) {
+  .navber{
+    height: 80px;
+  }
   .leftnav ul li {
     margin: 0px;
   }
@@ -150,8 +153,8 @@ padding-left: 30px;
     text-align: left;
   }
   .nav_small *{
-    color: rgb(0, 72, 255);
-    font-weight: 600;
+    color: rgb(0, 0, 0);
+    /* font-weight: 600; */
 
   }
 }

@@ -36,9 +36,10 @@ li {
   padding: 20px 40px;
   height: 40vw;
   width: 38vw;
-  
+  cursor: pointer;
 }
 .cata_product2 img{
+  cursor: pointer;
   padding: 20px 40px;
   height: 80vw;
   width: 40vw;
@@ -85,10 +86,10 @@ li {
 #featuredmain > div{
   flex-wrap: wrap;
   display: flex;
-  cursor: pointer;
   justify-content: space-evenly;
 }
 #featuredmain > div >div{
+  cursor: pointer;
   margin: 30px 30px;
   flex-direction: column;
   width: 380px;

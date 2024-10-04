@@ -30,26 +30,28 @@ export default function Itembox(props) {
         ></img>
         <p>{props.brand}</p>
       </div>
-      <div className="box2">
+      <div className="box2" onClick={switchonclick}>
         <h5 className="productname" id="proname">
           {props.name}
         </h5>
         <p className="descrip">
-          {props.description ? props.description.slice(0, 25) : " "}...
+          {props.description ? props.description.slice(0, 30) : " "}...
         </p>
         <div className="box2_1">
+          <div>
+
           <p className="price">₹{props.price}</p>
-          <p className="mrp1">
-            {Math.round((100*props.price)/(100-props.discount))}
+          <p className="discount2">{props.discount}% Off</p>
+          </div>
+          <p className="mrp2">
+          ₹{Math.round((100*props.price)/(100-props.discount))}
           </p>
-          <p className="discount1">{props.discount}% Off</p>
         </div>
-        <div>
-          {/* <span>Size :</span> */}
+        {/* <div>
           {props.size.map((size) => {
             return <span id="size">{size.toUpperCase()}</span>
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );

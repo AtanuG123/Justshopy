@@ -1,17 +1,16 @@
-.filterbtn {
+/* .filterbtn {
   display: none;
 }
 .sorting{
 display: flex;
 justify-content: space-between;
 width: 250px;
-/* padding-top: 5px; */
+
 }
 .sorting div{
   display: flex;
   justify-content: space-between;
   width: 250px;
-  /* padding-top: 5px; */
   }
 .sorting p{
   text-align: center;
@@ -25,15 +24,12 @@ height: 30px;
 }
 .filter {
   border: 2px solid rgb(181, 181, 181);
-  /* border-radius: 5px; */
   display: flex;
   flex-direction: column;
   width: 250px;
-  /* margin-top: 55px; */
   margin-right: 10px;
 
   height: fit-content;
-  /* position: fixed; */
 }
 .filter > div {
   display: flex;
@@ -71,7 +67,6 @@ height: 30px;
   }
   .sorting select{
     width: 150px;
-    /* margin-right: 5px; */
   }
   .filter {
     display: none;
@@ -92,4 +87,4 @@ height: 30px;
   .sorting *{
 font-size: 12px;
   }
-}
+} */

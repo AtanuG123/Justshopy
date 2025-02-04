@@ -178,7 +178,7 @@ margin-top: 10vh;
 }
 @media (max-width:400px) {
   .home1 {
-    background-image: url("../component/images/homesmall3.jpg");
+    background-image: url("../component/images/homesmall4.jpg");
     /* height: 65vh; */
     background-size:100%;
     background-size: cover;
@@ -419,7 +419,7 @@ button i{
       justify-content: center;
     }
     #feedsection div img {
-      height: 45vh;
+      height: 50vh;
       width: 75vw;
   }
   #feedsection> div * {
@@ -519,6 +519,7 @@ button i{
     .saltbanner> img{
       width: 90vw;
       margin: 20px 10px;
+      cursor: pointer;
     }
     .saltitems{
       width: 80%;

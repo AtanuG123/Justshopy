@@ -74,7 +74,7 @@ export default function Home() {
             
             <div className="saltsection">
                 <div className="saltbanner">
-                    <img src={home2}></img>
+                    <img onClick={() => switchonclick("salt")} src={home2}></img>
                 </div>
                 <div className="saltitems">
                     <Crousal />
@@ -90,7 +90,7 @@ export default function Home() {
                     <p>Premium Collection</p>
                     <h2>Growel Fish Food Floating
                         Pellets for Koi Fish, Gold Fish,Edible Fish,Pond Fish ,All Life Stages</h2>
-                    <button class="button-53" role="button">Quick view
+                    <button class="button-53" role="button" onClick={() => switchonclick("fishfeed")}>Quick view
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -99,7 +99,7 @@ export default function Home() {
 
             <div className="saltsection">
                 <div className="saltbanner">
-                    <img src={home3}></img>
+                    <img onClick={() => switchonclick("pipe")}src={home3}></img>
                 </div>
                 <div className="saltitems">
                     <Crousal2 />
@@ -114,7 +114,7 @@ export default function Home() {
                 <div>
                     <p>Limited Time Deal</p>
                     <h2>Treats mixed bacterial infections. Second generation fluroquinilone.</h2>
-                    <button class="button-53" role="button">Quick view
+                    <button class="button-53" role="button" onClick={() => switchonclick("fishmedicine")}>Quick view
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>

@@ -1,5 +1,5 @@
 *{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
 
   /* font-size: 16px; */
 }
@@ -7,32 +7,36 @@ p{
   margin-bottom: 10px;
 }
 .box {
-  margin: 15px 10px;
+  margin: 2.1rem 1rem;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-direction: column;
   cursor: pointer;
-  border-radius: 5px;
- width:40vw;
+  /* border-radius: 10px; */
+  width:280px;
   transition: all .25s;
-  box-shadow: 0px 0px 4px rgb(152, 152, 155);
 }
-.box:hover{
-  box-shadow: 0px 0px 8px rgb(152, 152, 155);
-  transform: scale(1.05);
 
-}
+.imgdiv{
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
 .box >div > img {
-border-radius: 10px;
+  border-radius: 10px;
   cursor: pointer;
-  width: 210px;
-  height: 245px;
-  padding: 10px;
+  width: 280px;
+  padding-bottom: 20px;
+  transition: all .55s;
+  transition: transform .5s ease ;
 }
-
+.box  >div > img:hover{
+  transform: scale(1.2) ;
+  
+}
 .box2 {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  margin: 15px  5px;
-  text-align: left;
+  text-align: center;
   
 }
 .box2 *{
@@ -47,13 +51,14 @@ border-radius: 10px;
   color: rgb(95, 95, 95);
 }
 .box2_1 {
-  display: flex;
-
-  flex-direction: column;
-
+  /* display: flex;
+  
+  flex-direction: column; */
+  
 }
 .box2_1 div{
-  display: flex;
+  text-align: center;
+  /* display: flex; */
 }
 .mrp2 {
  /* font-size: 18px; */

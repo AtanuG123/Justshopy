@@ -32,15 +32,15 @@ export default function PreviousNextMethods() {
         {...settings}
       >
         <div key={1}>
-        <img src={"https://i.postimg.cc/g0fx8s1J/salt.jpg"}  />
+        <img src={"https://i.postimg.cc/GmWV7kc4/eco-flex.jpg"}  />
         <p>Starting at 10/kg</p>
         </div>
         <div key={2}>
-        <img src={"https://i.postimg.cc/DyHrbGrj/IMG-20241006-130127.jpg"} />
+        <img src={"https://i.postimg.cc/7ZTk6t5t/supersakti.jpg"} />
         <p>Starting at 10/kg</p>
         </div>
         <div key={3}>
-        <img src={"https://i.postimg.cc/4N2b2yJG/IMG-20241005-095812.jpg"} />
+        <img src={"https://i.postimg.cc/13c7sM6h/IMG-20241006-124758.jpg"} />
         <p>Starting at 25/kg</p>
         </div>
        

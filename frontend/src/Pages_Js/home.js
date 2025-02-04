@@ -1,8 +1,11 @@
 import Crousal from "../component/crousal";
+import Crousal2 from "../component/crousal2";
 import { useNavigate } from "react-router-dom";
 import "../Pages_css/home.css";
 import Copyright from "../component/Footer";
-
+import home1 from "../component/images/home1.jpg"
+import home2 from "../component/images/home2.jpg"
+import home3 from "../component/images/home3.jpg"
 import Navber from "../component/navber";
 export default function Home() {
     const navigate = useNavigate();
@@ -16,125 +19,109 @@ export default function Home() {
     return (
         <div id="mainhome">
 
-            <Crousal />
-            <div id="catagory">
-                <div id="catagoryheading">
-                    <h2>TOP SELLING</h2>
-                </div>
-                <div className="cata_product">
-
-                <div className="cata_product1">
-
-                    <div>
-                        <img onClick={() => switchonclick("pipe")} src={"https://i.postimg.cc/GmWV7kc4/eco-flex.jpg"} alt="loading"></img>
-                        {/* <div onClick={() => switchonclick("pipe")} className="seedetails" >
-                            <h3>Suction Hose</h3>
-                        </div> */}
-                    </div>
-                    <div >
-                        <img onClick={() => switchonclick("fishmedicine")} src={"https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/meriquin_0.jpg?itok=edMkr4Wg"} alt="loading" ></img>
-                        {/* <div onClick={() => switchonclick("salt")} className="seedetails">
-                            <h3>Salt</h3>
-                           
-                        </div> */}
-                    </div>
-                </div>
-
-                
-
-                    <div className="cata_product2" >
-                        <img onClick={() => switchonclick("fishfeed")} src={"https://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"} alt="loading"></img>
-                        {/* <div onClick={() => switchonclick("basin")} className="seedetails">
-                            <h3>Plastic Basin</h3>
-                        </div> */}
-                    </div>
-                
-                </div>
+            <div className="home1">
+                {/* <img src={home1}></img> */}
             </div>
+
 
             <div id="featuredpro">
                 <div id="featureheading">
-                    <p>FEATURED PRODUCTS</p>
+                    <p>On Sale </p>
+
+                   
+
                 </div>
                 <div id="featuredmain">
                     <div>
-
+                        <img onClick={() => switchonclick("bin")} className="featuredmain11" src={"https://i.postimg.cc/DySGRWF1/Screenshot-2024-09-07-110114.png"}></img>
                         <div>
-                            <img onClick={() => switchonclick("bin")} className="featuredmain11" src={"https://i.postimg.cc/DySGRWF1/Screenshot-2024-09-07-110114.png"}></img>
-                            <div>
-                                <h4>PLASTIC  BIN</h4>
-                                {/* <p>Starting at <span>100</span></p> */}
-                            </div>
-
+                            <h4>Plastic Bin</h4>
+                            {/* <p>Starting at <span>100</span></p> */}
                         </div>
+                    </div>
+                    <div>
+                        <img onClick={() => switchonclick("busket")} className="featuredmain12" src={"https://i.postimg.cc/Hn36Nq9B/chupri.jpg"}></img>
                         <div>
-
-                            <img onClick={() => switchonclick("busket")} className="featuredmain12" src={"https://i.postimg.cc/Hn36Nq9B/chupri.jpg"}></img>
-                            <div>
-                                <h4>BASKET</h4>
-                                {/* <p>Starting at <span>80</span></p> */}
-                            </div>
+                            <h4>Basket</h4>
+                            {/* <p>Starting at <span>80</span></p> */}
                         </div>
-
-
+                    </div>
+                    <div>
+                        <img onClick={() => switchonclick("footvalve")} className="featuredmain21" src={"https://i.postimg.cc/vH8M3jRK/telfish.jpg"}></img>
                         <div>
-                            <img onClick={() => switchonclick("footvalve")} className="featuredmain21" src={"https://i.postimg.cc/vH8M3jRK/telfish.jpg"}></img>
-                            <div>
-                                <h4>FOOTVALVE</h4>
-                                {/* <p>Starting at <span>150</span></p> */}
-                            </div>
+                            <h4>Footvalve</h4>
+                            {/* <p>Starting at <span>150</span></p> */}
                         </div>
+                    </div>
+                    <div>
+                        <img className="featuredmain22" onClick={() => switchonclick("basin")} src={"https://i.postimg.cc/FzpbT0VS/tajbucket.jpg"}></img>
                         <div>
-                            <img onClick={() => switchonclick("net")} className="featuredmain32" src={"https://i.postimg.cc/Y2hVD34R/chapa.jpg"}></img>
-                            <div>
-                                <h4>NET</h4>
-                                {/* <p>Starting at <span>70</span></p> */}
-                            </div>
+                            <h4>Bucket</h4>
                         </div>
-                
-
-                        <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("salt")} src={"https://i.postimg.cc/vHM35td3/Screenshot-2024-09-07-105255.png"}></img>
-                            <div>
-                                <h4>SALT</h4>
-                            </div>
-                        </div>
-                        <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("pipe")} src={"https://i.postimg.cc/GmWV7kc4/eco-flex.jpg"}></img>
-                            <div>
-                                <h4>SUCTION HOSE</h4>
-                                {/* <p>Starting at <span>4500</span></p> */}
-                            </div>
-
-                        </div>
-                        <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("basin")} src={"https://i.postimg.cc/FzpbT0VS/tajbucket.jpg"}></img>
-                            <div>
-                                <h4>BUCKET</h4>
-                            </div>
-                        </div>
-
-                        <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("fishfeed")} src={"https://i5.walmartimages.com/asr/b705ae8f-2149-4e06-8685-81d1ef2a4737_1.933f9f3eaf9b9743afba01a12b9050d6.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"}></img>
-                            <div>
-                                <h4>FISH FEED</h4>
-                                {/* <p>Starting at <span>500</span></p> */}
-                            </div>
-
-                        </div>
-                        <div>
-                            <img className="featuredmain22" onClick={() => switchonclick("fishmedicine", false)} src={"https://www.loyalpetzone.com/wp-content/uploads/2024/07/merquin-syrup-dogs-birds-800x800.jpg"}></img>
-                            <div>
-                                <h4>MERIQUEN</h4>
-                                {/* <p>Starting at <span>500</span></p> */}
-                            </div>
-
-                        </div>
+                    </div>
                 </div>
+                <div className="viewbtn">
+                <button class="button-6" role="button">View all
+                <i class="fa-solid fa-arrow-right"></i>
+                </button>
 
+                </div>
+                {/* <button class="button-6" role="button">View all</button> */}
+
+            </div>
+
+
+            
+            <div className="saltsection">
+                <div className="saltbanner">
+                    <img src={home2}></img>
+                </div>
+                <div className="saltitems">
+                    <Crousal />
                 </div>
             </div>
-            
+
+
+            <div id="feedsection">
+                {/* <div>
+                    <img src={"https://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"}></img>
+                </div>
+                <div>
+                    <p>Premium Collection</p>
+                    <h2>Growel Fish Food Floating
+                        Pellets for Koi Fish, Gold Fish,Edible Fish,Pond Fish ,All Life Stages</h2>
+                    <button class="button-53" role="button">Quick view
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div> */}
+
+
+            {/* <div className="saltsection">
+                <div className="saltbanner">
+                    <img src={home3}></img>
+                </div>
+                <div className="saltitems">
+                    <Crousal2 />
+                </div>
+            </div> */}
+
+
+            {/* <div id="feedsection">
+                <div>
+                    <img src={"https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/meriquin_0.jpg?itok=edMkr4Wghttps://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"}></img>
+                </div>
+                <div>
+                    <p>Limited Time Deal</p>
+                    <h2>Treats mixed bacterial infections. Second generation fluroquinilone.</h2>
+                    <button class="button-53" role="button">Quick view
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+ */}
+
+
+            </div>
             {/* <div id="ad">
                 <img src={require("../component/images/ad.jpg")} alt="ad"></img>
             </div> */}
@@ -161,7 +148,8 @@ export default function Home() {
                     </div>
                 </div>
             </div> */}
-            <Copyright />
+
+            {/* <Copyright /> */}
         </div>
 
 

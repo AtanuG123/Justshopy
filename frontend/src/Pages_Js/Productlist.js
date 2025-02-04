@@ -93,18 +93,18 @@ export default function Productlist() {
             {isLoading ? <LoadingSpinner /> : null}
             <div id='productlist'>
                 <div id='productlist1'>
-                    <div className="navigation">
+                    {/* <div className="navigation">
                         <h5>
 
-                        <span onClick={homenavi}>Home  </span> {'>'}
-                        <span >{Catagory.toUpperCase()}  </span>
+                            <span onClick={homenavi}>Home  </span> {'>'}
+                            <span >{Catagory.toUpperCase()}  </span>
                         </h5>
-                        {/* <span>{Customid}</span> */}
-                    </div>
+                      
+                    </div> */}
                     {/* <h2>
                         {Catagory.toUpperCase()}
                     </h2> */}
-                    <div className="filter1">
+                    {/* <div className="filter1">
                         <div className='sorting'>
 
                             <div>
@@ -117,8 +117,8 @@ export default function Productlist() {
                                 </select>
                             </div>
                         </div>
-                        {/* <Filter /> */}
-                    </div>
+                        <Filter /> 
+                    </div> */}
                     <div>
                         <div id="boxs">
                             {listpro.map(items => {

@@ -20,7 +20,7 @@ export default function Itembox(props) {
 
   return (
     <div className="box">
-      <div>
+      <div className="imgdiv">
         {/* <img id="img"src={photo} alt="productimg" onMouseLeave ={changeprev} onMouseEnter={changeimg} onClick={switchonclick}></img> */}
         <img
           id="img"
@@ -28,24 +28,24 @@ export default function Itembox(props) {
           alt="productimg"
           onClick={switchonclick}
         ></img>
-        <p>{props.brand}</p>
+        {/* <p>{props.brand}</p> */}
       </div>
       <div className="box2" onClick={switchonclick}>
         <h5 className="productname" id="proname">
           {props.name}
         </h5>
-        <p className="descrip">
+        {/* <p className="descrip">
           {props.description ? props.description.slice(0, 30) : " "}...
-        </p>
+        </p> */}
         <div className="box2_1">
           <div>
 
           <p className="price">₹{props.price}</p>
-          <p className="discount2">{props.discount}% Off</p>
+          {/* <p className="discount2">{props.discount}% Off</p> */}
           </div>
-          <p className="mrp2">
+          {/* <p className="mrp2">
           ₹{Math.round((100*props.price)/(100-props.discount))}
-          </p>
+          </p> */}
         </div>
         {/* <div>
           {props.size.map((size) => {
@@ -53,6 +53,13 @@ export default function Itembox(props) {
           })}
         </div> */}
       </div>
+
+
+
+      
     </div>
+
+
+
   );
 }

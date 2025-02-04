@@ -83,7 +83,7 @@ export default function Home() {
 
 
             <div id="feedsection">
-                {/* <div>
+                <div>
                     <img src={"https://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"}></img>
                 </div>
                 <div>
@@ -94,20 +94,20 @@ export default function Home() {
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
-            </div> */}
+            </div>
 
 
-            {/* <div className="saltsection">
+            <div className="saltsection">
                 <div className="saltbanner">
                     <img src={home3}></img>
                 </div>
                 <div className="saltitems">
                     <Crousal2 />
                 </div>
-            </div> */}
+            </div>
 
 
-            {/* <div id="feedsection">
+            <div id="feedsection">
                 <div>
                     <img src={"https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/meriquin_0.jpg?itok=edMkr4Wghttps://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"}></img>
                 </div>
@@ -118,7 +118,7 @@ export default function Home() {
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
- */}
+
 
 
             </div>
@@ -149,7 +149,7 @@ export default function Home() {
                 </div>
             </div> */}
 
-            {/* <Copyright /> */}
+            <Copyright />
         </div>
 
 

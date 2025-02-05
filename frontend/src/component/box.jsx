@@ -32,7 +32,7 @@ export default function Itembox(props) {
       </div>
       <div className="box2" onClick={switchonclick}>
         <h5 className="productname" id="proname">
-          {props.name}
+        {props.name ? props.name.slice(0, 48) : ""}
         </h5>
         {/* <p className="descrip">
           {props.description ? props.description.slice(0, 30) : " "}...

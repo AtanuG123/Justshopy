@@ -131,10 +131,44 @@ margin-top: 10vh;
 .home1 {
   width: 100%;
   height:100vh ;
-  background-image: url("../component/images/home1.jpg");
+  background-image: url("../component/images/homefinal.jpg");
   background-size:cover;
   background-repeat: no-repeat;
   
+}
+.homep1{
+color: aliceblue;
+  padding-top:13vw;
+  line-height: 1.8rem;
+}
+.homep1,.homep2{
+  font-size: 70px;
+  padding-left: 5vw;
+  text-align: left;
+  font-weight:1000;
+}
+.homep2{
+  text-shadow: 1px 1px 2px rgb(2, 65, 131);
+  color: rgb(255, 255, 255);
+}
+.homep3,.homep4{
+  font-weight: bolder;
+  font-size:22px;
+  color: white;
+}
+.homep3{
+  text-align: left;
+  line-height: .9rem;
+  padding-left: 20vw;
+}
+.homep4{
+padding-top: 10vw;
+padding-left: 8vw;
+text-align: left;
+}
+.homep4 i{
+  color: rgb(255, 208, 0);
+  padding-right: 10px;
 }
 @media (max-width:865px) {
   .cata_product1 img{
@@ -147,44 +181,80 @@ margin-top: 10vh;
     padding: 5px 10px;
     height: 110vw;
     width: 43vw;
+  }}
+  @media (max-width:950px) {
+   .homep1,.homep2{
+    font-size: 50px;
+   }
+  .homep1 {
+    padding-top: 20vw;
   }
-  .home1 {
-    /* margin-top: 20vh;
-    transform: scale(1.08) ;
-    height: 75vh;
-    overflow: hidden; */
+  .homep3,.homep4{
+font-size:18px;
+  }
+  .home1{
+    object-fit: cover;
+    object-position: 25%;
   }
   
 }
 @media (max-width:600px) {
   .home1 {
-  
-    background-size: contain;
-   /* height: 75vh; */
-    background-image: url("../component/images/homesmall1.jpg");
+    background-image: url("../component/images/homesmall4.1.jpg");
   }
+  .homep1,.homep2{
+    font-size: 40px;
+   }
+  .homep1 {
+    padding-top: 28vw;
+  }
+  .homep3,.homep4{
+font-size:16px;
+  }
+  .homep4{
+    padding-left: 20vw;
+    padding-top: 40vw;
+  }
+ 
   
 }
 @media (max-width:430px) {
   .home1 {
-    height: 90vh;
+    /* height: 90vh; */
     background-size:100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../component/images/homesmall2.jpg");
+    /* background-image: url("../component/images/homesmall2.jpg"); */
     
+  }
+  .homep1,.homep2{
+    font-size: 30px;
+    font-weight: 1000;
+   }
+  .homep1 {
+    padding-top: 170px;
+  }
+  .homep3,.homep4{
+font-size:14px;
+  }
+  .homep4{
+    padding-top: 250px;
+    padding-left: 10vw;
   }
   
 }
 @media (max-width:400px) {
   .home1 {
-    background-image: url("../component/images/homesmall4.jpg");
+    /* background-image: url("../component/images/homesmall4.jpg"); */
     /* height: 65vh; */
     background-size:100%;
     background-size: cover;
     background-repeat: no-repeat;
     
   }
+  
+ 
+  
 
 }
 /* Featured product */

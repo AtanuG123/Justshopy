@@ -115,7 +115,7 @@ const gotocart=()=>{
           </li>
           {/* <li className="nav_li"><a href="https://www.google.co.in/"><i className="fa-regular fa-heart"></i></a></li> */}
           <li className="nav_li"><a onClick={gotocart}>
-          <i className="fa-solid fa-cart-shopping"></i><span className="position-absolute  translate-middle badge rounded-pill  " style={{ color: "black" }}>{cartitem1.length}</span>
+          <i className="fa-solid fa-cart-shopping"></i><span className="position-absolute  translate-middle badge rounded-pill  " >{cartitem1.length}</span>
           </a></li>
           <li className="navwrap">
             <div onClick={shownav}>

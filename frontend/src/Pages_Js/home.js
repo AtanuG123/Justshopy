@@ -20,6 +20,12 @@ export default function Home() {
         <div id="mainhome">
 
             <div className="home1">
+                <p className="homep1">WELCOME TO</p>
+                <p  className="homep2">GHOSH HARDWARE</p>
+                <p  className="homep3">One Destination For Your Fishery Products</p>
+                <p  className="homep4">
+                <i class="fa-solid fa-location-dot" ></i>
+                    Rajendrapur , Naihati , Near Blind School , 743166</p>
                 {/* <img src={home1}></img> */}
             </div>
 

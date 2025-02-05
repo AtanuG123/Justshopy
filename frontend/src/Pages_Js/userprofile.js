@@ -73,10 +73,10 @@ export default function Userprofile() {
                 <div id='tablebox'>
                     <table >
                         <tr id='detailhead'>
-                            <td>ORDER</td>
-                            <td>SHIP TO </td>
-                            <td >ORDER ID</td>
-                            <td>TOTAL AMOUNT</td>  
+                            <td>Description</td>
+                            <td>Status</td>
+                            <td >Order Id</td>
+                            <td>Amount</td>  
                         </tr>
                         {allorder.map((items) => {
                                 return (
@@ -84,14 +84,15 @@ export default function Userprofile() {
                                         <td>
                                             <div>
                                                 <img src={items.Orderimg}></img>
-                                                <span
+                                                {/* <span
                                                     
                                                     class="badge rounded-pill noofitem"
                                                 >  +{items.Orderlen - 1}
-                                                </span>
+                                                </span> */}
                                             </div>
+                                            {/* <button className="btn btn-success">Ordered</button> */}
                                         </td>
-                                        <td>{items.Name}</td>
+                                        <td><button style={{cursor:"none"}} className="btn btn-success">Ordered</button></td>
                                         <td>{items.Orderid}</td>
                                         <td>{items.Amount}</td>                                   
                                     </tr>

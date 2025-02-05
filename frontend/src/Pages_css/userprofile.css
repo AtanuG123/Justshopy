@@ -1,5 +1,31 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+
+.userd{
+    margin-top: 80px;
+    /* margin-left: 150px; */
+}
+.card-body{
+    min-width: 300px;
+    align-items: center;
+    justify-content: center;
+}
+.logbtnpro{
+    
+    background-color: rgba(242, 242, 242, 0.437);
+}
+.logbtnpro:hover{
+background-color: rgb(255, 80, 31);
+color: black;
+}
 #orderhead{
-    display: block;
+    display:block;
     margin-top: 90px;
 }
 
@@ -11,14 +37,14 @@
     /* text-align: center; */
     /* justify-content: center; */
     
-    width: 90vw;
+    width: 60vw;
     
 }
 
 
 #tablebox {
-    margin-left: 40px;
-    width: 90vw;
+    /* margin-left: 40px; */
+    /* width: 90vw; */
     /* border-radius: 10px; */
  /* border: 2px solid rgb(164, 164, 164);  */
 }
@@ -39,21 +65,45 @@
     width: 50px;
     margin: 5px 10px;
 }
-
+.noofitem{
+    translate: -70% 120%;
+    background-Color: grey;
+    font-size: 12px;
+}
 @media (max-width:750px) {
     #tablebox{
         margin:auto;
         overflow: scroll;
     }
     #orderhead table{
-        width: 720px;
+        width:fit-content;
         overflow: scroll;
     }
     tr *{
-        /* overflow: scroll; */
+        padding: 0px 3px;
         font-size: 14px;
     }
     .userdetail *{
         font-size: 13px;
     }
+}
+@media (max-width:425px) {
+    #tablebox{
+        /* margin:auto;
+        overflow: scroll; */
+    }
+    #orderhead table img {
+    margin: 4px 0px;
+    }
+   
+    .userdetail *{
+        font-size: 13px;
+    }
+}
+@media (max-width:395px) {
+.noofitem{
+    translate: 32% -120%;
+}
+
+
 }

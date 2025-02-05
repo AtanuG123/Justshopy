@@ -11,16 +11,20 @@ import { order } from '../state/order';
 export default function Cart() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const user = useSelector((state) => state.profile.data);
     const cartproduct = useSelector(state => state.cart.data);
     const subtotal = useSelector(state => state.cart.subprice);
     const order_id = useSelector(state=>state.order.data);
   
+    
     const makepayment = async () => {
-        if (Math.round(subtotal) !== 0) {
-            const stripe = await loadStripe("pk_test_51NopitSJ60SygxplnqXdvdBzZ88SA9g1eLhATSLGgZrPNHNYWebcb4FStx1aqEoDWlSz7GGIKkhmDEh4FBNLm1BZ00c35qlSzc");
-            const body = {
-                products: Math.round(subtotal + ((subtotal * 5) / 100))
-            }
+        if(user!=="invalid"){
+
+            if (Math.round(subtotal) !== 0) {
+                const stripe = await loadStripe("pk_test_51NopitSJ60SygxplnqXdvdBzZ88SA9g1eLhATSLGgZrPNHNYWebcb4FStx1aqEoDWlSz7GGIKkhmDEh4FBNLm1BZ00c35qlSzc");
+                const body = {
+                    products: Math.round(subtotal + ((subtotal * 5) / 100))
+                }
             const headers = {
                 "Content-Type": "application/json"
             }
@@ -44,6 +48,13 @@ export default function Cart() {
         }
         else {
             toast.info("your cart is empty", {
+                autoclose: 2000,
+                position: "top-right"
+            });
+        }
+        }
+        else{
+             toast.info("Login before checkout", {
                 autoclose: 2000,
                 position: "top-right"
             });

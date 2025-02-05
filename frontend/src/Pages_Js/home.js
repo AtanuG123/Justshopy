@@ -67,7 +67,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="viewbtn">
-                <button class="button-6" role="button">View all
+                <button class="button-6" onClick={()=>navigate('/allproduct')}role="button">View all 
                 <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
@@ -96,7 +96,7 @@ export default function Home() {
                     <p>Premium Collection</p>
                     <h2>Growel Fish Food Floating
                         Pellets for Koi Fish, Gold Fish,Edible Fish,Pond Fish ,All Life Stages</h2>
-                    <button class="button-53" role="button" onClick={() => switchonclick("fishfeed")}>Quick view
+                    <button class="button-53" role="button" onClick={() => navigate('/product/fishfeed12')}>Quick view
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -120,7 +120,7 @@ export default function Home() {
                 <div>
                     <p>Limited Time Deal</p>
                     <h2>Treats mixed bacterial infections. Second generation fluroquinilone.</h2>
-                    <button class="button-53" role="button" onClick={() => switchonclick("fishmedicine")}>Quick view
+                    <button class="button-53" role="button" onClick={() =>navigate('/product/fishmedicine12')}>Quick view
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>

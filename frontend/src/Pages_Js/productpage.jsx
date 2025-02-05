@@ -101,7 +101,7 @@ export default function Productpage() {
   };
 
   const fordispatch = (e) => {
-    if (user !== "invalid"  && flag === 0) {
+    if (flag === 0) {
       setflag(1);
 
       dispatch(
@@ -138,11 +138,11 @@ export default function Productpage() {
       {isLoading ? <LoadingSpinner /> : null}
       <ToastContainer />
       <div id="product_p" style={{ flexDirection: "column" }}>
-        <div className="navigation">
+        {/* <div className="navigation">
           <span onClick={homenavi}>Home</span> {">"}
           <span >{singleproduct.Catagory}  </span>{">"}
           <span>{singleproduct.Name}</span>
-        </div>
+        </div> */}
         <div className="product_part">
           <div className="img_part">
             <div className="main_img">

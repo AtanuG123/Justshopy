@@ -120,6 +120,7 @@ export default function Productlist() {
                         <Filter /> 
                     </div> */}
                     <div>
+                        <h4 style={{fontWeight:"bolder"}}>{Catagory.toUpperCase()}</h4>
                         <div id="boxs">
                             {listpro.map(items => {
                                 return (

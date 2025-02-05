@@ -347,6 +347,7 @@ font-size:14px;
 }
 #feedsection div img{
   height: 80vh;
+  /* cursor: pointer; */
 }
 button i{
   padding: 5px 8px;
@@ -571,6 +572,7 @@ button i{
   width: 90%;
   height: 80%;
   border-radius: 10px;
+  cursor: pointer;
 }
 .saltitems{
  width: 27%;

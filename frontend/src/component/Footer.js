@@ -2,7 +2,7 @@
 import "./copyright.css";
 export default function Copyright() {
   return (
-    <div className="container" style={{ padding:"0px" }}>
+    <div className="container" style={{ paddingTop:"20px" }}>
       <footer
         className="text-center text-lg-start text-white"
         style={{ backgroundColor: "#738aaf", margin: "10px 0px 0px 0px" }}>
@@ -10,7 +10,7 @@ export default function Copyright() {
           <section className="">
             <div className="row">
               <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <img style={{width:"260px"}} src={require("./images/logo.png")}></img>
+                <img style={{width:"260px"}} src={require("./images/logo2.png")}></img>
                
               </div>
              

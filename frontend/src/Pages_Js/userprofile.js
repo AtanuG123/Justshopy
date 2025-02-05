@@ -39,18 +39,33 @@ export default function Userprofile() {
         navigate("/");
         logoutnotify();
     }
-
+    
     return (
-        <div style={{ marginTop: "80px"}}>
+        <section>
 
-            <div id="orderhead">
-                <div className="userdetail"style={{textAlign:"left",padding:"30px"}}>
-                    <h4>User Name : {user.Name}</h4>
-                    <h4>User Email : {user.Email}</h4>
-                    <h4>User Address : {user.Address}</h4>
-                    <h4>User Pincode : {user.Pin}</h4>
+            <div class="col-lg-4 userd">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"
+                                class="rounded-circle p-1 bg-warning" width="110" />
+                            <div class="mt-3">
+                                <h4>{user.Name}</h4>
+                                <p class="text-muted font-size-sm">{user.Address}</p>
+                                <p class="text-secondary mb-1">{user.Pin}</p>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush text-center mt-4 " >
 
+                            {/* <a href="#" class="list-group-item list-group-item-action border-0" >Orders</a> */}
+
+
+                            <a href="#" class="button-6 logbtnpro" onClick={removeuser}> Logout</a>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div id="orderhead">
                 <div>
                     <h4>Past Order Details</h4>
                     <br></br>
@@ -61,47 +76,34 @@ export default function Userprofile() {
                             <td>ORDER</td>
                             <td>SHIP TO </td>
                             <td >ORDER ID</td>
-                            <td>TOTAL AMOUNT</td>
-                            <td>DATE & TIME</td>
+                            <td>TOTAL AMOUNT</td>  
                         </tr>
-
-
-
-                        {/* <tr id='orderitems'> */}
-                        {
-                            allorder.map((items) => {
+                        {allorder.map((items) => {
                                 return (
                                     <tr id='orderitems'>
                                         <td>
                                             <div>
                                                 <img src={items.Orderimg}></img>
                                                 <span
-                                                    style={{ translate: "-70% 120%",backgroundColor: "grey",fontSize:"12px" }}
-                                                    class="  badge rounded-pill"
-                                                >  +{items.Orderlen-1}
+                                                    
+                                                    class="badge rounded-pill noofitem"
+                                                >  +{items.Orderlen - 1}
                                                 </span>
-                                               
                                             </div>
                                         </td>
                                         <td>{items.Name}</td>
                                         <td>{items.Orderid}</td>
-                                        <td>{items.Amount}</td>
-                                        <td>{items.Datetime}</td>
+                                        <td>{items.Amount}</td>                                   
                                     </tr>
                                 )
                             })
                         }
-                       
                     </table>
-                   
                 </div>
             </div>
-            <br></br>
-            <button className="btn btn-primary" onClick={removeuser}>
-                Logout
+        </section>
 
-            </button>
-        </div>
+        
 
     );
 }

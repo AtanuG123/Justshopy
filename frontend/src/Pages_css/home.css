@@ -490,8 +490,8 @@ button i{
       justify-content: center;
     }
     #feedsection div img {
-      height: 50vh;
-      width: 75vw;
+      height: 55vh;
+      width: 65vw;
   }
   #feedsection> div * {
     padding: 10px 2px;
@@ -587,11 +587,14 @@ button i{
     .saltsection{
       flex-direction: column;
       height: 100%;
+      padding-bottom: 30px;
     }
     .saltbanner> img{
       width: 90vw;
+      /* height: 25vh; */
       margin: 20px 10px;
       cursor: pointer;
+      /* transform: scale(1.2);overflow: hidden; */
     }
     .saltitems{
       width: 80%;
@@ -599,5 +602,13 @@ button i{
     }
     .saltitems *{
      justify-content: center;
+    }
+  }
+
+  @media (max-width:500px) {
+    .saltbanner> img{
+      width: 95vw;
+      margin: 20px 5px;
+     
     }
   }

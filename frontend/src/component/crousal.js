@@ -33,15 +33,15 @@ export default function PreviousNextMethods() {
       >
         <div key={1}>
         <img src={"https://i.postimg.cc/g0fx8s1J/salt.jpg"}  />
-        <p>Starting at 10/kg</p>
+        <p>Starting at ₹10/kg</p>
         </div>
         <div key={2}>
         <img src={"https://i.postimg.cc/DyHrbGrj/IMG-20241006-130127.jpg"} />
-        <p>Starting at 10/kg</p>
+        <p>Starting at ₹10/kg</p>
         </div>
         <div key={3}>
         <img src={"https://i.postimg.cc/4N2b2yJG/IMG-20241005-095812.jpg"} />
-        <p>Starting at 25/kg</p>
+        <p>Starting at ₹25/kg</p>
         </div>
        
       </Slider>

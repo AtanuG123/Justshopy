@@ -33,15 +33,15 @@ export default function PreviousNextMethods() {
       >
         <div key={1}>
         <img src={"https://i.postimg.cc/GmWV7kc4/eco-flex.jpg"}  />
-        <p>Starting at 10/kg</p>
+        <p>Starting at ₹47/ft (2.5inch)</p>
         </div>
         <div key={2}>
         <img src={"https://i.postimg.cc/7ZTk6t5t/supersakti.jpg"} />
-        <p>Starting at 10/kg</p>
+        <p>Starting at ₹44/ft (2.5inch)</p>
         </div>
         <div key={3}>
         <img src={"https://i.postimg.cc/13c7sM6h/IMG-20241006-124758.jpg"} />
-        <p>Starting at 25/kg</p>
+        <p>Starting at ₹36/ft (2inch)</p>
         </div>
        
       </Slider>

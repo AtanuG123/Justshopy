@@ -202,8 +202,8 @@ app.post('/user/', (req, res) => {
 
 app.post('/orderdetailspage/', (req, res) => {
   const { Orderid } = req.body;
-  OrderModel.findOne({ Orderid: Orderid })
-    .then(order => res.json(order))
+  OrderModel.find({ Orderid:Orderid })
+    .then(result => res.json(result))
     .catch(err => res.json(err))
 })
 

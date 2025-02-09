@@ -51,6 +51,7 @@ export default function Userprofile() {
                                 class="rounded-circle p-1 bg-warning" width="110" />
                             <div class="mt-3">
                                 <h4>{user.Name}</h4>
+                                <p class="text-secondary mb-1">{user.Email}</p>
                                 <p class="text-muted font-size-sm">{user.Address}</p>
                                 <p class="text-secondary mb-1">{user.Pin}</p>
                             </div>

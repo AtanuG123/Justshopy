@@ -53,10 +53,14 @@ const getTargetElement = () => document.getElementById("container");
 const downloadPdf = () => generatePDF(getTargetElement, options);
 
 export default function Orderdetailspage  () {
-    const{id} = useParams();
+    const {id} = useParams();
+    const OrderId = id;
     useEffect(()=>{
-        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage`, {id})
-    }).then( res=>console.log(res))
+        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {OrderId})
+        .then( (result)=>{
+          console.log(result)
+    })
+    })
 
     
   const orderData = {

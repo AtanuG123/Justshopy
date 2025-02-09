@@ -123,17 +123,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
     },
     shipping_options: [
       {
-        defaultValues: {
-          Email:userEmail,
-        name: userName,
-        address: {
-          line1: useradd,
-          line2: '',
-          city: '',
-          state:  '',
-          postal_code: userpin,
-          country: 'IN',
-        }},
+       
         shipping_rate_data: {
           type: "fixed_amount",
           fixed_amount: {

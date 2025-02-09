@@ -92,7 +92,7 @@ export default function Userprofile() {
                                             </div>
                                             {/* <button className="btn btn-success">Ordered</button> */}
                                         </td>
-                                        <td><button style={{cursor:"none"}} className="btn btn-success">Ordered</button></td>
+                                        <td><button onClick={()=>navigate(`/orderdetailspage/`+items.Orderid)} className="btn btn-success">Ordered</button></td>
                                         <td>{items.Orderid}</td>
                                         <td>{items.Amount}</td>                                   
                                     </tr>

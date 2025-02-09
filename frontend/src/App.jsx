@@ -22,6 +22,7 @@ import Success from "./Pages_Js/sucess";
 import Cancel from "./Pages_Js/cancel";
 import Productupdate from "./Pages_Js/productupdate";
 import Notfound from "./component/notfound";
+import Orderdetailspage from "./Pages_Js/orderdetailspage";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/paymentcancel" element={<Cancel/>}></Route>
         <Route path="/productupdate" element={<Productupdate/>}></Route>
         <Route path="/notfound" element={<Notfound/>}></Route>
+        <Route path="/orderdetailspage/:id" element={<Orderdetailspage/>}></Route>
       </Routes>
     </BrowserRouter>      
   </div>

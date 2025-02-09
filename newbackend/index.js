@@ -200,6 +200,13 @@ app.post('/user/', (req, res) => {
 })
 
 
+app.post('/orderdetailspage/', (req, res) => {
+  const { Orderid } = req.body;
+  OrderModel.findOne({ Orderid: Orderid })
+    .then(order => res.json(order))
+    .catch(err => res.json(err))
+})
+
 
 app.listen(process.env.REACT_APP_PORT || 3002, () => {
   console.log("success");

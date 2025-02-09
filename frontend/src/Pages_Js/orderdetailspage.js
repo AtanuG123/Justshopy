@@ -2,9 +2,9 @@ import generatePDF, { Resolution, Margin, Options } from "react-to-pdf";
 // import OrderDetails from "../component/ordercard";
 // import { Container } from "./Container";
 // import { Button } from "./Button";
-// import { Card } from "./Card";
-import React, { useEffect } from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { profile } from "../state/userprofile";
+import React, { useEffect, useState } from "react";
+import { useSelector } from 'react-redux';
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -53,13 +53,20 @@ const getTargetElement = () => document.getElementById("container");
 const downloadPdf = () => generatePDF(getTargetElement, options);
 
 export default function Orderdetailspage  () {
+  const user = useSelector(state => state.profile.data);
     const {id} = useParams();
-    const OrderId = id;
-    console.log(OrderId.toString());
+    const [orders,setorders] = useState([]);
+    const Email = user.Email;
+    // console.log(OrderId.toString());
     useEffect(()=>{
-        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {OrderId})
+        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {Email})
         .then( (result)=>{
-          console.log(result)
+          result.data.map(order =>{
+            if(order.Orderid==id){
+              setorders(order);
+              // console.log(orders);
+            }
+          })
     })
     });
 

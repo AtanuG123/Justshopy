@@ -23,7 +23,7 @@ export default function Cart() {
             if (Math.round(subtotal) !== 0) {
                 const stripe = await loadStripe("pk_test_51NopitSJ60SygxplnqXdvdBzZ88SA9g1eLhATSLGgZrPNHNYWebcb4FStx1aqEoDWlSz7GGIKkhmDEh4FBNLm1BZ00c35qlSzc");
                 const body = {
-                    products: Math.round(subtotal + ((subtotal * 5) / 100))
+                    products: Math.round(subtotal + ((subtotal * 5) / 100)),userEmail:user.Email,userName:user.Name,useradd:user.Address,userpin:user.Pin
                 }
             const headers = {
                 "Content-Type": "application/json"

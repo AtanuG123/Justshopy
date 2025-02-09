@@ -57,11 +57,11 @@ export default function Orderdetailspage  () {
     const {id} = useParams();
     const [orders,setorders] = useState([]);
     const Email = user.Email;
-    console.log(Email);
+    // console.log(Email);
     useEffect(()=>{
-        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {Email})
+        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {})
         .then( (result)=>{
-          console.log(result.data);
+          // console.log(result.data);
           result.data.map(order =>{
             if(order.Orderid==id){
               setorders(order);
@@ -113,9 +113,9 @@ export default function Orderdetailspage  () {
       {/* Order Summary */}
       <div className="card mb-3">
         <div className="card-body">
-          <h5 className="card-title">Order #{orderData.orderNumber}</h5>
+          <h5 className="card-title">Order # ORD-{orders.Orderid}</h5>
           <p><strong>Status:</strong> <span className="badge bg-info text-dark">{orderData.status}</span></p>
-          <p><strong>Estimated Delivery:</strong> {orderData.estimatedDelivery}</p>
+          <p><strong>Ordered at :</strong> {orders.Datetime}</p>
         </div>
       </div>
 

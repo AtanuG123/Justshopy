@@ -201,9 +201,9 @@ app.post('/user/', (req, res) => {
 
 
 app.post(`/orderdetailspage/`, (req, res) => {
-  const { Emailid } = req.body;
+ 
   
-  OrderModel.find({ Emailid:Emailid })
+  OrderModel.find()
     .then(result => res.json(result))
     .catch(err => res.json(err))
 })

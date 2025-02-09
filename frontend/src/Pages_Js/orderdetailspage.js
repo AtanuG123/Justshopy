@@ -57,10 +57,11 @@ export default function Orderdetailspage  () {
     const {id} = useParams();
     const [orders,setorders] = useState([]);
     const Email = user.Email;
-    // console.log(OrderId.toString());
+    console.log(Email);
     useEffect(()=>{
         axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {Email})
         .then( (result)=>{
+          console.log(result.data);
           result.data.map(order =>{
             if(order.Orderid==id){
               setorders(order);

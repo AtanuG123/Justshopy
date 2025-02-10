@@ -10,7 +10,8 @@ export default function Success() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [Order,setOrder] = useState([]);
-    const odr  =useSelector(state => state.cart.data);
+    const Odr = useSelector(state => state.cart.copydata);
+    console.log(Odr)
     const subtotal = useSelector(state => state.cart.copyprice);
     const user = useSelector(state => state.profile.data);
     const order_id = useSelector(state => state.order.data);
@@ -24,11 +25,12 @@ export default function Success() {
     // const Orderlen = order.length;
    
 
-    const [timeleft,settimeleft]=useState(10);
-    setOrder(odr);
+    const [timeleft,settimeleft]=useState(100);
+
     useEffect(() => {
+        setOrder(Odr);
         if(timeleft===0){
-            axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name,Order ,Orderid,Datetime})
+            axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name,Order ,Amount ,Orderid,Datetime})
             dispatch(remove());
             navigate("/user/" + user.Name); 
             return;
@@ -58,17 +60,15 @@ export default function Success() {
                             <td >Price</td>
                             <td>Total</td>
                         </tr>
-                            {Order.map((item) => {
+                            {Odr.map((item) => {
                                     return (
                                         <tr>
-
-                                        
                                         <td>
                                             <img src={item.img}></img>
                                         </td>
-                                        <td>{item.Quantity}</td>
-                                        <td>{item.Price}</td>
-                                        <td>{item.Quantity*item.Price}</td>
+                                        <td>{item.qty}</td>
+                                        <td>{item.price}</td>
+                                        <td>{item.qty*item.price}</td>
                                         </tr>
                                     )
                                 })

@@ -107,10 +107,10 @@ export default function Cart() {
                             <p>Merchandise:</p>
                             <p>{subtotal}</p>
                         </div>
-                        <div>
+                        {/* <div>
                             <p>Est. Tax(5%):</p>
                             <p>{((subtotal * 5) / 100)}</p>
-                        </div>
+                        </div> */}
                         <div>
                             <p>Est. Shipping & Handling:</p>
                             <p>00.00</p>
@@ -122,7 +122,7 @@ export default function Cart() {
                         <hr></hr>
                         <div>
                             <p>Total:</p>
-                            <p>{subtotal + ((subtotal * 5) / 100)}</p>
+                            <p>{subtotal}</p>
                         </div>
                     </div>
                     <div className="chkout">

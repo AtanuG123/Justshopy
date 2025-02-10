@@ -3,6 +3,7 @@ const Orderschema = new mongoose.Schema({
     Emailid : String,
     Name: String,
     Order : Array,
+    Amount:Number,
     Orderid:String,
     Datetime : String,
 })

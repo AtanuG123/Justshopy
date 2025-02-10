@@ -39,34 +39,34 @@ export default function Productpage() {
    
     axios
       .post(
-        `${process.env.REACT_APP_PORT}/productlist`,
+        `${process.env.REACT_APP_PORT}/product/`,
 
-        {}
+        {Customid}
       )
-      .then((res) => {
-        let a = [];
-        let Cat = "";
-        res.data.map((item) => {
-          if (item.Customid === Customid) {
-            setsingleproduct(item);
-            Cat = item.Catagory[item.Catagory.length - 1];
-            setsizelist(item.Sizelist);
-            setphoto(item.Img1);
-          }
-        });
-        res.data.map((items) => {
-          if (items.Catagory.includes(Cat) && items.Customid !== Customid) {
-            a.push(items);
-          }
-        });
+      .then((item) => {
+        // let a = [];
+        // let Cat = "";
+        // res.data.map((item) => {
+        //   if (item.Customid === Customid) {
+            setsingleproduct(item.data);
+            // Cat = item.data.Catagory[item.Catagory.length - 1];
+            setsizelist(item.data.Sizelist);
+            setphoto(item.data.Img1);
+          // }
+        // });
+        // res.data.map((items) => {
+        //   if (items.Catagory.includes(Cat) && items.Customid !== Customid) {
+        //     a.push(items);
+        //   }
+        // });
        
-        setrelateditem(a);
+        // setrelateditem(a);
 
         document.getElementById("product_p").style.display = "flex";
         // document.getElementById("product_r").style.display = "block";
         setisLoading(false);
       });
-  }, []);
+  }, [Customid]);
   if (singleproduct.Img2 !== null) {
     // console.log("not null");
   } else {

@@ -10,7 +10,7 @@ export default function Success() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [Order,setOrder] = useState([]);
-    const odr  =useSelector(state => state.cart.copydata);
+    const odr  =useSelector(state => state.cart.data);
     const subtotal = useSelector(state => state.cart.copyprice);
     const user = useSelector(state => state.profile.data);
     const order_id = useSelector(state => state.order.data);

@@ -25,7 +25,7 @@ export default function Success() {
     // const Orderlen = order.length;
    
 
-    const [timeleft,settimeleft]=useState(100);
+    const [timeleft,settimeleft]=useState(10);
 
     useEffect(() => {
         setOrder(Odr);
@@ -52,7 +52,7 @@ export default function Success() {
                     <h4>ORDER DETAILS</h4>
                     <br></br>
                 </div>
-                <div id='tablebox'>
+                <div id='tablebox' >
                     <table >
                         <tr id='detailhead'>
                             <td>Product</td>
@@ -73,18 +73,13 @@ export default function Success() {
                                     )
                                 })
                             }
-
                             {/* <td>{user.Name} </td>
-
-
-
                             <td >{order_id.orderid.slice(9, 20)}</td>
                             <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td> */}
-                        
                     </table>
                 </div>
             </div>
-            <p style={{ textAlign:"right"}}> *Redirecting to your profile in {timeleft}s</p>
+            <p style={{ textAlign:"center"}}> *Redirecting to your profile in {timeleft}s</p>
         </div>
     )
 }

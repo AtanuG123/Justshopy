@@ -23,9 +23,11 @@ const options: Options = {
     // margin is in MM, default is Margin.NONE = 0
     margin: Margin.SMALL,
     // default is 'A4'
-    format: "letter",
+    // format: "letter",
+    format: "A4",
     // default is 'portrait'
-    orientation: "landscape"
+    orientation: "portrait"
+    // orientation: "landscape"
   },
   canvas: {
     // default is 'image/jpeg' for better size performance
@@ -38,10 +40,11 @@ const options: Options = {
   overrides: {
     // see https://artskydj.github.io/jsPDF/docs/jsPDF.html for more options
     pdf: {
-      compress: true
+      compress: 50
     },
     // see https://html2canvas.hertzen.com/configuration for more options
     canvas: {
+      
       useCORS: true
     }
   }
@@ -73,14 +76,14 @@ export default function Orderdetailspage() {
         setorders(result.data[0]);
         setorderitem(result.data[0].Order);
 
-        
+
 
 
 
       })
-      // // document.getElementById("ordpage").style.display = "flex";
-      // // document.getElementById("container").style.display = "flex";
-      //   setisLoading(false);
+    // // document.getElementById("ordpage").style.display = "flex";
+    // // document.getElementById("container").style.display = "flex";
+    //   setisLoading(false);
   }, [Orderid]);
 
   // console.log(orders.Order)
@@ -91,108 +94,104 @@ export default function Orderdetailspage() {
 
   };
 
-  
+
 
 
   return (
     <>
       {/* {isLoading ? <LoadingSpinner /> : null} */}
-    <section>
 
-      <div id="odrpage">
-      <div id="container">
-        <div className="card-container">
-          <div className="container my-4">
-            <h2 className="mb-4">Order Details</h2>
 
-            {/* Order Summary */}
-            <div className="card mb-3">
-              <div className="card-body">
-                <h5 className="card-title">Order # ORD-{orders.Orderid}</h5>
-                <p><strong>Status:</strong> <span className="badge bg-info text-dark">{orderData.status}</span></p>
-                <p><strong>Ordered at :</strong> {orders.Datetime}</p>
-              </div>
-            </div>
 
-            {/* Items List */}
-            <div className="card mb-3">
-              <div className="card-body">
-                <h5 className="card-title">Items</h5>
-                <table className="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>Product</th>
-                      <th>Quantity</th>
-                      <th className="text-end">Price</th>
-                      <th className="text-end">Total</th>
-                    </tr>
-                  </thead>
-                  <tbody>
 
-                    {/* <tr key={item.id}> */}
-                    {orderitem.map((item) => {
-                      return (
-                        <tr>
-                          <td>
-                            <div className="d-flex align-items-center">
-                              <img src={item.img} alt={item.name} className="me-2 rounded" style={{ width: "40px", height: "40px", objectFit: "cover" }} />
-                              {item.name}
-                            </div>
-                          </td>
-                          <td>{item.qty}</td>
-                          <td className="text-end">₹{item.price.toFixed(2)}</td>
-                          <td className="text-end">₹{(item.qty * item.price).toFixed(2)}</td>
-                        </tr>
-                      )
-                    })}
 
-                  </tbody>
-                </table>
-              </div>
-            </div>
 
-            {/* Delivery & Payment Information */}
-            <div className="row">
-              <div className="col-md-6">
-                <div className="card mb-3">
+
+
+
+
+      <section >
+
+        <div id="odrpage">
+          <div id="container">
+            <div className="card-container">
+              <div className="container my-4">
+                <h2 className="mb-4">INVOICE</h2>
+                
+
+
+                <div className="col-md-auto border-0 d-flex flex-row">
+                  <div className="card-body" style={{textAlign:"left"}}>
+                    <h5 className="card-title">Order # ORD-{orders.Orderid}</h5>
+                    {/* <p><strong>Status:</strong> <span className="badge bg-info text-dark">{orderData.status}</span></p> */}
+                    <p><strong>Date & Time :</strong> {orders.Datetime}</p>
+                  </div>
                   <div className="card-body">
-                    <h5 className="card-title">Delivery Address</h5>
-                    <p>
-                    {user.Name} <br />
-                      {user.Address} <br />
+                    <img style={{width:"45px"}}src={require("../component/images/logo-png.png")}></img>
+                  </div>
+                  <div className="card-body" >
+                    <h5 className="card-title">Ghosh Hardware</h5>
+                    <p>Rajendrapur , Naihati , WB
+                      <br />
+                      Near Blind School<br />
 
-                      {user.Pin}
+                      743166
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="card mb-3">
-                  <div className="card-body">
-                    <h5 className="card-title">Payment Method</h5>
-                    <p>{orderData.paymentMethod}</p>
+                    <table className="table table-bordered">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">Description</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {orderitem.map((item) => {
+                          return (
+                            <tr>
+                              <td>
+                                <div className="">
+                                  <img src={item.img} alt={item.name} className="me-2 rounded" style={{ width: "40px", height: "40px", objectFit: "cover" }} />
+                                  {item.name}
+                                </div>
+                              </td>
+                              <td>{item.qty}</td>
+                              <td className="text-end">₹{item.price.toFixed(2)}</td>
+                              <td className="text-end">₹{(item.qty * item.price).toFixed(2)}</td>
+                            </tr>
+                          )
+                        })}
+
+                      </tbody>
+                    </table>
+                 
+
+                {/* Delivery & Payment Information */}
+                <div className="col-md-auto border-0 d-flex flex-row">
+                  <div className="card-body" style={{textAlign:"left"}}>
+                    <h5 className="card-title">Delivery Address</h5>
+                    <p >
+                      {user.Name} <br />
+                      {user.Address} <br />
+                      {user.Pin}
+                    </p>
+                  </div>
+                 
+                  <div className="card-body" style={{textAlign:"right"}}>
+                    {/* <h5 className="card-title">Order Summary</h5> */}
+                    <h4>Total: ₹{orders.Amount}</h4>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Order Summary */}
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Order Summary</h5>
-
-                <h4>Total: ₹{orders.Amount}</h4>
-
-                {/* <hr /> */}
-              </div>
-            </div>
           </div>
+          <button className="btn btn-success" style={{ marginBottom: "20px" }} onClick={downloadPdf}>Download PDF</button>
         </div>
-
-      </div>
-      <button className="btn btn-success" style={{ marginBottom: "20px" }} onClick={downloadPdf}>Download PDF</button>
-      </div>
-    </section>
+      </section>
     </>
   );
 };

@@ -10,7 +10,7 @@
   font-family: "DM Sans", sans-serif;
 }
 .listitem{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   justify-content: center;
 }
 
@@ -65,11 +65,12 @@
   right: 1px;
   width: 360px;
   margin-right: 30px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   padding: 10px 30px;
   background-color: #738aaf;
   background-color: rgb(249, 252, 252);
   border: 3px solid black;
+  height: fit-content;
 }
 .checkout > div > div {
   display: flex;

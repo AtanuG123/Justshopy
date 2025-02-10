@@ -25,7 +25,7 @@ export default function Success() {
     // const Orderlen = order.length;
    
 
-    const [timeleft,settimeleft]=useState(100);
+    const [timeleft,settimeleft]=useState(10);
 
     useEffect(() => {
         setOrder(Odr);

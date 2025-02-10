@@ -40,7 +40,7 @@ const options: Options = {
   overrides: {
     // see https://artskydj.github.io/jsPDF/docs/jsPDF.html for more options
     pdf: {
-      compress: 50
+      compress: true
     },
     // see https://html2canvas.hertzen.com/configuration for more options
     canvas: {

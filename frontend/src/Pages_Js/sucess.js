@@ -18,14 +18,14 @@ export default function Success() {
     
     const Name = user.Name;
     const Emailid = user.Email;
-    const Amount = Math.round(subtotal + ((subtotal * 5) / 100));
+    const Amount = Math.round(subtotal);
     const Orderid = order_id.orderid.slice(9, 20);
     const Datetime=new Date().toLocaleDateString()+ " "+new Date().toLocaleTimeString();
     // const Orderimg = order[0].img;
     // const Orderlen = order.length;
    
 
-    const [timeleft,settimeleft]=useState(10);
+    const [timeleft,settimeleft]=useState(100);
 
     useEffect(() => {
         setOrder(Odr);

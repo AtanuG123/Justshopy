@@ -75,7 +75,7 @@ color: black;
         overflow: scroll;
     }
     #orderhead table{
-        width:fit-content;
+        width:90vw;
         overflow: scroll;
     }
     tr *{

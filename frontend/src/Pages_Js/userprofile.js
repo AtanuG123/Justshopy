@@ -8,6 +8,9 @@ import axios from "axios";
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from "react";
 import "../Pages_css/userprofile.css"
+
+import LoadingSpinner from "../component/loader";
+
 export default function Userprofile() {
 
     const navigate = useNavigate();
@@ -15,7 +18,11 @@ export default function Userprofile() {
     const user = useSelector(state => state.profile.data);
     const Emailid = user.Email
     const [allorder, setallorder] = useState([]);
+    const [isLoading, setisLoading] = useState(false);
     useEffect(() => {
+        document.getElementById("orderhead").style.display = "none";
+        // document.getElementById("product_r").style.display = "none";
+        setisLoading(true);
         axios.post(`${process.env.REACT_APP_PORT}/user/`, { Emailid })
             .then(result => {
                 const reversedData = [...result.data].reverse();
@@ -25,8 +32,11 @@ export default function Userprofile() {
                 // }
             })
             .catch(err => console.log(err));
-
-    }, [Emailid])
+            document.getElementById("orderhead").style.display = "block";
+            // document.getElementById("product_r").style.display = "none";
+            setisLoading(false);
+    }
+    , [Emailid])
 
     const logoutnotify = () => {
         toast.success("logout succesfull", {
@@ -66,6 +76,7 @@ export default function Userprofile() {
                     </div>
                 </div>
             </div>
+            {isLoading ? <LoadingSpinner /> : null}
             <div id="orderhead">
                 <div>
                     <h4>Past Order Details</h4>
@@ -74,28 +85,20 @@ export default function Userprofile() {
                 <div id='tablebox'>
                     <table >
                         <tr id='detailhead'>
-                            <td>Description</td>
                             <td>Status</td>
-                            <td >Order Id</td>
+                            <td>Details</td>
                             <td>Amount</td>  
+                            <td >Date</td>
                         </tr>
                         {allorder.map((items) => {
                                 return (
                                     <tr id='orderitems'>
-                                        <td>
-                                            <div>
-                                                <img src={items.Orderimg}></img>
-                                                {/* <span
-                                                    
-                                                    class="badge rounded-pill noofitem"
-                                                >  +{items.Orderlen - 1}
-                                                </span> */}
-                                            </div>
-                                            {/* <button className="btn btn-success">Ordered</button> */}
+                                        <td> 
+                                            <button className="btn btn-success">Ordered</button>
                                         </td>
-                                        <td><button onClick={()=>navigate(`/orderdetailspage/`+items.Orderid)} className="btn btn-success">Ordered</button></td>
-                                        <td>{items.Orderid}</td>
-                                        <td>{items.Amount}</td>                                   
+                                        <td><a onClick={()=>navigate(`/orderdetails/`+items.Orderid)} className="">View Order</a></td>
+                                        <td>{items.Amount}</td>
+                                        <td>{items.Datetime}</td>                                   
                                     </tr>
                                 )
                             })

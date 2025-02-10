@@ -66,7 +66,7 @@ export default function Orderdetailspage() {
     // // document.getElementById("ordpage").style.display = "none";
     // // document.getElementById("container").style.display = "none";
     // setisLoading(true);
-    axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, { Orderid })
+    axios.post(`${process.env.REACT_APP_PORT}/orderdetails/`, { Orderid })
       .then((result) => {
         // console.log(result.data[0].Order);
 

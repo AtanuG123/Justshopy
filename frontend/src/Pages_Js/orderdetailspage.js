@@ -56,20 +56,19 @@ export default function Orderdetailspage  () {
   const user = useSelector(state => state.profile.data);
     const {id} = useParams();
     const [orders,setorders] = useState([]);
-    const Email = user.Email;
+    const Orderid = id;
     // console.log(Email);
     useEffect(()=>{
-        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {})
+        axios.post(`${process.env.REACT_APP_PORT}/orderdetailspage/`, {Orderid})
         .then( (result)=>{
-          // console.log(result.data);
-          result.data.map(order =>{
-            if(order.Orderid==id){
-              setorders(order);
+          console.log(result.data);
+          
+              // setorders(result.data);
               // console.log(orders);
-            }
-          })
+            
+          
     })
-    });
+    },[Orderid]);
 
     
   const orderData = {

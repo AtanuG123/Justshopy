@@ -9,7 +9,8 @@ import "../Pages_css/userprofile.css"
 export default function Success() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const order = useSelector(state => state.cart.copydata)
+    const [Order,setOrder] = useState([]);
+    const odr  =useSelector(state => state.cart.copydata);
     const subtotal = useSelector(state => state.cart.copyprice);
     const user = useSelector(state => state.profile.data);
     const order_id = useSelector(state => state.order.data);
@@ -19,15 +20,15 @@ export default function Success() {
     const Amount = Math.round(subtotal + ((subtotal * 5) / 100));
     const Orderid = order_id.orderid.slice(9, 20);
     const Datetime=new Date().toLocaleDateString()+ " "+new Date().toLocaleTimeString();
-    const Orderimg = order[0].img;
-    const Orderlen = order.length;
+    // const Orderimg = order[0].img;
+    // const Orderlen = order.length;
    
 
     const [timeleft,settimeleft]=useState(10);
-
+    setOrder(odr);
     useEffect(() => {
         if(timeleft===0){
-            axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name,Orderimg,Orderlen, Orderid, Amount ,Datetime})
+            axios.post(`${process.env.REACT_APP_PORT}/paymentsuccess`, { Emailid, Name,Order ,Orderid,Datetime})
             dispatch(remove());
             navigate("/user/" + user.Name); 
             return;
@@ -52,30 +53,34 @@ export default function Success() {
                 <div id='tablebox'>
                     <table >
                         <tr id='detailhead'>
-                            <td>ORDER PLACED</td>
-                            <td>SHIP TO </td>
-                            <td >ORDER ID</td>
-                            <td>TOTAL AMOUNT</td>
+                            <td>Product</td>
+                            <td>Quantity</td>
+                            <td >Price</td>
+                            <td>Total</td>
                         </tr>
-                        <tr id='orderitems'>
-
-                            <td>{
-                                order.map(item => {
+                            {Order.map((item) => {
                                     return (
-                                        <span>
+                                        <tr>
+
+                                        
+                                        <td>
                                             <img src={item.img}></img>
-                                        </span>
+                                        </td>
+                                        <td>{item.Quantity}</td>
+                                        <td>{item.Price}</td>
+                                        <td>{item.Quantity*item.Price}</td>
+                                        </tr>
                                     )
                                 })
-                            }</td>
+                            }
 
-                            <td>{user.Name} </td>
+                            {/* <td>{user.Name} </td>
 
 
 
                             <td >{order_id.orderid.slice(9, 20)}</td>
-                            <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td>
-                        </tr>
+                            <td id="sub">{Math.round(subtotal + ((subtotal * 5) / 100))}</td> */}
+                        
                     </table>
                 </div>
             </div>

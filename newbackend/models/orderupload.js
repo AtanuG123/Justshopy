@@ -2,10 +2,8 @@ const mongoose = require("mongoose");
 const Orderschema = new mongoose.Schema({
     Emailid : String,
     Name: String,
-    Orderimg : String,
-    Orderlen :Number,
-    Orderid : String,
-    Amount : Number,
+    Order : Array,
+    Orderid:String,
     Datetime : String,
 })
 const OrderModel = mongoose.model("orderupload",Orderschema);

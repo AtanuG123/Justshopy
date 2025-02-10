@@ -120,8 +120,8 @@ export default function Orderdetailspage() {
                 
 
 
-                <div className="col-md-auto border-0 d-flex flex-row">
-                  <div className="card-body" style={{textAlign:"left"}}>
+                <div className="col-md-auto border-0 d-flex flex-row flex-wrap">
+                  <div className="card-body" >
                     <h5 className="card-title">Order # ORD-{orders.Orderid}</h5>
                     {/* <p><strong>Status:</strong> <span className="badge bg-info text-dark">{orderData.status}</span></p> */}
                     <p><strong>Date & Time :</strong> {orders.Datetime}</p>
@@ -170,7 +170,7 @@ export default function Orderdetailspage() {
                  
 
                 {/* Delivery & Payment Information */}
-                <div className="col-md-auto border-0 d-flex flex-row">
+                <div className="col-md-auto border-0 d-flex flex-row flex-wrap">
                   <div className="card-body" style={{textAlign:"left"}}>
                     <h5 className="card-title">Delivery Address</h5>
                     <p >

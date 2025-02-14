@@ -237,6 +237,7 @@ export default function Productpage() {
 
           </div>
         </div>
+        <Copyright />
       </div>
       {/* <div className="related" id="product_r">
         <p>You may also like</p>
@@ -262,7 +263,7 @@ export default function Productpage() {
           })}
         </div>
       </div> */}
-      <Copyright />
+      {/* <Copyright /> */}
       </div>
   );
 }

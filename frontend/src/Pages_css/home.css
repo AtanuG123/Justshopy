@@ -1,3 +1,22 @@
+.scroll-watcher {
+  height: 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgb(80, 255, 21);
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll(y);
+}
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
 #mainhome{
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
@@ -332,6 +351,7 @@ font-size:14px;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.441);
 }
 #feedsection div{
@@ -341,7 +361,9 @@ font-size:14px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
+
 #feedsection >div> *{
   padding: 18px;
 }
@@ -349,6 +371,24 @@ font-size:14px;
   height: 80vh;
   /* cursor: pointer; */
 }
+.feedimg{
+  overflow: hidden;
+  transform: translateX(-400%);
+  transition: transform 0.6s ease;
+  
+}
+.feedimg.show {
+  transform: translateX(0);
+}
+.feedimg:nth-of-type(2) {
+  transition: transform 0.6s ease;
+  transform: translateX(400%);
+}
+.feedimg:nth-of-type(2).show {
+  /* overflow-x: hidden; */
+  transform: translateX(0);
+}
+
 button i{
   padding: 5px 8px;
 }
@@ -489,14 +529,14 @@ button i{
       max-width: 80vw;
       justify-content: center;
     }
-    #feedsection div img {
-      height: 55vh;
-      width: 65vw;
-  }
+   
   #feedsection> div * {
     padding: 10px 2px;
 }
-
+#feedsection div img {
+  height: 80vw;
+  width: 60vw;
+}
   }
 /* Benifits */
 
@@ -608,7 +648,9 @@ button i{
   @media (max-width:500px) {
     .saltbanner> img{
       width: 95vw;
+      /* height: 60vw; */
+      /* transform: scale(1.3); */
       margin: 20px 5px;
-     
+      /* overflow: hidden; */
     }
   }

@@ -1,0 +1,21 @@
+.customer{
+    width: 85vw;
+    margin:auto
+}
+.customer>div>div>div>div>div>div>div{
+    width: 25vw;
+    margin-left: 10px;
+}
+
+@media (max-width:780px) {
+    .customer>div>div>div>div>div>div>div{
+        width: 40vw;
+        font-size: .9rem;
+    }
+}
+@media (max-width:480px) {
+    .customer>div>div>div>div>div>div>div{
+        width: 80vw;
+        font-size: .9rem;
+    }
+}

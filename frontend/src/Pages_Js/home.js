@@ -7,6 +7,8 @@ import home1 from "../component/images/home1.jpg"
 import home2 from "../component/images/home2.jpg"
 import home3 from "../component/images/home3.jpg"
 import Navber from "../component/navber";
+import { useEffect } from "react";
+import Customerreview from "../component/customerreview";
 export default function Home() {
     const navigate = useNavigate();
 
@@ -16,9 +18,30 @@ export default function Home() {
     };
 
 
-    return (
-        <div id="mainhome">
 
+    useEffect(() => {
+        
+        const checkBoxes = () => {
+            const triggerBottom = (window.innerHeight / 5) * 4;
+            document.querySelectorAll(".feedimg").forEach((box) => {
+            const boxTop = box.getBoundingClientRect().top;
+            if (boxTop < triggerBottom) {
+                box.classList.add("show");
+            }
+            else {
+                box.classList.remove("show");
+              }
+            });
+          };
+        window.addEventListener("scroll", checkBoxes);
+        checkBoxes();
+        return () => window.removeEventListener("scroll", checkBoxes);
+      }, []);
+
+   
+    return (
+        <div id="mainhome" >
+            <div class="scroll-watcher"></div>
             <div className="home1">
                 <p className="homep1">WELCOME TO</p>
                 <p  className="homep2">GHOSH HARDWARE</p>
@@ -89,10 +112,10 @@ export default function Home() {
 
 
             <div id="feedsection">
-                <div>
+                <div className="feedimg" >
                     <img src={"https://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"}></img>
                 </div>
-                <div>
+                <div className="feedimg">
                     <p>Premium Collection</p>
                     <h2>Growel Fish Food Floating
                         Pellets for Koi Fish, Gold Fish,Edible Fish,Pond Fish ,All Life Stages</h2>
@@ -114,10 +137,10 @@ export default function Home() {
 
 
             <div id="feedsection">
-                <div>
+                <div className="feedimg">
                     <img src={"https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/meriquin_0.jpg?itok=edMkr4Wghttps://5.imimg.com/data5/SELLER/Default/2021/7/LB/FQ/DZ/5788133/growfin-fish-feed.png"}></img>
                 </div>
-                <div>
+                <div className="feedimg">
                     <p>Limited Time Deal</p>
                     <h2>Treats mixed bacterial infections. Second generation fluroquinilone.</h2>
                     <button class="button-53" role="button" onClick={() =>navigate('/product/fishmedicine12')}>Quick view
@@ -128,6 +151,7 @@ export default function Home() {
 
 
             </div>
+            <Customerreview/>
             {/* <div id="ad">
                 <img src={require("../component/images/ad.jpg")} alt="ad"></img>
             </div> */}

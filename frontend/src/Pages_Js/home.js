@@ -69,7 +69,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div>
-                        <img onClick={() => switchonclick("busket")} className="featuredmain12" src={"https://i.postimg.cc/Hn36Nq9B/chupri.jpg"}></img>
+                        <img onClick={() => switchonclick("basket")} className="featuredmain12" src={"https://i.postimg.cc/Hn36Nq9B/chupri.jpg"}></img>
                         <div>
                             <h4>Basket</h4>
                             {/* <p>Starting at <span>80</span></p> */}

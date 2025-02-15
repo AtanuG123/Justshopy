@@ -34,8 +34,34 @@ border-radius: 10px;
   transition: transform .5s ease ;
 }
 .box  >div > img:hover{
-  transform: scale(1.2) ;
+  transform: scale(1.25) ;
   
+}
+.boxtocart{
+  transition: .5s ease;
+  opacity: 0;
+  width: fit-content;
+  
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(100%,-150%);
+  /* -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+}
+.boxtocart >button{
+  background-color: #38d105;
+  border: none;
+  font-weight: 600;
+  transition: .5s ease;
+}
+.boxtocart >button:hover{
+  color: black;
+
+  background-color: #38d105;
+}
+.imgdiv:hover .boxtocart{
+  opacity: 1;
 }
 .box2 {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -80,7 +106,7 @@ border-radius: 10px;
 
 }
 .price {
-color: rgb(217, 0, 255);
+color: #38d105;
   font-weight: 700;
 }
 #size{

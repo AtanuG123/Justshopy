@@ -1,6 +1,7 @@
 .customer{
     width: 85vw;
-    margin:auto
+    margin:auto;
+    padding: 40px 0px;
 }
 .customer>div>div>div>div>div>div>div{
     width: 25vw;

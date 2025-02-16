@@ -80,15 +80,15 @@ margin: 10px 0px 0px 0px;
     font-size: x-large;
     font-weight: 600;
     color: rgb(152, 152, 152);
-    text-decoration: line-through rgb(88, 88, 88);
+    text-decoration: line-through rgb(152, 152, 152);
 }
 .actual_mrp h4 + p {
     font-weight: 600;
-    border-radius: 5px;
-    background-color: rgb(218, 221, 221);
-    padding: 5px;
-    margin: 5px 0px 10px 10px;
-    color: rgb(215, 70, 25);
+    border-radius: 15px;
+    background-color: rgb(235, 238, 238);
+    padding: 0px 5px;
+    margin: 5px 0px 17px 10px;
+    color: rgb(3, 203, 40);
 }
 
 
@@ -131,22 +131,23 @@ margin: 10px 0px 0px 0px;
     border: none;
     font-weight: 600;
     background:none;
-    background-color: rgb(55, 255, 188);
+    background-color: #42f706;
     border-radius: 5px;
     /* color: white; */
     font-size: 18px;
     padding: 8px 25px;
     margin:0px 20px 0px 0px ;
     box-shadow: 2px 3px 3px gray;
+    transition: all .4s;
 }
-.product_cart1 button:active{
+/* .product_cart1 button:m{
     
     color: #2e2d2d;
     background-color: rgb(250, 80, 194);
-}
-.product_cart1 button:focus{
+} */
+.product_cart1 button:hover{
     
-    /* color: #e04af7; */
+    box-shadow: 3px 4px 8px gray;
     background-color: rgb(255, 255, 255);
 }
 

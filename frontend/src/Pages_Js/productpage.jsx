@@ -202,7 +202,7 @@ export default function Productpage() {
             <div className="product_price">
               <div className="actual_mrp">
                 <h4> ₹{singleproduct.Price}</h4>
-                <p>{singleproduct.Discount} % Off</p>
+                <p>{singleproduct.Discount} % OFF</p>
               </div>
               <div className="mrp">
                 <p className="mrp1">

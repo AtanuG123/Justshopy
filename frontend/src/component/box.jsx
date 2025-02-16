@@ -63,10 +63,10 @@ export default function Itembox(props) {
           alt="productimg"
           onClick={switchonclick}
         ></img>
-        <div className="boxtocart">
+        {/* <div className="boxtocart">
           
         <button className="btn btn-primary" onClick={fordispatch}>Add to cart</button>
-          </div>
+          </div> */}
       </div>
       <div className="box2" onClick={switchonclick}>
         <h5 className="productname" id="proname">

@@ -26,10 +26,10 @@ export default function Userprofile() {
         axios.post(`${process.env.REACT_APP_PORT}/user/`, { Emailid })
             .then(result => {
                 const reversedData = [...result.data].reverse();
+                if (reversedData.length===0) {
+                    document.getElementById("orderhead").style.display="none";
+                }
                 setallorder(reversedData)
-                // if (allorder.length===0) {
-                //     document.getElementById("orderhead").style.display="none";
-                // }
             })
             .catch(err => console.log(err));
             document.getElementById("orderhead").style.display = "block";
@@ -76,6 +76,7 @@ export default function Userprofile() {
                     </div>
                 </div>
             </div>
+            {/* <LoadingSpinner/> */}
             {isLoading ? <LoadingSpinner /> : null}
             <div id="orderhead">
                 <div>

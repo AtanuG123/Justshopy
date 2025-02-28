@@ -219,7 +219,7 @@ font-size:18px;
 }
 @media (max-width:600px) {
   .home1 {
-    background-image: url("../component/images/homesmall4.1.jpg");
+    background-image: url("../component/images/homesmall4.jpg");
   }
   .homep1,.homep2{
     font-size: 40px;
@@ -265,7 +265,7 @@ font-size:14px;
 @media (max-width:400px) {
   .home1 {
     /* background-image: url("../component/images/homesmall4.jpg"); */
-    /* height: 65vh; */
+    height: 80vh;
     background-size:100%;
     background-size: cover;
     background-repeat: no-repeat;

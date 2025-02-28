@@ -6,6 +6,7 @@ import Copyright from "../component/Footer";
 import home1 from "../component/images/home1.jpg"
 import home2 from "../component/images/home2.jpg"
 import home3 from "../component/images/home3.jpg"
+import home4 from "../component/images/homesmall4.jpg"
 import Navber from "../component/navber";
 import { useEffect } from "react";
 import Customerreview from "../component/customerreview";

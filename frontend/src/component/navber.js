@@ -79,7 +79,7 @@ export default function Navber() {
           <li className="nav_li"><Link to={"/"}>HOME</Link> </li>
           <li className="nav_li"><Link to={"/allproduct"}>PRODUCTS</Link> </li>
           <li className="nav_li"><Link to={"/aboutus"}>ABOUT US</Link> </li>
-          <li className="nav_li"><Link to={"/aboutus"}>CONTACT</Link> </li>
+          <li className="nav_li"><Link to={"/contactus"}>CONTACT</Link> </li>
         </ul>
       </div>
       <div className="rightnav">

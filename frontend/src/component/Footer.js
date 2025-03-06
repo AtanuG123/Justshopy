@@ -89,9 +89,9 @@ export default function Copyright() {
         </div>
         <div class="footer-content-column">
           <div class="footer-call-to-action">
-            <h2 class="footer-call-to-action-title">Email Us</h2>
-            <p class="footer-call-to-action-description"> Have a support question?</p>
-            <a class="footer-call-to-action-button button" href="mailto:atanu2004ghosh@gmail.com" target="_self"> Get in Touch </a>
+            <h2 class="footer-call-to-action-title"> Have a question?</h2>
+            <p class="footer-call-to-action-description">Get In Touch</p>
+            <a class="footer-call-to-action-button button" href="mailto:987anupkrghosh@gmail.com" target="_self">Email Us</a>
           </div>
           <div class="footer-call-to-action">
             <h2 class="footer-call-to-action-title"> You Call Us</h2>

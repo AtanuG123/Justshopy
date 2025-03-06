@@ -181,6 +181,9 @@ font-weight: 600;
     justify-content: center;
 }
 @media (max-width:700px) {
+    .productpage{
+        margin-top: 80px;
+    }
     .product_part{
         flex-direction: column;
     }

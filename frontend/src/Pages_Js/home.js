@@ -144,7 +144,7 @@ export default function Home() {
                 <div className="feedimg">
                     <p>Limited Time Deal</p>
                     <h2>Treats mixed bacterial infections. Second generation fluroquinilone.</h2>
-                    <button class="button-53" role="button" onClick={() =>navigate('/product/fishmedicine12')}>Quick view
+                    <button class="button-53" role="button" onClick={() =>navigate('/product/Vetoquinol-Meriquin-500ml')}>Quick view
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>

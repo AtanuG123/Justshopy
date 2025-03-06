@@ -47,7 +47,7 @@ export default function Customerreview() {
                     {/* <img className="h-5 w-8 m-0"src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"/> */}
                              <div class="card-body cardcustomer">
                             <h5 class="card-title">Sougata Ghosh</h5>
-                            <p class="card-text">High quality product and worth the money.</p>
+                            <p class="card-text">"High quality product and worth the money."</p>
                             <span>
                                 <i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star-half-stroke"style={{color:"#FFD43B"}} ></i>
                             </span>
@@ -59,7 +59,7 @@ export default function Customerreview() {
                     {/* <img className="w-25 m-0 mx-auto card-img-top"src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"/> */}
                     <div class="card-body cardcustomer">
                             <h5 class="card-title">Mithun Das</h5>
-                            <p class="card-text">Excellent products and competitive prices!</p>
+                            <p class="card-text">"Excellent products and competitive prices!"</p>
                             <span>
                                 <i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star-half-stroke"style={{color:"#FFD43B"}} ></i>
                             </span>
@@ -72,7 +72,7 @@ export default function Customerreview() {
                     {/* <img className="w-25 m-0 mx-auto card-img-top"src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"/> */}
                     <div class="card-body cardcustomer">
                             <h5 class="card-title">Sanjay Tiwari</h5>
-                            <p class="card-text">Excellent customer service.</p>
+                            <p class="card-text">"Excellent customer service."</p>
                             <span>
                                 <i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-regular fa-star"style={{color:"#FFD43B"}} ></i>
                             </span>
@@ -85,7 +85,7 @@ export default function Customerreview() {
                     {/* <img className="w-25 m-0 mx-auto card-img-top"src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"/> */}
                     <div class="card-body cardcustomer">
                             <h5 class="card-title">Asim Dutta</h5>
-                            <p class="card-text">Shopkepper is very friendly.</p>
+                            <p class="card-text">"Shopkepper is very friendly."</p>
                             <span>
                                 <i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star-half-stroke"style={{color:"#FFD43B"}} ></i>
                             </span>
@@ -98,7 +98,7 @@ export default function Customerreview() {
                     {/* <img className="w-25 m-0 mx-auto card-img-top"src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"/> */}
                     <div class="card-body cardcustomer">
                             <h5 class="card-title">Amit Das</h5>
-                            <p class="card-text">highly recomended and will visit again.</p>
+                            <p class="card-text">"Highly recomended and will visit again."</p>
                           
                             <span>
                                 <i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-regular fa-star"style={{color:"#FFD43B"}} ></i>
@@ -111,7 +111,7 @@ export default function Customerreview() {
                     {/* <img className=" h-3 mx-auto card-img-top"src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"/> */}
                     <div class="card-body cardcustomer">
                             <h5 class="card-title">Somnath Ghosh</h5>
-                            <p class="card-text">10/10 recomended!</p>
+                            <p class="card-text">"10/10 recomended!"</p>
                             <span>
                                 <i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star" style={{color: "#FFD43B"}}></i><i class="fa-solid fa-star-half-stroke"style={{color:"#FFD43B"}} ></i>
                             </span>

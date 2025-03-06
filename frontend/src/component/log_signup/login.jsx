@@ -51,7 +51,7 @@ export default function Login() {
     <div className="body">
 
       <div className="main">
-      <img className="logo_auth" src={require("../images/logo.png")}></img>
+      <img className="logo_auth" src={require("../images/logo2.png")}></img>
 
         <div className="signup">
           <form className="signform" onSubmit={handleonclick2}>

@@ -17,6 +17,7 @@ import Product from "./component/productdetails/uploadadmin";
 
 
 import AboutContact from "./Pages_Js/aboutus";
+import Contactus from "./Pages_Js/contactus";
 import Allproduct from "./Pages_Js/allproduct";
 import Success from "./Pages_Js/sucess";
 import Cancel from "./Pages_Js/cancel";
@@ -36,11 +37,12 @@ function App() {
         <Route path="/product/:id" element={<Productpage/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
-        <Route  path="/productupload" element={<Product/>}></Route>
+        <Route path="/productupload" element={<Product/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/productlist/:id" element={<Productlist/>}></Route>
         <Route path="/user/:id" element={<Userprofile/>}></Route>
         <Route path="/aboutus" element={<AboutContact/>}></Route>
+        <Route path="/contactus" element={<Contactus/>}></Route>
         <Route path="/allproduct" element={<Allproduct/>}></Route>
         <Route path="/paymentsuccess" element={<Success/>}></Route>
         <Route path="/paymentcancel" element={<Cancel/>}></Route>

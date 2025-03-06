@@ -62,7 +62,7 @@ export default function Signup() {
   return (
     <div className="body">
       <div className="main" id="sign1">
-      <img className="logo_auth" src={require("../images/logo.png")}></img>
+      <img className="logo_auth" src={require("../images/logo2.png")}></img>
 
         <div className="signup">
           <form className="signform" ref={from1} onSubmit={handleonclick1}>

@@ -116,7 +116,7 @@ export default function Navber() {
           <li className="nav_small"><Link to={"/"}>HOME</Link> </li>
           <li className="nav_small"><Link to={"/allproduct"}>PRODUCTS</Link> </li>
           <li className="nav_small"><Link to={"/aboutus"}>ABOUT US</Link> </li>
-          <li className="nav_small"><Link to={"/aboutus"}>CONTACT US</Link> </li>
+          <li className="nav_small"><Link to={"/contactus"}>CONTACT US</Link> </li>
         </ul>
       </div>
     </div>

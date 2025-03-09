@@ -108,7 +108,6 @@ export default function Customerreview() {
                 </div>
                 <div>
                     <div class="card">
-                    {/* <img className=" h-3 mx-auto card-img-top"src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Admin"/> */}
                     <div class="card-body cardcustomer">
                             <h5 class="card-title">Somnath Ghosh</h5>
                             <p class="card-text">"10/10 recomended!"</p>

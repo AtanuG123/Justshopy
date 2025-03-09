@@ -2,7 +2,7 @@
 import "./footer.css";
 export default function Copyright() {
   return (
-    <div className="" style={{ paddingTop:"20px" }}>
+    <div className="" style={{ paddingTop:"30px" }}>
      
 
 

@@ -11,11 +11,11 @@ a:hover{
   color: rgb(163, 9, 197);
 }
 .box {
-  margin: 2.1rem 1rem;
+  margin: .5rem;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  height: 28vw;
+  height: 34vw;
   width: 20vw;
   transition: all 0.25s;
 }
@@ -25,14 +25,14 @@ a:hover{
 .imgdiv {
   width: inherit;
   overflow: hidden;
-  height: 21vw;
-  border-radius: 10px;
+  height: 25vw;
+  border-radius: 3px;
 }
 .box > div > img {
-  border-radius: 10px;
+  border-radius: 3px;
   cursor: pointer;
   width: inherit;
-  height: 21vw;
+  height: 25vw;
   transition: all 0.55s;
   transition: transform 0.5s ease;
 }
@@ -115,13 +115,13 @@ a:hover{
 @media (max-width: 900px) {
   .box {
     width: 38vw;
-    height: 50vw;
+    height: 54vw;
   }
   .imgdiv {
-    height: 40vw;
+    height: 44vw;
   }
   .box > div > img {
-    height: 40vw;
+    height: 44vw;
   }
   .box * {
     font-size: 14px;
@@ -132,6 +132,7 @@ a:hover{
 }
 @media (max-width: 740px) {
   .box {
+
     
   }
   .box2 {
@@ -145,7 +146,7 @@ a:hover{
 
 @media (max-width: 650px) {
   .box {
-    
+    margin:1.5rem
   }
   .box * {
     font-size: 14px;

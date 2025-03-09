@@ -39,7 +39,7 @@
   }
   .content .left-side .details i{
     font-size: 30px;
-    color: rgb(111, 241, 12);
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
   }
   .content .left-side .details .topic{
@@ -58,7 +58,7 @@
   .content .right-side .topic-text{
     font-size: 23px;
     font-weight: 600;
-    color: rgb(111, 241, 12);
+    color: rgb(0, 0, 0);
   }
   .right-side .input-box{
     height: 50px;
@@ -102,7 +102,7 @@
     background: rgb(189, 246, 145);
   }
   .text-two a{
-    color: rgb(99, 223, 4);
+    color: rgb(81, 182, 4);
   }
   @media (max-width: 950px) {
     .container1{

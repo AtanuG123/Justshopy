@@ -63,9 +63,9 @@ export default function Home() {
                 </div>
                 <div id="featuredmain">
                     <div>
-                        <img onClick={() => switchonclick("bin")} className="featuredmain11" src={"https://i.postimg.cc/DySGRWF1/Screenshot-2024-09-07-110114.png"}></img>
+                        <img onClick={() => switchonclick("fishmedicine")} className="featuredmain11" src={"https://geturpet.com/wp-content/uploads/2021/03/Meriquin-500-ml-2.jpg"}></img>
                         <div>
-                            <h4>Plastic Bin</h4>
+                            <h4>Fish Medicines</h4>
                             {/* <p>Starting at <span>100</span></p> */}
                         </div>
                     </div>

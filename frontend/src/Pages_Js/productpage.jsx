@@ -29,7 +29,9 @@ export default function Productpage() {
   const user = useSelector((state) => state.profile.data);
   const cart = useSelector((state) => state.cart.data);
   const Customid = id;
+
   const [sizelist, setsizelist] = useState(["nu"]);
+  const [qty, setqty] = useState(1);
   const [relateditem, setrelateditem] = useState([]);
 
   useEffect(() => {
@@ -99,7 +101,10 @@ export default function Productpage() {
       className: "toast-message",
     });
   };
-
+  const qtyset=(el)=>{
+    setqty(el);
+    console.log(qty);
+  }
   const fordispatch = (e) => {
     if (flag === 0) {
       setflag(1);
@@ -210,6 +215,18 @@ export default function Productpage() {
                 </p>
               </div>
             </div>
+            {/* <div className='qty'>
+                            <div>
+                                <p>Qty</p>
+                                <select id="sort" onChange={(e) => qtyset(e.target.value)} >
+                                    <option value="New"  >1</option>
+                                    <option value="2" >2</option>
+                                    <option value="3"  >3</option>
+                                </select>
+                            </div>
+                        </div> */}
+                    {/* <Filter/> */}
+                
             {/* <div className="instock">
               <p>In Stock</p>
             </div> */}

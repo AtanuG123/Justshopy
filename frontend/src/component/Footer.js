@@ -131,7 +131,7 @@ export default function Copyright() {
       <div class="footer-copyright">
         <div class="footer-copyright-wrapper">
           <p class="footer-copyright-text">
-            <a class="footer-copyright-link" href="https://atanuportfolio.vercel.app/" target="_self"> ©2023. | Designed By: Atanu Ghosh | All rights reserved. </a>
+            <a class="footer-copyright-link" href="" target="_self"> ©2023. | Designed By: Atanu Ghosh | All rights reserved. </a>
           </p>
         </div>
       </div>

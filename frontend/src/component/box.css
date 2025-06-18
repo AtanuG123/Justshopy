@@ -1,159 +1,310 @@
 p {
   margin-bottom: 10px;
 }
-a{
+
+a {
   color: blue;
-  transition: all .4s;
+  transition: all 0.4s ease;
   cursor: pointer;
-  /* text-decoration: underline; */
 }
-a:hover{
+
+a:hover {
   color: rgb(163, 9, 197);
 }
+
 .box {
-  margin: .5rem;
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   height: 34vw;
   width: 20vw;
-  transition: all 0.25s;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-/* image part */
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(111, 241, 12, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
 
+.box:hover::before {
+  opacity: 1;
+}
+
+.box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Image part */
 .imgdiv {
   width: inherit;
   overflow: hidden;
   height: 25vw;
-  border-radius: 3px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
 }
+
 .box > div > img {
-  border-radius: 3px;
+  border-radius: 15px 15px 0 0;
   cursor: pointer;
   width: inherit;
   height: 25vw;
-  transition: all 0.55s;
-  transition: transform 0.5s ease;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 .box > div > img:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
+
 .boxtocart {
   transition: 0.5s ease;
   opacity: 0;
   width: fit-content;
   transform: translate(100%, -150%);
   text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 2;
 }
+
 .boxtocart > button {
-  background-color: #38d105;
+  background: linear-gradient(45deg, #38d105, #2eb004);
   border: none;
   font-weight: 600;
-  transition: 0.5s ease;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(56, 209, 5, 0.3);
 }
+
 .boxtocart > button:hover {
-  color: black;
-  background-color: #38d105;
+  background: linear-gradient(45deg, #2eb004, #38d105);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(56, 209, 5, 0.4);
 }
+
 .imgdiv:hover .boxtocart {
   opacity: 1;
+  transform: translate(0, -50%);
 }
 
-
-/* details part */
-
+/* Details part */
 .box2 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  padding-top: 15px;
+  padding: 20px 15px;
+  position: relative;
+  z-index: 2;
+  background: white;
+  border-radius: 0 0 15px 15px;
 }
+
 .box2 * {
-  font-size: large;
+  font-size: 16px;
 }
+
 .box2 > h5 {
-  margin-bottom: 4px;
-  color: rgb(0, 0, 0);
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: all 0.3s ease;
 }
+
+.box:hover .box2 > h5 {
+  color: rgb(111, 241, 12);
+}
+
 .descrip {
   font-size: 0.9rem;
   color: rgb(95, 95, 95);
+  margin-bottom: 10px;
 }
+
 .box2_1 {
-  
+  margin-top: 10px;
 }
+
 .box2_1 div {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
+
 .mrp2 {
   font-weight: 600;
   color: rgb(140, 141, 141);
   text-decoration: line-through;
+  font-size: 14px;
 }
+
 .discount2 {
-  /* padding: 0px 3px;
-  /* margin-left: 10px; */
-  /* border-radius: 3px; */
-  /* width: fit-content; */
   color: rgb(34, 55, 84);
-  background-color: rgb(123, 230, 150); 
+  background: linear-gradient(45deg, rgb(123, 230, 150), rgb(100, 200, 120));
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
 }
+
 .price {
   color: #38d105;
   font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(45deg, #38d105, #2eb004);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
 #size {
   background-color: rgb(236, 252, 252);
-  padding: 2px;
+  padding: 4px 8px;
   margin: 2px;
+  border-radius: 8px;
+  font-size: 12px;
+  border: 1px solid rgba(111, 241, 12, 0.3);
 }
+
+/* Loading animation */
+.box.loading {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 1050px) {
   .box2 * {
     font-size: 0.8rem;
   }
 }
+
 @media (max-width: 900px) {
   .box {
     width: 38vw;
     height: 54vw;
+    margin: 0.3rem;
   }
+  
   .imgdiv {
     height: 44vw;
   }
+  
   .box > div > img {
     height: 44vw;
   }
+  
   .box * {
     font-size: 14px;
   }
+  
   .box2 {
     height: 8vw;
+    padding: 15px 10px;
   }
 }
-@media (max-width: 740px) {
-  .box {
 
-    
-  }
-  .box2 {
-   
-  }
+@media (max-width: 740px) {
   .box * {
     font-size: medium;
   }
-  
 }
 
 @media (max-width: 650px) {
   .box {
-    margin: 1.8rem .5rem;
+    margin: 1.8rem 0.5rem;
   }
+  
   .box * {
     font-size: 14px;
   }
 }
-/* @media (max-width:470px) {
-  .box >div > img {
-    
+
+/* Hover effects for better UX */
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(111, 241, 12, 0.1), transparent);
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.box:hover::after {
+  left: 100%;
+}
+
+/* Smooth entrance animation */
+.box {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.box:nth-child(1) { animation-delay: 0.1s; }
+.box:nth-child(2) { animation-delay: 0.2s; }
+.box:nth-child(3) { animation-delay: 0.3s; }
+.box:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-} */
+}
+
+/* Price highlight animation */
+.price {
+  position: relative;
+  overflow: hidden;
+}
+
+.price::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.6s ease;
+}
+
+.box:hover .price::before {
+  left: 100%;
+}

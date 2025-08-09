@@ -33,7 +33,9 @@ function App() {
       <Navber/>
       <Routes>
         <Route></Route>
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/" element={
+          <RedirectToExternal url="https://ghoshhardware.vercel.app/" />
+        }></Route>
         <Route path="/product/:id" element={<Productpage/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
